@@ -4,7 +4,6 @@ import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { AppRoutingModule } from '@src/app/app-routing.module';
 import { AppComponent } from '@src/app/app.component';
 import { HomeComponent } from '@src/app/home/home.component';
-import { TimerComponent } from '@src/app/timer/timer.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -13,7 +12,7 @@ import { TimerComponent } from '@src/app/timer/timer.component';
 // import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, TimerComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [NativeScriptModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
