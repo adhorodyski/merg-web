@@ -57,7 +57,7 @@
     "node-sass": "^4.7.1",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
-    "protractor": "~5.4.0",
+    "protractor": "^5.4.3",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "tslint-config-prettier": "^1.18.0",
@@ -65,7 +65,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && ng test"
+      "pre-commit": "pretty-quick --staged && ng lint && ng test"
     }
   }
 }
