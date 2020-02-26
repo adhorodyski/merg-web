@@ -8,16 +8,16 @@ import { MemberGuard, CreatorGuard, NoAuthGuard } from './guards';
 import { ApiService, ThemeService } from './services';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, RouterModule],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ApiPrefixInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    MemberGuard,
-    CreatorGuard,
-    NoAuthGuard,
-    ApiService,
-    ThemeService,
-  ],
-  declarations: [],
+    imports: [CommonModule, HttpClientModule, RouterModule],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: ApiPrefixInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+        MemberGuard,
+        CreatorGuard,
+        NoAuthGuard,
+        ApiService,
+        ThemeService,
+    ],
+    declarations: [],
 })
 export class CoreModule {}

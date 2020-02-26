@@ -14,10 +14,10 @@ import { AppComponent } from '@src/app/app.component';
 // import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [NativeScriptModule, CoreModule, SharedModule, AppRoutingModule],
-  providers: [],
-  bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA],
+    declarations: [AppComponent],
+    imports: [NativeScriptModule, CoreModule, SharedModule, AppRoutingModule],
+    providers: [],
+    bootstrap: [AppComponent],
+    schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}
