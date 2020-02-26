@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { TokenInterceptor, ApiPrefixInterceptor } from './interceptors';
 import { MemberGuard, CreatorGuard, NoAuthGuard } from './guards';
 import { ApiService, ThemeService } from './services';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule, RouterModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiPrefixInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
