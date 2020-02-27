@@ -1,0 +1,7 @@
+@import 'ui-kit/buttons';
+@import 'ui-kit/inputs';
+
+@mixin merg-ui-kit($theme) {
+    @include buttons($theme);
+    @include inputs($theme);
+}

@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+@mixin inputs($theme) {
+    $primary: map-get($theme, primary);
+
+    .input {
+        background: mat-color($primary, 100);
+        color: mat-color($primary, 400);
+    }
+}

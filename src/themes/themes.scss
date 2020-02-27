@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+@import 'merg-light-theme';
+@import 'merg-dark-theme';
+@import 'merg-ui-kit';
+
+@include mat-core();
+
+@include merg-ui-kit($merg-light-theme);
+
+.merg-dark-theme {
+    @include merg-ui-kit($merg-dark-theme);
+}
