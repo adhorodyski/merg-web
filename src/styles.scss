@@ -1,13 +1,7 @@
-@import url('https://rsms.me/inter/inter.css');
 @import './themes/themes';
 @import 'app-common';
 
 * {
-    font: {
-        family: 'Inter', sans-serif;
-        weight: 400;
-        size: 10px;
-    }
     box-sizing: border-box;
     margin: 0;
     padding: 0;

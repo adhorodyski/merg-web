@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+@mixin cards($theme) {
+    $primary: map-get($theme, primary);
+
+    .card {
+        &:hover {
+        }
+    }
+}

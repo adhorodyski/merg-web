@@ -12,7 +12,15 @@
 
         &.secondary {
             background: mat-color($primary, 300);
-            box-shadow: 10px 0 25px rgba(mat-color($primary, 100), 0.03);
+            box-shadow: 10px 25px rgba(mat-color($primary, 100), 0.03);
+        }
+
+        &.external {
+            &.google-signin {
+            }
+
+            &.facebook-signin {
+            }
         }
     }
 }

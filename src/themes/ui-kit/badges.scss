@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+@mixin badges($theme) {
+    $primary: map-get($theme, primary);
+    $warn: map-get($theme, warn);
+
+    .badge {
+        &.success {
+        }
+
+        &.error {
+        }
+    }
+}

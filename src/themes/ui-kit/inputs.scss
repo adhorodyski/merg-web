@@ -2,9 +2,44 @@
 
 @mixin inputs($theme) {
     $primary: map-get($theme, primary);
+    $warn: map-get($theme, warn);
 
     .input {
         background: mat-color($primary, 100);
         color: mat-color($primary, 400);
+
+        &.username {
+        }
+
+        &.name {
+        }
+
+        &.email {
+        }
+
+        &.password {
+        }
+
+        &.tag {
+        }
+
+        &.search {
+            &.big {
+            }
+
+            &.small {
+            }
+        }
+
+        &.language {
+        }
+
+        &.mode {
+            &.light {
+            }
+
+            &.dark {
+            }
+        }
     }
 }
