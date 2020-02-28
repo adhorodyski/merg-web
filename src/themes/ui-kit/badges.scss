@@ -5,10 +5,27 @@
     $warn: map-get($theme, warn);
 
     .badge {
+        min-width: 300px;
+        hegiht: 40px;
+        margin: 200px 500px;
+        color: mat-color($primary, 50);
+        display: flex;
+        align-items: center;
+        border-radius: 3px;
+        padding: 8px 20px;
+
+        .material-icons {
+            margin-right: 20px;
+        }
+
         &.success {
+            background: mat-color($warn, 100);
+            box-shadow: 0 10px 25px rgba(mat-color($warn, 100), 0.3);
         }
 
         &.error {
+            background: mat-color($warn, 50);
+            box-shadow: 0 10px 25px rgba(mat-color($warn, 50), 0.3);
         }
     }
 }
