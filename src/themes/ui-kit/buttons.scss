@@ -5,21 +5,52 @@
     $accent: map-get($theme, accent);
 
     .button {
+        border: none;
+        border-radius: 5px;
+        background: transparent;
+        width: 300px;
+        padding: 12px 0;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+
         &.primary {
-            background: mat-color($accent, 100);
             color: mat-color($primary, 50);
+            background: mat-color($accent, 100);
+            box-shadow: 0 10px 25px rgba(mat-color($accent, 100), 0.3);
         }
 
         &.secondary {
-            background: mat-color($primary, 300);
-            box-shadow: 10px 25px rgba(mat-color($primary, 100), 0.03);
+            color: mat-color($primary, 200);
+            border: 1px solid mat-color($primary, 200);
+            box-shadow: 0 10px 25px rgba(mat-color($primary, 100), 0.3);
         }
 
         &.external {
-            &.google-signin {
+            color: mat-color($primary, 300);
+            border: 1px solid mat-color($accent, 100);
+            box-shadow: 0 10px 25px rgba(mat-color($accent, 100), 0.03);
+            font-size: 14px;
+            line-height: 14px;
+            position: relative;
+
+            .icon {
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                top: calc(50% - 9px);
+                left: 10%;
             }
 
-            &.facebook-signin {
+            &.google .icon {
+                background: url('assets/social-media/google.png');
+                background-size: contain;
+            }
+
+            &.facebook .icon {
+                background: url('assets/social-media/facebook.png');
+                background-size: contain;
             }
         }
     }
