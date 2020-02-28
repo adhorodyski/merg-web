@@ -5,6 +5,7 @@
 @import 'ui-kit/badges';
 @import 'ui-kit/cards';
 @import 'ui-kit/status';
+@import 'ui-kit/stories';
 
 @mixin merg-ui-kit($theme) {
     @include typography($theme);
@@ -14,4 +15,5 @@
     @include badges($theme);
     @include cards($theme);
     @include status($theme);
+    @include stories($theme);
 }

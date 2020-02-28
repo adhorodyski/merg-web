@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+@import '../palette';
+
+$providers: (
+    'facebook': $facebook,
+    'twitter': $twitter,
+    'instagram': $instagram,
+    'youtube': $youtube,
+    'tiktok': $tiktok,
+    'spotify': $spotify,
+);
+
+@mixin stories($theme) {
+    .story {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+
+        @each $provider-name, $provider-color in $providers {
+            &.#{$provider-name} {
+                background: $provider-color;
+            }
+        }
+    }
+}
