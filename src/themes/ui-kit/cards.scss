@@ -4,7 +4,17 @@
     $primary: map-get($theme, primary);
 
     .card {
+        width: 200px;
+        padding: 20px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 10px;
+        background: transparent;
+        box-shadow: 0 10px 25px rgba(mat-color($primary, 300), 0.15);
+        transition: box-shadow 0.2s;
+
         &:hover {
+            box-shadow: 0 10px 25px rgba(mat-color($primary, 300), 0.25);
         }
     }
 }

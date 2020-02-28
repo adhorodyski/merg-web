@@ -46,6 +46,7 @@
             .button {
                 width: 100%;
                 color: mat-color($primary, 200);
+                transition: color 0.2s;
             }
 
             &.active .button {
@@ -119,6 +120,11 @@
                 display: inline-block;
                 margin-right: 15px;
                 color: mat-color($primary, 400);
+            }
+
+            p,
+            .material-icons {
+                transition: color 0.2s;
             }
 
             &.active {
