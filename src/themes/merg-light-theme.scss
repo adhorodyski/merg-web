@@ -31,8 +31,12 @@ $light-accent: (
 
 $light-warn: (
     50: $merg-orange,
+    100: $merg-green-1,
+    200: $merg-green-2,
     contrast: (
         50: $merg-grey-4,
+        100: $merg-green-1,
+        200: $merg-green-2,
     ),
 );
 

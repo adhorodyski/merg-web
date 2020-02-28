@@ -6,13 +6,17 @@
 
     .status {
         display: flex;
-        justify-content: space-between;
 
         .dot {
             width: 10px;
             height: 10px;
             border-radius: 50%;
             background: mat-color($primary, 400);
+            margin-right: 15px;
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             &.active {
                 background: mat-color($accent, 100);
