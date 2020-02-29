@@ -1,0 +1,46 @@
+@import '~@angular/material/theming';
+@import 'palette';
+
+$light-primary: (
+    50: $merg-white,
+    100: $merg-grey-4,
+    200: $merg-grey-3,
+    300: $merg-grey-2,
+    400: $merg-grey-1,
+    500: $merg-black,
+    contrast: (
+        50: $merg-grey-1,
+        100: $merg-grey-1,
+        200: $merg-grey-1,
+        300: $merg-grey-4,
+        400: $merg-grey-4,
+        500: $merg-grey-4,
+    ),
+);
+
+$light-accent: (
+    50: $merg-blue-1,
+    100: $merg-blue-2,
+    200: $merg-blue-3,
+    contrast: (
+        50: $merg-grey-4,
+        100: $merg-grey-4,
+        200: $merg-grey-4,
+    ),
+);
+
+$light-warn: (
+    50: $merg-orange,
+    100: $merg-green-1,
+    200: $merg-green-2,
+    contrast: (
+        50: $merg-grey-4,
+        100: $merg-green-1,
+        200: $merg-green-2,
+    ),
+);
+
+$primary: mat-palette($light-primary);
+$accent: mat-palette($light-accent);
+$warn: mat-palette($light-warn);
+$merg-light-theme: mat-light-theme($primary, $accent, $warn);

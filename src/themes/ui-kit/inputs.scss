@@ -1,0 +1,156 @@
+@import '~@angular/material/theming';
+
+@mixin reverseIconSide($padding) {
+    left: auto;
+    right: $padding;
+}
+
+@mixin inputs($theme) {
+    $primary: map-get($theme, primary);
+    $warn: map-get($theme, warn);
+
+    .input {
+        position: relative;
+        width: 300px;
+        height: 42px;
+        border-radius: 10px;
+        background: mat-color($primary, 100);
+        box-shadow: 0 10px 25px rgba(mat-color($primary, 400), 0.03);
+
+        .material-icons {
+            position: absolute;
+            font-size: 1.5rem;
+            top: calc(50% - 12px);
+            left: 15px;
+            color: mat-color($primary, 200);
+        }
+
+        input,
+        select {
+            border: none;
+            width: 100%;
+            height: 100%;
+            font-size: 1rem;
+            line-height: 1rem;
+            font-weight: 600;
+            padding: 0 15px 0 54px;
+            background: transparent;
+            appearance: none;
+            color: mat-color($primary, 400);
+        }
+
+        &.password {
+            input {
+                padding: 0 54px;
+            }
+
+            .material-icons.show {
+                left: auto;
+                right: 15px;
+                color: mat-color($primary, 400);
+                cursor: pointer;
+                display: none;
+            }
+        }
+
+        &.tag {
+            width: max-content;
+            cursor: pointer;
+
+            .button {
+                width: 100%;
+                color: mat-color($primary, 200);
+                transition: color 0.2s;
+            }
+
+            &.active .button {
+                color: mat-color($warn, 100);
+            }
+        }
+
+        &.search {
+            &.big {
+                width: 600px;
+                height: 50px;
+
+                input {
+                    padding: 0 64px;
+                }
+
+                .material-icons {
+                    left: 20px;
+
+                    &.clear {
+                        @include reverseIconSide(20px);
+                        color: mat-color($primary, 400);
+                        cursor: pointer;
+                        display: none;
+                    }
+                }
+            }
+
+            &.small {
+                width: 300px;
+                height: 30px;
+
+                input {
+                    padding: 0 50px;
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                }
+
+                .material-icons {
+                    font-size: 1.25rem;
+                    top: calc(50% - 10px);
+                    left: 15px;
+
+                    &.clear {
+                        @include reverseIconSide(15px);
+                        color: mat-color($primary, 400);
+                        cursor: pointer;
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.language .material-icons.dropdown {
+            @include reverseIconSide(15px);
+            color: mat-color($primary, 400);
+        }
+
+        &.mode {
+            width: max-content;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: transparent;
+            box-shadow: none;
+            cursor: pointer;
+
+            .material-icons {
+                position: static;
+                display: inline-block;
+                margin-right: 15px;
+                color: mat-color($primary, 400);
+            }
+
+            p,
+            .material-icons {
+                transition: color 0.2s;
+            }
+
+            &.active {
+                p,
+                .material-icons {
+                    color: mat-color($warn, 50);
+                }
+            }
+
+            input {
+                display: none;
+            }
+        }
+    }
+}

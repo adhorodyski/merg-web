@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+
+@mixin status($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+
+    .status {
+        display: flex;
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: mat-color($primary, 400);
+            margin-right: 15px;
+            transition: background 0.2s;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                background: mat-color($accent, 100);
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import 'ui-kit/typography';
+@import 'ui-kit/buttons';
+@import 'ui-kit/inputs';
+@import 'ui-kit/avatars';
+@import 'ui-kit/badges';
+@import 'ui-kit/cards';
+@import 'ui-kit/status';
+@import 'ui-kit/stories';
+
+@mixin merg-ui-kit($theme) {
+    @include typography($theme);
+    @include buttons($theme);
+    @include inputs($theme);
+    @include avatars($theme);
+    @include badges($theme);
+    @include cards($theme);
+    @include status($theme);
+    @include stories($theme);
+}

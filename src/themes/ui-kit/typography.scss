@@ -1,0 +1,83 @@
+@import '~@angular/material/theming';
+@import url('https://rsms.me/inter/inter.css');
+
+$sizes: (
+    'size-9': 9,
+    'size-11': 11,
+    'size-14': 14,
+    'size-18': 18,
+    'size-30': 30,
+    'size-40': 40,
+    'size-70': 70,
+);
+$weights: (
+    'regular': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+);
+$hues: 50, 100, 200, 300, 400, 500, 50-contrast, 100-contrast, 200-contrast, 300-contrast, 400-cotnrast, 500-contrast;
+$alignments: left, center, right;
+$decorations: underline;
+
+@function px-to-rem($target, $context: 16) {
+    @return ($target / $context) + rem;
+}
+
+@mixin typography($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $colors: (
+        'primary': $primary,
+        'accent': $accent,
+        'warn': $warn,
+    );
+
+    span,
+    p,
+    h6,
+    h5,
+    h4,
+    h3,
+    h2,
+    h1 {
+        color: mat-color($primary, 400);
+        font: {
+            family: 'Inter', sans-serif;
+            weight: 400;
+        }
+
+        @each $size-name, $size in $sizes {
+            &.#{$size-name} {
+                font-size: px-to-rem($size);
+            }
+        }
+
+        @each $weight-name, $weight-size in $weights {
+            &.#{$weight-name} {
+                font-weight: $weight-size;
+            }
+        }
+
+        @each $color-name, $color-value in $colors {
+            @each $hue in $hues {
+                &.#{$color-name}-#{$hue} {
+                    color: mat-color($color-value, $hue);
+                }
+            }
+        }
+
+        @each $alignment in $alignments {
+            &.#{$alignment} {
+                text-align: $alignment;
+            }
+        }
+
+        @each $decoration in $decorations {
+            &.#{$decoration} {
+                text-decoration: $decoration;
+            }
+        }
+    }
+}
