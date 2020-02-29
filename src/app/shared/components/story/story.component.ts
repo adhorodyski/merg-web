@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class StoryComponent {
     @Input() size: string;
     @Input() provider: string;
+    @Input() avatar: string;
     @Input() username: string;
 
     constructor() {}
