@@ -13,10 +13,23 @@ $providers: (
 @mixin stories($theme) {
     .story {
         width: 70px;
-        margin: 0 15px 15px 0;
 
-        &:last-child {
-            margin-right: 0;
+        &.big:not(:last-child) {
+            margin: 0 15px 15px 0;
+        }
+
+        &.small {
+            margin-right: 10px;
+
+            .elipse {
+                width: 54px;
+                height: 54px;
+
+                .avatar {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
         }
 
         @each $provider-name, $provider-color in $providers {
