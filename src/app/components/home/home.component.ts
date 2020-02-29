@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
     title = 'merg-app';
+    provider = 'facebook';
+    size = 'big';
+    username = 'tommyjerra';
 
     constructor() {}
 
