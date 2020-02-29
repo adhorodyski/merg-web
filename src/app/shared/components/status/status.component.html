@@ -1,0 +1,3 @@
+<div class="status" *ngIf="steps">
+    <div class="dot {{ activeStepIDX === stepIDX && 'active' }}" *ngFor="let step of steps; let stepIDX"></div>
+</div>

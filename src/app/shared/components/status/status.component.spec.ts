@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
-import { StatusComponent } from '@src/app/shared/components/status/status.component';
+import { StatusComponent } from './status.component';
 
-describe('HomeComponent', () => {
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+describe('StatusComponent', () => {
+    let component: StatusComponent;
+    let fixture: ComponentFixture<StatusComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, StatusComponent],
+            declarations: [StatusComponent],
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(StatusComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

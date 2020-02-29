@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
     title = 'merg-app';
-    message = 'It worked!';
-    type = 'error';
+    steps = [1, 2];
+    activeStepIDX = 1;
 
     constructor() {}
 
