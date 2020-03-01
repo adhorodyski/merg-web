@@ -1,7 +1,15 @@
 @import '~@angular/material/theming';
 
 @mixin avatars($theme) {
+    $primary: map-get($theme, primary);
+
     .avatar {
+        border-radius: 50%;
+        display: block;
+        color: mat-color($primary, 200);
+        background: mat-color($primary, 100);
+        object-fit: cover;
+
         &.big {
             width: 64px;
             height: 64px;

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import {
+    AvatarComponent,
     BadgeComponent,
     ButtonComponent,
     CountrySelectorComponent,
@@ -15,6 +16,7 @@ import {
 @NgModule({
     imports: [CommonModule, FormsModule],
     exports: [
+        AvatarComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
@@ -24,6 +26,7 @@ import {
         StoryComponent,
     ],
     providers: [
+        AvatarComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
@@ -33,6 +36,7 @@ import {
         StoryComponent,
     ],
     declarations: [
+        AvatarComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,

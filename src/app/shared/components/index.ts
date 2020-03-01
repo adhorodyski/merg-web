@@ -5,3 +5,4 @@ export * from './input/password';
 export * from './badge';
 export * from './status';
 export * from './story';
+export * from './avatar';
