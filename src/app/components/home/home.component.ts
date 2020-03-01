@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
     title = 'merg-app';
-    type = 'secondary';
-    message = 'accept and continue';
+    type = 'password';
+    value: string;
 
     constructor() {}
 
     ngOnInit() {}
+
+    setValue(value: string) {
+        this.value = value;
+        console.log(this.value);
+    }
 }

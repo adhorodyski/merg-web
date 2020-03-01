@@ -1,0 +1,9 @@
+<div class="country-selector language">
+    <i class="material-icons">translate</i>
+    <select name="country-selector" (change)="sendValue()" [(ngModel)]="selectedLanguage">
+        <option *ngFor="let option of options | keyvalue" [value]="option.value">
+            {{ option.value }}
+        </option>
+    </select>
+    <i class="material-icons dropdown">keyboard_arrow_down</i>
+</div>

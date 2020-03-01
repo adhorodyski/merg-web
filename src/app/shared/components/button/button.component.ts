@@ -9,7 +9,7 @@ export class ButtonComponent {
     @Input() type: string;
     @Input() provider?: string;
     @Input() message: string;
-    @Output() click = new EventEmitter();
+    @Output() click: EventEmitter<any> = new EventEmitter();
 
     constructor() {}
 

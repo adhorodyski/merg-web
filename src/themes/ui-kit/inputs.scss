@@ -9,7 +9,8 @@
     $primary: map-get($theme, primary);
     $warn: map-get($theme, warn);
 
-    .input {
+    .input,
+    .country-selector {
         position: relative;
         width: 300px;
         height: 42px;
@@ -23,6 +24,19 @@
             top: calc(50% - 12px);
             left: 15px;
             color: mat-color($primary, 200);
+            user-select: none;
+
+            &.dropdown {
+                @include reverseIconSide(15px);
+                color: mat-color($primary, 400);
+            }
+
+            &.show {
+                left: auto;
+                right: 15px;
+                color: mat-color($primary, 400);
+                cursor: pointer;
+            }
         }
 
         input,
@@ -39,18 +53,8 @@
             color: mat-color($primary, 400);
         }
 
-        &.password {
-            input {
-                padding: 0 54px;
-            }
-
-            .material-icons.show {
-                left: auto;
-                right: 15px;
-                color: mat-color($primary, 400);
-                cursor: pointer;
-                display: none;
-            }
+        &.password input {
+            padding: 0 54px;
         }
 
         &.tag {
@@ -70,7 +74,8 @@
 
         &.search {
             &.big {
-                width: 600px;
+                width: 100%;
+                max-width: 600px;
                 height: 50px;
 
                 input {
@@ -84,7 +89,6 @@
                         @include reverseIconSide(20px);
                         color: mat-color($primary, 400);
                         cursor: pointer;
-                        display: none;
                     }
                 }
             }
@@ -108,15 +112,9 @@
                         @include reverseIconSide(15px);
                         color: mat-color($primary, 400);
                         cursor: pointer;
-                        display: none;
                     }
                 }
             }
-        }
-
-        &.language .material-icons.dropdown {
-            @include reverseIconSide(15px);
-            color: mat-color($primary, 400);
         }
 
         &.mode {
