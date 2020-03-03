@@ -1,4 +1,14 @@
-<div class="modes" style="display: flex">
-    <app-mode [mode]="mode" [activeMode]="activeMode" [title]="title1" (clickMode)="setActiveMode($event)"></app-mode>
-    <app-mode [mode]="mode2" [activeMode]="activeMode" [title]="title2" (clickMode)="setActiveMode($event)"></app-mode>
+<div class="modes">
+    <app-mode
+        [mode]="mode"
+        [isActive]="mode === activeMode"
+        [title]="title1"
+        (clickMode)="setActiveMode($event)"
+    ></app-mode>
+    <app-mode
+        [mode]="mode2"
+        [isActive]="mode2 === activeMode"
+        [title]="title2"
+        (clickMode)="setActiveMode($event)"
+    ></app-mode>
 </div>

@@ -7,9 +7,9 @@ import { ModesEnum } from '@src/app/core/models/modes.enum';
     styleUrls: ['./mode.component.scss'],
 })
 export class ModeComponent {
-    @Input() title: string;
     @Input() mode: ModesEnum;
-    @Input() activeMode: ModesEnum = ModesEnum.LIGHT;
+    @Input() title: string;
+    @Input() isActive: boolean;
     @Output() clickMode: EventEmitter<ModesEnum> = new EventEmitter<ModesEnum>();
 
     constructor() {}
