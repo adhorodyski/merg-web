@@ -1,0 +1,15 @@
+<div class="search-result {{ size }}">
+    <div class="info">
+        <app-avatar [source]="avatar" [size]="size" [username]="username"></app-avatar>
+        <div class="paragraphs-wrapper">
+            <p class="{{ size === 'big' ? 'semi-bold' : 'regular' }} size-14 primary-400">{{ username }}</p>
+            <p *ngIf="size === 'big'" class="regular size-14 primary-200 counter">
+                <span class="number">{{ followers }}</span> people
+            </p>
+        </div>
+    </div>
+    <i *ngIf="size === 'big'" class="material-icons">keyboard_arrow_right</i>
+    <p *ngIf="size === 'small'" class="account-type regular size-14 primary-200">
+        {{ accountType.toString().toLowerCase() }}
+    </p>
+</div>

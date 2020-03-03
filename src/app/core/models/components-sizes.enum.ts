@@ -1,4 +1,4 @@
-export enum AvatarSizesEnum {
+export enum ComponentsSizesEnum {
     'SMALL' = 'small',
     'MEDIUM' = 'medium',
     'BIG' = 'big',

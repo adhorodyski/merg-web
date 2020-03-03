@@ -1,14 +1,23 @@
-<div class="modes">
-    <app-mode
-        [mode]="mode"
-        [isActive]="mode === activeMode"
-        [title]="title1"
-        (clickMode)="setActiveMode($event)"
-    ></app-mode>
-    <app-mode
-        [mode]="mode2"
-        [isActive]="mode2 === activeMode"
-        [title]="title2"
-        (clickMode)="setActiveMode($event)"
-    ></app-mode>
+<div class="results">
+    <app-search-result
+        [avatar]="avatar"
+        [username]="username"
+        [followers]="followers"
+        [accountType]="accountType"
+        [size]="size"
+    ></app-search-result>
+    <app-search-result
+        [avatar]="avatar"
+        [username]="username"
+        [followers]="followers"
+        [accountType]="accountType"
+        [size]="size"
+    ></app-search-result>
+    <app-search-result
+        [avatar]="avatar"
+        [username]="username"
+        [followers]="followers"
+        [accountType]="accountType"
+        [size]="size"
+    ></app-search-result>
 </div>

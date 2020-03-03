@@ -6,6 +6,7 @@
 @import 'ui-kit/cards';
 @import 'ui-kit/status';
 @import 'ui-kit/stories';
+@import 'ui-kit/search-results';
 
 @mixin merg-ui-kit($theme) {
     @include typography($theme);
@@ -16,4 +17,5 @@
     @include cards($theme);
     @include status($theme);
     @include stories($theme);
+    @include search-results($theme);
 }
