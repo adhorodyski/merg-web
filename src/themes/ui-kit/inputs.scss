@@ -137,6 +137,7 @@
             p,
             .material-icons {
                 transition: color 0.2s;
+                user-select: none;
             }
 
             &.active {
@@ -144,10 +145,6 @@
                 .material-icons {
                     color: mat-color($warn, 50);
                 }
-            }
-
-            input {
-                display: none;
             }
         }
     }

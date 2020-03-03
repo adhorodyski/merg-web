@@ -1,1 +1,4 @@
-<app-avatar [source]="source" [size]="size" [username]="username"></app-avatar>
+<div class="modes" style="display: flex">
+    <app-mode [mode]="mode" [activeMode]="activeMode" [title]="title1" (clickMode)="setActiveMode($event)"></app-mode>
+    <app-mode [mode]="mode2" [activeMode]="activeMode" [title]="title2" (clickMode)="setActiveMode($event)"></app-mode>
+</div>

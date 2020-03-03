@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AvatarSizesEnum } from '@src/app/core/models/avatar-sizes.enum';
+import { ModesEnum } from '@src/app/core/models/modes.enum';
 
 @Component({
     selector: 'app-home',
@@ -8,11 +8,17 @@ import { AvatarSizesEnum } from '@src/app/core/models/avatar-sizes.enum';
 })
 export class HomeComponent implements OnInit {
     title = 'merg-app';
-    source = 'https://upload.wikimedia.org/wikipedia/commons/f/f5/Poster-sized_portrait_of_Barack_Obama.jpg';
-    size: AvatarSizesEnum = AvatarSizesEnum.BIG;
-    username = 'tommyjerrya';
+    activeMode = ModesEnum.LIGHT;
+    mode = ModesEnum.LIGHT;
+    mode2 = ModesEnum.DARK;
+    title1 = 'Light Mode';
+    title2 = 'Dark Mode';
 
     constructor() {}
 
     ngOnInit() {}
+
+    setActiveMode(mode: ModesEnum): void {
+        this.activeMode = ModesEnum[ModesEnum[mode]];
+    }
 }
