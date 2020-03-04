@@ -1,8 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
-import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
-import { SearchResultComponent } from '@src/app/shared/components/search-result/search-result.component';
 
 describe('HomeComponent', () => {
     let component: HomeComponent;
@@ -10,7 +8,7 @@ describe('HomeComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, SearchResultComponent, AvatarComponent],
+            declarations: [HomeComponent],
         }).compileComponents();
     }));
 
