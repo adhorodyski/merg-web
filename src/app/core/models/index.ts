@@ -4,3 +4,4 @@ export * from './input-icons.enum';
 export * from './components-sizes.enum';
 export * from './modes.enum';
 export * from './accounts.enum';
+export * from './tags.enum';

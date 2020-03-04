@@ -1,20 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
-import { HomeComponent } from './home.component';
-import { TagComponent } from '@src/app/shared/components/input/tag/tag.component';
+import { TagComponent } from './tag.component';
 
-describe('HomeComponent', () => {
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+describe('PasswordComponent', () => {
+    let component: TagComponent;
+    let fixture: ComponentFixture<TagComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, TagComponent],
+            imports: [FormsModule],
+            declarations: [TagComponent],
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(TagComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

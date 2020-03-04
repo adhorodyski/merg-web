@@ -13,6 +13,7 @@ import {
     SearchResultComponent,
     StatusComponent,
     StoryComponent,
+    TagComponent,
 } from '@src/app/shared/components';
 
 @NgModule({
@@ -28,6 +29,7 @@ import {
         SearchResultComponent,
         StatusComponent,
         StoryComponent,
+        TagComponent,
     ],
     providers: [
         AvatarComponent,
@@ -40,6 +42,7 @@ import {
         SearchResultComponent,
         StatusComponent,
         StoryComponent,
+        TagComponent,
     ],
     declarations: [
         AvatarComponent,
@@ -52,6 +55,7 @@ import {
         SearchResultComponent,
         StatusComponent,
         StoryComponent,
+        TagComponent,
     ],
 })
 export class SharedModule {}

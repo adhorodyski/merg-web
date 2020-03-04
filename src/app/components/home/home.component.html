@@ -1,1 +1,26 @@
-<div class="card"></div>
+<div class="tags" style="display: flex">
+    <app-tag
+        [size]="size"
+        [value]="value"
+        [isActive]="this.activeTags.includes(value)"
+        (clickTag)="handleEvent($event)"
+    ></app-tag>
+    <app-tag
+        [size]="size"
+        [value]="value2"
+        [isActive]="this.activeTags.includes(value2)"
+        (clickTag)="handleEvent($event)"
+    ></app-tag>
+    <app-tag
+        [size]="size"
+        [value]="value3"
+        [isActive]="this.activeTags.includes(value3)"
+        (clickTag)="handleEvent($event)"
+    ></app-tag>
+    <app-tag
+        [size]="size"
+        [value]="value4"
+        [isActive]="this.activeTags.includes(value4)"
+        (clickTag)="handleEvent($event)"
+    ></app-tag>
+</div>
