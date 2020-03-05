@@ -1,22 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 import { SafePipe } from '@src/app/core/pipes/safe.pipe';
-
-import { HomeComponent } from './home.component';
-import { PostComponent } from '@src/app/shared/components/post/post.component';
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
 
-describe('HomeComponent', () => {
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+import { PostComponent } from './post.component';
+
+describe('PostComponent', () => {
+    let component: PostComponent;
+    let fixture: ComponentFixture<PostComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, PostComponent, AvatarComponent, SafePipe],
+            providers: [SafePipe],
+            declarations: [PostComponent, AvatarComponent, SafePipe],
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(PostComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

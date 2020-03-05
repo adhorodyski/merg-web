@@ -7,3 +7,4 @@ export * from './status';
 export * from './story';
 export * from './avatar';
 export * from './search-result';
+export * from './post';

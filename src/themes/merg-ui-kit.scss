@@ -7,6 +7,7 @@
 @import 'ui-kit/status';
 @import 'ui-kit/stories';
 @import 'ui-kit/search-results';
+@import 'ui-kit/posts';
 
 @mixin merg-ui-kit($theme) {
     @include typography($theme);
@@ -18,4 +19,5 @@
     @include status($theme);
     @include stories($theme);
     @include search-results($theme);
+    @include posts($theme);
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SafePipe } from '@src/app/core';
 
 import {
     AvatarComponent,
@@ -10,6 +11,7 @@ import {
     InputComponent,
     ModeComponent,
     PasswordComponent,
+    PostComponent,
     SearchResultComponent,
     StatusComponent,
     StoryComponent,
@@ -26,6 +28,7 @@ import {
         InputComponent,
         ModeComponent,
         PasswordComponent,
+        PostComponent,
         SearchResultComponent,
         StatusComponent,
         StoryComponent,
@@ -39,6 +42,7 @@ import {
         InputComponent,
         ModeComponent,
         PasswordComponent,
+        PostComponent,
         SearchResultComponent,
         StatusComponent,
         StoryComponent,
@@ -52,10 +56,12 @@ import {
         InputComponent,
         ModeComponent,
         PasswordComponent,
+        PostComponent,
         SearchResultComponent,
         StatusComponent,
         StoryComponent,
         TagComponent,
+        SafePipe,
     ],
 })
 export class SharedModule {}
