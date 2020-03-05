@@ -1,6 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
-import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 import { SafePipe } from '@src/app/core/pipes/safe.pipe';
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
 
