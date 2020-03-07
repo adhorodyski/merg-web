@@ -1,11 +1,13 @@
-<div class="ocean">
-    <app-post
-        [username]="user.username"
-        [avatar]="user.avatar"
+<div class="social-results">
+    <app-social-result
+        [isHidden]="isHidden"
+        [isDone]="isDone"
+        [streams]="streams"
         [provider]="provider"
-        [size]="size"
-        [timestamp]="timestamp"
-        [source]="source"
-        [embed]="embed"
-    ></app-post>
+        [state]="state"
+        [addStreamsTitle]="addStreamsTitle"
+        (expand)="expandStreams($event)"
+        (add)="addStream($event)"
+        (remove)="removeStream($event)"
+    ></app-social-result>
 </div>

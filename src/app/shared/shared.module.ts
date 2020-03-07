@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SafePipe } from '@src/app/core';
 
 import {
@@ -13,13 +14,14 @@ import {
     PasswordComponent,
     PostComponent,
     SearchResultComponent,
+    SocialResultComponent,
     StatusComponent,
     StoryComponent,
     TagComponent,
 } from '@src/app/shared/components';
 
 @NgModule({
-    imports: [CommonModule, FormsModule],
+    imports: [CommonModule, FormsModule, BrowserAnimationsModule],
     exports: [
         AvatarComponent,
         BadgeComponent,
@@ -30,6 +32,7 @@ import {
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
+        SocialResultComponent,
         StatusComponent,
         StoryComponent,
         TagComponent,
@@ -44,6 +47,7 @@ import {
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
+        SocialResultComponent,
         StatusComponent,
         StoryComponent,
         TagComponent,
@@ -58,6 +62,7 @@ import {
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
+        SocialResultComponent,
         StatusComponent,
         StoryComponent,
         TagComponent,

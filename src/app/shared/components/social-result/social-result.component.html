@@ -1,0 +1,80 @@
+<div class="social-result {{ provider }} {{ state }}" [ngClass]="{ hidden: isHidden }">
+    <div class="title">
+        <p class="semi-bold size-14 primary-200 provider">{{ provider }}</p>
+        <i class="material-icons done" *ngIf="isDone && state !== empty" [@inOutAnimation]>done</i>
+    </div>
+
+    <!--  EMPTY  -->
+    <div class="results" *ngIf="state === empty">
+        <div class="result" (click)="clickResult(state)" [@inOutAnimation]>
+            <div class="info">
+                <div class="images">
+                    <img
+                        src="assets/social-media/{{ provider }}.png"
+                        alt="logo {{ provider }}"
+                        class="logo"
+                        [ngClass]="provider"
+                    />
+                </div>
+                <p class="semi-bold size-14 primary-400">{{ addStreamsTitle }}</p>
+            </div>
+            <div class="actions">
+                <i class="material-icons add">add</i>
+            </div>
+        </div>
+    </div>
+
+    <!-- FILLED/CONDENSED  -->
+    <div class="results" *ngIf="state !== empty">
+        <div
+            class="result"
+            *ngFor="let stream of streams; let streamIDX = index"
+            (click)="clickResult(state)"
+            [@inOutAnimation]
+        >
+            <div class="info">
+                <div class="images" *ngIf="state === empty">
+                    <img
+                        src="assets/social-media/{{ provider }}.png"
+                        alt="logo {{ provider }}"
+                        class="logo"
+                        [ngClass]="provider"
+                    />
+                </div>
+                <div class="images" *ngIf="state === condensed" [ngClass]="provider">
+                    <app-avatar
+                        *ngFor="let stream of streams.slice(0, 2)"
+                        [username]="stream.username"
+                        [size]="avatarSize"
+                        [source]="stream.avatar"
+                    ></app-avatar>
+                </div>
+                <div class="images" *ngIf="state === filled" [ngClass]="provider">
+                    <app-avatar [username]="stream.username" [size]="avatarSize" [source]="stream.avatar"></app-avatar>
+                </div>
+                <p class="semi-bold size-14 primary-400" *ngIf="state === empty">{{ addStreamsTitle }}</p>
+                <p class="semi-bold size-14 primary-400" *ngIf="state === condensed">
+                    {{ streams[0].username }} <span class="hint"></span>
+                </p>
+                <p class="semi-bold size-14 primary-400" *ngIf="state === filled">
+                    {{ stream.username }} <span class="hint"></span>
+                </p>
+            </div>
+
+            <div class="actions">
+                <i
+                    class="material-icons add"
+                    *ngIf="isLastStream(stream) && state !== condensed"
+                    (click)="addStream(provider)"
+                    [@inOutAnimation]
+                >
+                    add
+                </i>
+                <i class="material-icons remove" *ngIf="state === filled" (click)="removeStream(provider, streamIDX)">
+                    close
+                </i>
+                <i class="material-icons dropdown" *ngIf="state === condensed">keyboard_arrow_down</i>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,23 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HomeComponent } from './home.component';
-import { SocialResultComponent } from '@src/app/shared/components/social-result/social-result.component';
+import { SocialResultComponent } from './social-result.component';
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
 
-describe('HomeComponent', () => {
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+describe('SocialResultComponent', () => {
+    let component: SocialResultComponent;
+    let fixture: ComponentFixture<SocialResultComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [BrowserAnimationsModule],
-            declarations: [HomeComponent, SocialResultComponent, AvatarComponent],
+            declarations: [SocialResultComponent, AvatarComponent],
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(SocialResultComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

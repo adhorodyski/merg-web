@@ -24,7 +24,6 @@
             top: calc(50% - 12px);
             left: 15px;
             color: mat-color($primary, 200);
-            user-select: none;
 
             &.dropdown {
                 @include reverseIconSide(15px);
@@ -163,7 +162,6 @@
             p,
             .material-icons {
                 transition: color 0.2s;
-                user-select: none;
             }
 
             &.active {
