@@ -48,6 +48,10 @@ $decorations: underline;
             weight: 400;
         }
 
+        &::selection {
+            background: mat-color($warn, 200);
+        }
+
         @each $size-name, $size in $sizes {
             &.#{$size-name} {
                 font-size: px-to-rem($size);
@@ -79,5 +83,10 @@ $decorations: underline;
                 text-decoration: $decoration;
             }
         }
+    }
+
+    .material-icons {
+        color: mat-color($primary, 400);
+        user-select: none;
     }
 }

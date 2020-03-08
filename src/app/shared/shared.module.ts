@@ -1,11 +1,72 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SafePipe } from '@src/app/core';
 
-import { HomeComponent } from '@src/app/shared/components';
+import {
+    AvatarComponent,
+    BadgeComponent,
+    ButtonComponent,
+    CountrySelectorComponent,
+    InputComponent,
+    ModeComponent,
+    PasswordComponent,
+    PostComponent,
+    SearchResultComponent,
+    SocialResultComponent,
+    StatusComponent,
+    StoryComponent,
+    TagComponent,
+} from '@src/app/shared/components';
 
 @NgModule({
-    imports: [CommonModule],
-    providers: [HomeComponent],
-    declarations: [HomeComponent],
+    imports: [CommonModule, FormsModule, BrowserAnimationsModule],
+    exports: [
+        AvatarComponent,
+        BadgeComponent,
+        ButtonComponent,
+        CountrySelectorComponent,
+        InputComponent,
+        ModeComponent,
+        PasswordComponent,
+        PostComponent,
+        SearchResultComponent,
+        SocialResultComponent,
+        StatusComponent,
+        StoryComponent,
+        TagComponent,
+    ],
+    providers: [
+        AvatarComponent,
+        BadgeComponent,
+        ButtonComponent,
+        CountrySelectorComponent,
+        InputComponent,
+        ModeComponent,
+        PasswordComponent,
+        PostComponent,
+        SearchResultComponent,
+        SocialResultComponent,
+        StatusComponent,
+        StoryComponent,
+        TagComponent,
+    ],
+    declarations: [
+        AvatarComponent,
+        BadgeComponent,
+        ButtonComponent,
+        CountrySelectorComponent,
+        InputComponent,
+        ModeComponent,
+        PasswordComponent,
+        PostComponent,
+        SearchResultComponent,
+        SocialResultComponent,
+        StatusComponent,
+        StoryComponent,
+        TagComponent,
+        SafePipe,
+    ],
 })
 export class SharedModule {}

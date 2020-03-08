@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { TokenInterceptor } from './interceptors';
 import { MemberGuard, CreatorGuard, NoAuthGuard } from './guards';
 import { ApiService, ThemeService } from './services';
+import { SafePipe } from './pipes';
 
 @NgModule({
     imports: [CommonModule, HttpClientModule, RouterModule],
@@ -16,6 +17,7 @@ import { ApiService, ThemeService } from './services';
         NoAuthGuard,
         ApiService,
         ThemeService,
+        SafePipe,
     ],
     declarations: [],
 })

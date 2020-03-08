@@ -6,15 +6,30 @@
     .card {
         width: 200px;
         padding: 20px;
-        height: 50px;
+        min-height: 50px;
         cursor: pointer;
         border-radius: 10px;
         background: transparent;
-        box-shadow: 0 10px 25px rgba(mat-color($primary, 300), 0.15);
-        transition: box-shadow 0.2s;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px mat-color($primary, 300);
+            transition: opacity 0.2s;
+            z-index: -1;
+        }
 
         &:hover {
-            box-shadow: 0 10px 25px rgba(mat-color($primary, 300), 0.25);
+            &::after {
+                opacity: 0.25;
+            }
         }
     }
 }

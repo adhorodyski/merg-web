@@ -1,0 +1,5 @@
+<div class="input {{ type }} {{ size }}">
+    <i class="material-icons">{{ icons[type] }}</i>
+    <input [type]="type" [(ngModel)]="value" (ngModelChange)="sendValue($event)" />
+    <i *ngIf="type === 'search' && value" class="material-icons clear" (click)="clearInput()">close</i>
+</div>

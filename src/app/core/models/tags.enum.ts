@@ -1,0 +1,15 @@
+export enum TagsEnum {
+    'MUSIC' = 'Music',
+    'VLOGS' = 'Vlogs',
+    'GAMES' = 'Games',
+    'LIFESTYLE' = 'Lifestyle',
+    'FASHION' = 'Fashion',
+    'FOOD' = 'Food',
+    'COMEDY' = 'Comedy',
+    'TECHNOLOGY' = 'Technology',
+    'BEAUTY' = 'Beauty',
+    'ART' = 'Art',
+    'SCIENCE' = 'Science',
+    'FINANCES' = 'Finances',
+    'NATURE' = 'Nature',
+}
