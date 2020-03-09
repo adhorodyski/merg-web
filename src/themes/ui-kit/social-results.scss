@@ -17,8 +17,7 @@ $providers: (
     .social-result {
         max-width: 600px;
         border-radius: 10px;
-        box-shadow: 0 10px 25px rgba(mat-color($primary, 400), 0.03);
-        transition: opacity 0.4s, background 0.4s;
+        transition: opacity 0.4s;
         background: transparent;
         pointer-events: auto;
 
@@ -98,7 +97,10 @@ $providers: (
         .results {
             max-height: 64px;
             overflow: hidden;
-            transition: max-height 1s;
+            border-radius: 10px;
+            background: transparent;
+            box-shadow: 0 10px 25px rgba(mat-color($primary, 400), 0.03);
+            transition: max-height 1s, background 0.4s;
 
             .result {
                 width: 100%;

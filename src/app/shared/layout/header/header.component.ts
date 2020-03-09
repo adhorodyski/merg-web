@@ -15,7 +15,7 @@ export class HeaderComponent {
 
     avatarUsername = 'myusername';
     avatarSize = ComponentsSizesEnum.SMALL;
-    avatarSource = 'https://bit.ly/2PWiguP';
+    avatarSource = 'https://fredericksburg.today/wp-content/uploads/2020/02/jayden-1024x862.jpg';
 
     constructor() {}
 
