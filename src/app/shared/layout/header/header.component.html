@@ -1,5 +1,34 @@
-<div>Header</div>
-<div>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/explore">Explore</a>
-</div>
+<header class="header">
+    <div class="view-header">
+        <!--  LOGO  -->
+        <div class="nav-group">
+            <a class="link logo" routerLink="/">
+                <img src="assets/{{ company }}.png" [alt]="company" />
+            </a>
+        </div>
+        <!--  SEARCH  -->
+        <div class="nav-group">
+            <app-input
+                [size]="searchSize"
+                [type]="searchType"
+                [value]="searchValue"
+                (valueEvent)="handleSearchValue($event)"
+            ></app-input>
+        </div>
+        <!--  NAVIGATION  -->
+        <div class="nav-group">
+            <a class="link" routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+                <i class="material-icons">all_inclusive</i>
+            </a>
+            <a class="link" routerLink="/explore" routerLinkActive="active">
+                <i class="material-icons">search</i>
+            </a>
+            <a class="link" routerLink="/settings" routerLinkActive="active">
+                <i class="material-icons">more_horiz</i>
+            </a>
+            <a class="link" routerLink="/:username" routerLinkActive="active">
+                <app-avatar [size]="avatarSize" [username]="avatarUsername" [source]="avatarSource"></app-avatar>
+            </a>
+        </div>
+    </div>
+</header>
