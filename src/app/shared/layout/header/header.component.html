@@ -26,7 +26,12 @@
             <a class="link" routerLink="/settings" routerLinkActive="active">
                 <i class="material-icons">more_horiz</i>
             </a>
-            <a class="link" routerLink="/:username" routerLinkActive="active">
+            <a
+                class="link"
+                [routerLink]="['/u', avatarUsername]"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+            >
                 <app-avatar [size]="avatarSize" [username]="avatarUsername" [source]="avatarSource"></app-avatar>
             </a>
         </div>

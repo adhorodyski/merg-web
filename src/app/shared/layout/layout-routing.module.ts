@@ -23,6 +23,16 @@ const routes: Routes = [
                 pathMatch: 'full',
                 loadChildren: () => import('@src/app/components/explore/explore.module').then(m => m.ExploreModule),
             },
+            {
+                path: 'settings',
+                pathMatch: 'full',
+                loadChildren: () => import('@src/app/components/settings/settings.module').then(m => m.SettingsModule),
+            },
+            {
+                path: 'u/:username',
+                pathMatch: 'full',
+                loadChildren: () => import('@src/app/components/profile/profile.module').then(m => m.ProfileModule),
+            },
         ],
     },
 ];
