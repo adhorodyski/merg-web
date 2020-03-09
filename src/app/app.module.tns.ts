@@ -1,9 +1,9 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
+import { RouterModule } from '@angular/router';
 
 import { CoreModule } from '@src/app/core/core.module';
 import { SharedModule } from '@src/app/shared/shared.module';
-import { AppRoutingModule } from '@src/app/app-routing.module';
 
 import { AppComponent } from '@src/app/app.component';
 
@@ -15,7 +15,7 @@ import { AppComponent } from '@src/app/app.component';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [NativeScriptModule, CoreModule, SharedModule, AppRoutingModule],
+    imports: [NativeScriptModule, RouterModule.forRoot([]), CoreModule, SharedModule, RouterModule],
     providers: [],
     bootstrap: [AppComponent],
     schemas: [NO_ERRORS_SCHEMA],

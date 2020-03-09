@@ -4,11 +4,11 @@ import { SocialResultStatesEnum } from '@src/app/core/models/social-result-state
 import { IUser } from '@src/app/core/models/user.model';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class DashboardComponent implements OnInit {
     title = 'merg-app';
     provider = ProvidersEnum.INSTAGRAM;
     state = SocialResultStatesEnum.EMPTY;

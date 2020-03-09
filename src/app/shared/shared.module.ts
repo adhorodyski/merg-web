@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SafePipe } from '@src/app/core';
 
 import {
@@ -21,7 +20,7 @@ import {
 } from '@src/app/shared/components';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, BrowserAnimationsModule],
+    imports: [CommonModule, FormsModule],
     exports: [
         AvatarComponent,
         BadgeComponent,
