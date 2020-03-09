@@ -5,7 +5,7 @@ import { MainLayoutComponent } from '@src/app/shared/layout/main-layout';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: '/',
         pathMatch: 'full',
     },
     {
@@ -13,12 +13,14 @@ const routes: Routes = [
         component: MainLayoutComponent,
         children: [
             {
-                path: 'dashboard',
+                path: '',
+                pathMatch: 'full',
                 loadChildren: () =>
                     import('@src/app/components/dashboard/dashboard.module').then(m => m.DashboardModule),
             },
             {
                 path: 'explore',
+                pathMatch: 'full',
                 loadChildren: () => import('@src/app/components/explore/explore.module').then(m => m.ExploreModule),
             },
         ],

@@ -9,6 +9,7 @@
 @import 'ui-kit/search-results';
 @import 'ui-kit/social-results';
 @import 'ui-kit/posts';
+@import 'ui-kit/header';
 
 @mixin merg-ui-kit($theme) {
     @include typography($theme);
@@ -22,4 +23,5 @@
     @include search-results($theme);
     @include social-results($theme);
     @include posts($theme);
+    @include header($theme);
 }
