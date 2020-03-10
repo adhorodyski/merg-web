@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { MainLayoutComponent } from './main-layout.component';
-import { HeaderComponent } from '@src/app/shared/layout/header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
 import { InputComponent } from '@src/app/shared/components/input/input.component';
 
