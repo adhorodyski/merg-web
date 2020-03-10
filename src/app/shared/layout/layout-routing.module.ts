@@ -16,22 +16,21 @@ const routes: Routes = [
             {
                 path: '',
                 pathMatch: 'full',
-                loadChildren: () =>
-                    import('@src/app/components/dashboard/dashboard.module').then(m => m.DashboardModule),
+                loadChildren: () => import('@src/app/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
             },
             {
                 path: 'explore',
                 pathMatch: 'full',
-                loadChildren: () => import('@src/app/components/explore/explore.module').then(m => m.ExploreModule),
+                loadChildren: () => import('@src/app/pages/explore/explore.module').then(m => m.ExploreModule),
             },
             {
                 path: 'settings',
                 pathMatch: 'full',
-                loadChildren: () => import('@src/app/components/settings/settings.module').then(m => m.SettingsModule),
+                loadChildren: () => import('@src/app/pages/settings/settings.module').then(m => m.SettingsModule),
             },
             {
                 path: 'u/:username',
-                loadChildren: () => import('@src/app/components/profile/profile.module').then(m => m.ProfileModule),
+                loadChildren: () => import('@src/app/pages/profile/profile.module').then(m => m.ProfileModule),
             },
         ],
     },
@@ -40,9 +39,25 @@ const routes: Routes = [
         component: MinimalLayoutComponent,
         children: [
             {
+                path: 'landing',
+                loadChildren: () => import('@src/app/pages/landing/landing.module').then(m => m.LandingModule),
+            },
+            {
+                path: 'login',
+                loadChildren: () => import('@src/app/pages/login/login.module').then(m => m.LoginModule),
+            },
+            {
+                path: 'register',
+                loadChildren: () => import('@src/app/pages/register/register.module').then(m => m.RegisterModule),
+            },
+            {
+                path: 'merging',
+                loadChildren: () => import('@src/app/pages/merging/merging.module').then(m => m.MergingModule),
+            },
+            {
                 path: '**',
                 loadChildren: () =>
-                    import('@src/app/components/pageNotFound/pageNotFound.module').then(m => m.PageNotFoundModule),
+                    import('@src/app/pages/pageNotFound/pageNotFound.module').then(m => m.PageNotFoundModule),
             },
         ],
     },
