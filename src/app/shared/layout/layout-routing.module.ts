@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from '@src/app/shared/layout/main-layout';
+import { MinimalLayoutComponent } from '@src/app/shared/layout/minimal-layout';
 
 const routes: Routes = [
     {
@@ -30,8 +31,18 @@ const routes: Routes = [
             },
             {
                 path: 'u/:username',
-                pathMatch: 'full',
                 loadChildren: () => import('@src/app/components/profile/profile.module').then(m => m.ProfileModule),
+            },
+        ],
+    },
+    {
+        path: '',
+        component: MinimalLayoutComponent,
+        children: [
+            {
+                path: '**',
+                loadChildren: () =>
+                    import('@src/app/components/pageNotFound/pageNotFound.module').then(m => m.PageNotFoundModule),
             },
         ],
     },
