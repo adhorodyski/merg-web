@@ -1,15 +1,17 @@
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { MemberGuard } from './member.guard';
 
 describe('MemberGuard', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [MemberGuard],
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [RouterTestingModule],
+            providers: [MemberGuard],
+        });
     });
-  });
 
-  it('should ...', inject([MemberGuard], (guard: MemberGuard) => {
-    expect(guard).toBeTruthy();
-  }));
+    it('should create an instance', inject([MemberGuard], (guard: MemberGuard) => {
+        expect(guard).toBeTruthy();
+    }));
 });

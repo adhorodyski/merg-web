@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreatorGuard, NoAuthGuard, MemberGuard } from '@src/app/core';
 import { MainLayoutComponent } from '@src/app/shared/layout/main-layout';
 import { MinimalLayoutComponent } from '@src/app/shared/layout/minimal-layout';
 
@@ -16,20 +17,24 @@ const routes: Routes = [
             {
                 path: '',
                 pathMatch: 'full',
+                canActivate: [MemberGuard],
                 loadChildren: () => import('@src/app/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
             },
             {
                 path: 'explore',
                 pathMatch: 'full',
+                canActivate: [MemberGuard],
                 loadChildren: () => import('@src/app/pages/explore/explore.module').then(m => m.ExploreModule),
             },
             {
                 path: 'settings',
                 pathMatch: 'full',
+                canActivate: [MemberGuard],
                 loadChildren: () => import('@src/app/pages/settings/settings.module').then(m => m.SettingsModule),
             },
             {
                 path: 'u/:username',
+                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/pages/profile/profile.module').then(m => m.ProfileModule),
             },
         ],
@@ -40,22 +45,27 @@ const routes: Routes = [
         children: [
             {
                 path: 'landing',
+                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/pages/landing/landing.module').then(m => m.LandingModule),
             },
             {
                 path: 'login',
+                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/pages/login/login.module').then(m => m.LoginModule),
             },
             {
                 path: 'register',
+                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/pages/register/register.module').then(m => m.RegisterModule),
             },
             {
                 path: 'merging',
+                canActivate: [MemberGuard, CreatorGuard],
                 loadChildren: () => import('@src/app/pages/merging/merging.module').then(m => m.MergingModule),
             },
             {
                 path: '**',
+                canActivate: [NoAuthGuard],
                 loadChildren: () =>
                     import('@src/app/pages/pageNotFound/pageNotFound.module').then(m => m.PageNotFoundModule),
             },
