@@ -1,23 +1,12 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { InputIconsEnum } from '@src/app/core/models/input-icons.enum';
+import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
     selector: 'app-input',
     templateUrl: './input.component.html',
     styleUrls: ['./input.component.scss'],
-    animations: [
-        trigger('inOutAnimation', [
-            transition(':enter', [
-                style({ opacity: 0, transform: 'translateY(-5px)' }),
-                animate('0.3s ease-in-out', style({ opacity: 1, transform: 'translateY(0)' })),
-            ]),
-            transition(':leave', [
-                style({ opacity: 1, transform: 'translateY(0)' }),
-                animate('0.3s ease-in-out', style({ opacity: 0, transform: 'translateY(-5px)' })),
-            ]),
-        ]),
-    ],
+    animations: [inOutAnimation],
 })
 export class InputComponent {
     icons = InputIconsEnum;

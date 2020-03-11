@@ -1,10 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { InputIconsEnum } from '@src/app/core/models/input-icons.enum';
+import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
     selector: 'app-password',
     templateUrl: './password.component.html',
     styleUrls: ['./password.component.scss'],
+    animations: [inOutAnimation],
 })
 export class PasswordComponent {
     icons = InputIconsEnum;

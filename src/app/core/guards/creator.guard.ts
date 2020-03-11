@@ -8,7 +8,7 @@ export class CreatorGuard implements CanActivate {
 
     canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
         if (!this.authService.isCreator()) {
-            this.router.navigate(['/']);
+            this.router.navigate(['landing']);
             return false;
         }
         return true;

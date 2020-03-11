@@ -10,7 +10,7 @@ export class MemberGuard implements CanActivate {
 
     canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
         if (!this.authService.isAuthenticated()) {
-            this.router.navigate(['/']);
+            this.router.navigate(['landing']);
             return false;
         }
         return true;
