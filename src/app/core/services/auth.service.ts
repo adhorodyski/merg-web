@@ -7,10 +7,10 @@ export class AuthService {
     constructor() {}
 
     public isAuthenticated(): boolean {
-        return false;
+        return true;
     }
 
     public isCreator(): boolean {
-        return true;
+        return false;
     }
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreatorGuard, NoAuthGuard, MemberGuard } from '@src/app/core';
+import { CreatorGuard, MemberGuard } from '@src/app/core';
 import { MainLayoutComponent } from '@src/app/shared/layout/main-layout';
 import { MinimalLayoutComponent } from '@src/app/shared/layout/minimal-layout';
 
@@ -34,7 +34,6 @@ const routes: Routes = [
             },
             {
                 path: 'u/:username',
-                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/pages/profile/profile.module').then(m => m.ProfileModule),
             },
         ],
@@ -45,17 +44,14 @@ const routes: Routes = [
         children: [
             {
                 path: 'landing',
-                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/pages/landing/landing.module').then(m => m.LandingModule),
             },
             {
                 path: 'login',
-                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/pages/login/login.module').then(m => m.LoginModule),
             },
             {
                 path: 'register',
-                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/pages/register/register.module').then(m => m.RegisterModule),
             },
             {
@@ -65,7 +61,6 @@ const routes: Routes = [
             },
             {
                 path: '**',
-                canActivate: [NoAuthGuard],
                 loadChildren: () =>
                     import('@src/app/pages/pageNotFound/pageNotFound.module').then(m => m.PageNotFoundModule),
             },

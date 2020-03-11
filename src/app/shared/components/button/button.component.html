@@ -1,4 +1,4 @@
-<button class="button {{ type }} {{ provider }}" (click)="sendClick()">
+<button class="button" [ngClass]="{ type: type, provider: provider, size: size }" (click)="sendClick()">
     <div class="icon"></div>
     {{ message }}
 </button>
