@@ -5,17 +5,18 @@ import { RouterModule } from '@angular/router';
 
 import { TokenInterceptor } from './interceptors';
 import { MemberGuard, CreatorGuard, NoAuthGuard } from './guards';
-import { ApiService, ThemeService } from './services';
+import { ApiService, AuthService, ThemeService } from './services';
 import { SafePipe } from './pipes';
 
 @NgModule({
     imports: [CommonModule, HttpClientModule, RouterModule],
     providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor },
         MemberGuard,
         CreatorGuard,
         NoAuthGuard,
         ApiService,
+        AuthService,
         ThemeService,
         SafePipe,
     ],
