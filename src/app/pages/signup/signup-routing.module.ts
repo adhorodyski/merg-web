@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from '@src/app/pages/login/login.component';
+import { SignUpComponent } from '@src/app/pages/signup/signup.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: LoginComponent,
+        component: SignUpComponent,
     },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
 })
-export class LoginRoutingModule {}
+export class SignUpRoutingModule {}

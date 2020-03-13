@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { LoginComponent } from './login.component';
+import { SignInComponent } from './signin.component';
 
-describe('LoginComponent', () => {
-    let component: LoginComponent;
-    let fixture: ComponentFixture<LoginComponent>;
+describe('SignInComponent', () => {
+    let component: SignInComponent;
+    let fixture: ComponentFixture<SignInComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [BrowserAnimationsModule],
-            declarations: [LoginComponent],
+            declarations: [SignInComponent],
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(LoginComponent);
+        fixture = TestBed.createComponent(SignInComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
