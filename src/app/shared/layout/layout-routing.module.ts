@@ -47,12 +47,12 @@ const routes: Routes = [
                 loadChildren: () => import('@src/app/pages/landing/landing.module').then(m => m.LandingModule),
             },
             {
-                path: 'login',
-                loadChildren: () => import('@src/app/pages/login/login.module').then(m => m.LoginModule),
+                path: 'signin',
+                loadChildren: () => import('@src/app/pages/signin/signin.module').then(m => m.SignInModule),
             },
             {
-                path: 'register',
-                loadChildren: () => import('@src/app/pages/register/register.module').then(m => m.RegisterModule),
+                path: 'signup',
+                loadChildren: () => import('@src/app/pages/signup/signup.module').then(m => m.SignUpModule),
             },
             {
                 path: 'merging',
