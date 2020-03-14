@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { ControlContainer, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ControlContainer, ReactiveFormsModule } from '@angular/forms';
 
 import { InputComponent } from './input.component';
 
@@ -18,7 +18,6 @@ describe('InputComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(InputComponent);
         component = fixture.componentInstance;
-        component.ngOnInit();
         fixture.detectChanges();
     });
 
