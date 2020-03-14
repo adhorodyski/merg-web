@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { ControlContainer, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { PasswordComponent } from './password.component';
 
@@ -9,14 +9,16 @@ describe('PasswordComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [FormsModule],
+            imports: [ReactiveFormsModule],
             declarations: [PasswordComponent],
+            providers: [ControlContainer],
         }).compileComponents();
     }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(PasswordComponent);
         component = fixture.componentInstance;
+        component.ngOnInit();
         fixture.detectChanges();
     });
 

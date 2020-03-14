@@ -16,6 +16,10 @@
         line-height: 18px;
         font-weight: 600;
 
+        &:disabled {
+            cursor: not-allowed;
+        }
+
         &.small {
             width: auto;
             height: 30px;

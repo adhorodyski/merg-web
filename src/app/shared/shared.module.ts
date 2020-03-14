@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SafePipe } from '@src/app/core';
 
 import {
@@ -13,6 +13,7 @@ import {
     PasswordComponent,
     PostComponent,
     SearchResultComponent,
+    SearchComponent,
     SocialResultComponent,
     StatusComponent,
     StoryComponent,
@@ -20,7 +21,7 @@ import {
 } from '@src/app/shared/components';
 
 @NgModule({
-    imports: [CommonModule, FormsModule],
+    imports: [CommonModule, FormsModule, ReactiveFormsModule],
     exports: [
         AvatarComponent,
         BadgeComponent,
@@ -31,6 +32,7 @@ import {
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
+        SearchComponent,
         SocialResultComponent,
         StatusComponent,
         StoryComponent,
@@ -46,6 +48,7 @@ import {
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
+        SearchComponent,
         SocialResultComponent,
         StatusComponent,
         StoryComponent,
@@ -61,6 +64,7 @@ import {
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
+        SearchComponent,
         SocialResultComponent,
         StatusComponent,
         StoryComponent,

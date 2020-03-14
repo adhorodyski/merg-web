@@ -9,7 +9,6 @@ import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum'
 export class HeaderComponent {
     company = 'merg';
 
-    searchType = 'search';
     searchValue: string;
     searchSize = ComponentsSizesEnum.SMALL;
 

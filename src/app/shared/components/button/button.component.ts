@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
 import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
 
 @Component({
@@ -7,9 +8,10 @@ import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum'
     styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-    @Input() type: string;
+    @Input() type: ButtonTypesEnum;
     @Input() message: string;
     @Input() provider?: string;
+    @Input() disabled?: boolean;
     @Input() size?: ComponentsSizesEnum;
     @Output() click: EventEmitter<any> = new EventEmitter();
 

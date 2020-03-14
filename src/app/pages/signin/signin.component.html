@@ -1,5 +1,21 @@
 <main class="main center">
     <div class="medium-column">
-        <p>Sign in medium column.</p>
+        <form [formGroup]="signInForm" (ngSubmit)="submit()">
+            <app-input [type]="emailControl"></app-input>
+            <app-password [type]="passwordControl" [value]="signInForm.value.password"></app-password>
+            <app-button message="sign in" [type]="signInButtonType" [disabled]="!signInForm.valid"></app-button>
+        </form>
+        <app-button
+            message="Continue with Facebook"
+            provider="facebook"
+            [type]="externalButtonType"
+            (click)="handleFacebookSignIn()"
+        ></app-button>
+        <app-button
+            message="Continue with Google"
+            provider="google"
+            [type]="externalButtonType"
+            (click)="handleGoogleSignIn()"
+        ></app-button>
     </div>
 </main>

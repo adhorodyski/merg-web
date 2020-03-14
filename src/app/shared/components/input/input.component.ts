@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { InputIconsEnum } from '@src/app/core/models/input-icons.enum';
+import { Component, Input, OnInit } from '@angular/core';
+import { ControlContainer, FormGroup } from '@angular/forms';
+import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
+import { FormIconsEnum } from '@src/app/core/models/form-icons.enum';
 import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
@@ -8,20 +10,16 @@ import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
     styleUrls: ['./input.component.scss'],
     animations: [inOutAnimation],
 })
-export class InputComponent {
-    icons = InputIconsEnum;
-    @Input() type: string;
+export class InputComponent implements OnInit {
+    @Input() type: FormControlsEnum;
     @Input() size?: string;
-    @Input() value: string;
-    @Output() valueEvent: EventEmitter<string> = new EventEmitter<string>();
 
-    constructor() {}
+    private icons = FormIconsEnum;
+    inputForm: FormGroup;
 
-    sendValue($event): void {
-        this.valueEvent.emit($event);
-    }
+    constructor(private controlContainer: ControlContainer) {}
 
-    clearInput(): void {
-        this.valueEvent.emit('');
+    ngOnInit(): void {
+        this.inputForm = <FormGroup>this.controlContainer.control;
     }
 }

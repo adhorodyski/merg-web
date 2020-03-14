@@ -8,12 +8,7 @@
         </div>
         <!--  SEARCH  -->
         <div class="nav-group">
-            <app-input
-                [size]="searchSize"
-                [type]="searchType"
-                [value]="searchValue"
-                (valueEvent)="handleSearchValue($event)"
-            ></app-input>
+            <app-search [size]="searchSize" [value]="searchValue" (valueEvent)="handleSearchValue($event)"></app-search>
         </div>
         <!--  NAVIGATION  -->
         <div class="nav-group">

@@ -32,8 +32,10 @@
 
             &.show {
                 left: auto;
-                right: 15px;
-                color: mat-color($primary, 400);
+                right: 6px;
+                color: mat-color($primary, 200);
+                padding: 9px;
+                top: 0;
                 cursor: pointer;
             }
         }
