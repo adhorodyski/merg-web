@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './header.component';
-import { InputComponent } from '@src/app/shared/components/input/input.component';
+import { SearchComponent } from '@src/app/shared/components/input/search/search.component';
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
 
 describe('HeaderComponent', () => {
@@ -14,7 +14,7 @@ describe('HeaderComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [BrowserAnimationsModule, FormsModule, RouterTestingModule],
-            declarations: [HeaderComponent, AvatarComponent, InputComponent],
+            declarations: [HeaderComponent, AvatarComponent, SearchComponent],
         }).compileComponents();
     }));
 

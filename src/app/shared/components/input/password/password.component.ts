@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { InputIconsEnum } from '@src/app/core/models/input-icons.enum';
+import { Component, Input, OnInit } from '@angular/core';
+import { ControlContainer, FormGroup } from '@angular/forms';
+import { FormIconsEnum } from '@src/app/core/models/form-icons.enum';
 import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
@@ -8,16 +9,17 @@ import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
     styleUrls: ['./password.component.scss'],
     animations: [inOutAnimation],
 })
-export class PasswordComponent {
-    icons = InputIconsEnum;
+export class PasswordComponent implements OnInit {
     @Input() type: string;
     @Input() value: string;
-    @Output() valueEvent: EventEmitter<string> = new EventEmitter<string>();
 
-    constructor() {}
+    private icons = FormIconsEnum;
+    inputForm: FormGroup;
 
-    sendValue(): void {
-        this.valueEvent.emit(this.value);
+    constructor(private controlContainer: ControlContainer) {}
+
+    ngOnInit(): void {
+        this.inputForm = <FormGroup>this.controlContainer.control;
     }
 
     viewPassword(): void {

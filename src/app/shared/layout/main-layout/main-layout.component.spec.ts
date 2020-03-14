@@ -6,7 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MainLayoutComponent } from './main-layout.component';
 import { HeaderComponent } from './header/header.component';
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
-import { InputComponent } from '@src/app/shared/components/input/input.component';
+import { SearchComponent } from '@src/app/shared/components/input/search/search.component';
 
 describe('MainLayoutComponent', () => {
     let component: MainLayoutComponent;
@@ -15,7 +15,7 @@ describe('MainLayoutComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [RouterTestingModule, BrowserAnimationsModule, FormsModule],
-            declarations: [MainLayoutComponent, HeaderComponent, AvatarComponent, InputComponent],
+            declarations: [MainLayoutComponent, HeaderComponent, AvatarComponent, SearchComponent],
         }).compileComponents();
     }));
 

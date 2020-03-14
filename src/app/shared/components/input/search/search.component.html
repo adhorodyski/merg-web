@@ -1,0 +1,7 @@
+<div class="input search {{ size }}">
+    <i class="material-icons">search</i>
+    <input [(ngModel)]="value" (ngModelChange)="sendValue($event)" />
+    <i *ngIf="value" class="material-icons clear" (click)="clearInput()" [@inOutAnimation]>
+        close
+    </i>
+</div>
