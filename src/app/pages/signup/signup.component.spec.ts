@@ -1,7 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SignUpComponent } from './signup.component';
+import { ButtonComponent } from '@src/app/shared/components/button/button.component';
+import { InputComponent } from '@src/app/shared/components/input/input.component';
+import { PasswordComponent } from '@src/app/shared/components/input/password/password.component';
 
 describe('SignUpComponent', () => {
     let component: SignUpComponent;
@@ -9,14 +13,20 @@ describe('SignUpComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [BrowserAnimationsModule],
-            declarations: [SignUpComponent],
+            imports: [BrowserAnimationsModule, ReactiveFormsModule],
+            declarations: [SignUpComponent, ButtonComponent, InputComponent, PasswordComponent],
         }).compileComponents();
     }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(SignUpComponent);
         component = fixture.componentInstance;
+        component.signUpForm = new FormGroup({
+            username: new FormControl('', [Validators.required]),
+            name: new FormControl('', [Validators.required]),
+            email: new FormControl('', [Validators.required, Validators.email]),
+            password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+        });
         fixture.detectChanges();
     });
 
