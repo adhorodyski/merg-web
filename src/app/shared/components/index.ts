@@ -11,3 +11,4 @@ export * from './avatar';
 export * from './search-result';
 export * from './social-result';
 export * from './post';
+export * from './footer';

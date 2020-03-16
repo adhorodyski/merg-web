@@ -20,8 +20,8 @@
 
         .material-icons {
             position: absolute;
-            font-size: 1.5rem;
-            top: calc(50% - 12px);
+            font-size: 1.25rem;
+            top: calc(50% - 10px);
             left: 15px;
             color: mat-color($primary, 200);
 
@@ -32,9 +32,9 @@
 
             &.show {
                 left: auto;
-                right: 6px;
+                right: 5px;
                 color: mat-color($primary, 200);
-                padding: 9px;
+                padding: 11px;
                 top: 0;
                 cursor: pointer;
             }
@@ -48,14 +48,14 @@
             font-size: 1rem;
             line-height: 1rem;
             font-weight: 600;
-            padding: 0 15px 0 54px;
+            padding: 0 15px 0 50px;
             background: transparent;
             appearance: none;
             color: mat-color($primary, 400);
         }
 
         &.password input {
-            padding: 0 54px;
+            padding: 0 50px;
         }
 
         &.tag {
@@ -106,7 +106,7 @@
                 height: 50px;
 
                 input {
-                    padding: 0 64px;
+                    padding: 0 60px;
                 }
 
                 .material-icons {

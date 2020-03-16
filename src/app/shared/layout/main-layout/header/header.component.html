@@ -11,7 +11,7 @@
             <app-search [size]="searchSize" [value]="searchValue" (valueEvent)="handleSearchValue($event)"></app-search>
         </div>
         <!--  NAVIGATION  -->
-        <div class="nav-group">
+        <nav class="nav-group">
             <a class="link" routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
                 <i class="material-icons">all_inclusive</i>
             </a>
@@ -29,6 +29,6 @@
             >
                 <app-avatar [size]="avatarSize" [username]="avatarUsername" [source]="avatarSource"></app-avatar>
             </a>
-        </div>
+        </nav>
     </div>
 </header>
