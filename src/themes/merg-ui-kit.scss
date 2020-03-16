@@ -10,6 +10,7 @@
 @import 'ui-kit/social-results';
 @import 'ui-kit/posts';
 @import 'ui-kit/headers';
+@import 'ui-kit/footers';
 
 @mixin merg-ui-kit($theme) {
     @include typography($theme);
@@ -24,4 +25,5 @@
     @include social-results($theme);
     @include posts($theme);
     @include headers($theme);
+    @include footers($theme);
 }

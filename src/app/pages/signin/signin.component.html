@@ -1,17 +1,28 @@
-<main class="main center">
+<main class="main center minimal">
     <div class="medium-column">
-        <form [formGroup]="signInForm" (ngSubmit)="submit()">
-            <app-input [type]="emailControl"></app-input>
-            <app-password [type]="passwordControl" [value]="signInForm.value.password"></app-password>
-            <app-button message="sign in" [type]="signInButtonType" [disabled]="!signInForm.valid"></app-button>
+        <form [formGroup]="signInForm" class="form" (ngSubmit)="submit()">
+            <app-input class="form-input" [type]="emailControl"></app-input>
+            <app-password
+                class="form-input"
+                [type]="passwordControl"
+                [value]="signInForm.value.password"
+            ></app-password>
+            <app-button
+                class="form-button"
+                message="sign in"
+                [type]="signInButtonType"
+                [disabled]="!signInForm.valid"
+            ></app-button>
         </form>
         <app-button
+            class="button-external"
             message="Continue with Facebook"
             provider="facebook"
             [type]="externalButtonType"
             (click)="handleFacebookSignIn()"
         ></app-button>
         <app-button
+            class="button-external"
             message="Continue with Google"
             provider="google"
             [type]="externalButtonType"

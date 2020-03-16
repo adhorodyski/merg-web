@@ -6,14 +6,6 @@
     width: 1040px;
     padding: 30px 0;
 
-    &.center {
-        justify-content: center;
-    }
-
-    &.minimal {
-        margin: 60px auto 0 auto;
-    }
-
     @media (max-width: 1100px) {
         flex-direction: column-reverse;
         max-width: 600px;
@@ -54,6 +46,22 @@
             @media (max-width: 1100px) {
                 position: static;
             }
+        }
+    }
+
+    &.center {
+        height: 100vh;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    &.minimal {
+        padding: 60px 0 100px 0;
+
+        @media (max-width: 640px) {
+            padding: 60px 0 30px 0;
         }
     }
 }

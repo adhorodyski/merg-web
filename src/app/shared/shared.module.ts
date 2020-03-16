@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { SafePipe } from '@src/app/core';
 
 import {
@@ -8,6 +9,7 @@ import {
     BadgeComponent,
     ButtonComponent,
     CountrySelectorComponent,
+    FooterComponent,
     InputComponent,
     ModeComponent,
     PasswordComponent,
@@ -21,12 +23,13 @@ import {
 } from '@src/app/shared/components';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, ReactiveFormsModule],
+    imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule.forChild([])],
     exports: [
         AvatarComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
+        FooterComponent,
         InputComponent,
         ModeComponent,
         PasswordComponent,
@@ -43,6 +46,7 @@ import {
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
+        FooterComponent,
         InputComponent,
         ModeComponent,
         PasswordComponent,
@@ -59,6 +63,7 @@ import {
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
+        FooterComponent,
         InputComponent,
         ModeComponent,
         PasswordComponent,

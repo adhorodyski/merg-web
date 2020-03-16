@@ -1,0 +1,55 @@
+@import '~@angular/material/theming';
+
+@mixin footers($theme) {
+    $primary: map-get($theme, primary);
+
+    .footer {
+        width: 100%;
+        display: flex;
+        background: mat-color($primary, 50);
+        justify-content: center;
+        align-items: center;
+
+        .nav-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .link {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                transition: opacity 0.2s;
+                margin-right: 20px;
+                padding: 5px 0;
+                cursor: pointer;
+                opacity: 0.8;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .copyright {
+                opacity: 0.6;
+            }
+        }
+
+        &.full {
+            margin-bottom: 30px;
+            padding: 0 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+
+            .nav-group {
+                justify-content: center;
+            }
+
+            @media (max-width: 640px) {
+                position: static;
+            }
+        }
+    }
+}

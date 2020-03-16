@@ -1,4 +1,4 @@
 <div class="input {{ type }} {{ size }}" *ngIf="inputForm" [formGroup]="inputForm">
     <i class="material-icons">{{ icons[type] }}</i>
-    <input type="text" [formControlName]="type" />
+    <input type="text" [formControlName]="type" [placeholder]="type | titlecase" />
 </div>

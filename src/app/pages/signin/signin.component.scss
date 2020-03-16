@@ -1,0 +1,30 @@
+.main {
+    .medium-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+
+            .form-input {
+                margin-bottom: 20px;
+
+                &:nth-child(2) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        .button-external {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
