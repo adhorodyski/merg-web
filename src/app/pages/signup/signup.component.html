@@ -1,5 +1,32 @@
-<main class="main center">
+<main class="main center minimal" [@inOutAnimation]>
     <div class="medium-column">
-        <p>Sign up medium column.</p>
+        <form [formGroup]="signUpForm" class="form" (ngSubmit)="submit()">
+            <app-input class="form-input" [type]="usernameControl"></app-input>
+            <app-input class="form-input" [type]="nameControl"></app-input>
+            <app-input class="form-input" [type]="emailControl"></app-input>
+            <div class="help">
+                <div class="help-requirement">
+                    <i class="material-icons" *ngIf="isPasswordLongEnough()" [@inOutAnimation]>done</i>
+                    <i class="material-icons" *ngIf="!isPasswordLongEnough()" [@inOutAnimation]>clear</i>
+                    <p class="primary-200 size-11 help-text">Use minimum 8 signs</p>
+                </div>
+                <div class="help-requirement">
+                    <i class="material-icons" *ngIf="isPasswordStrongEnough()" [@inOutAnimation]>done</i>
+                    <i class="material-icons" *ngIf="!isPasswordStrongEnough()" [@inOutAnimation]>clear</i>
+                    <p class="primary-200 size-11 help-text">Include letters, numbers and special characters</p>
+                </div>
+            </div>
+            <app-password
+                class="form-input"
+                [type]="passwordControl"
+                [value]="signUpForm.value.password"
+            ></app-password>
+            <app-button
+                class="form-button"
+                message="sign up and continue"
+                [type]="signUpButtonType"
+                [disabled]="!signUpForm.valid"
+            ></app-button>
+        </form>
     </div>
 </main>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { PatternValidatorDirective } from '@src/app/core/directives';
 
 import { TokenInterceptor } from './interceptors';
 import { MemberGuard, CreatorGuard } from './guards';
@@ -18,6 +19,7 @@ import { SafePipe } from './pipes';
         AuthService,
         ThemeService,
         SafePipe,
+        PatternValidatorDirective,
     ],
     declarations: [],
 })
