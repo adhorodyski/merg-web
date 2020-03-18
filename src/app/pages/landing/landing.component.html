@@ -1,5 +1,40 @@
-<main class="main center">
+<main class="main minimal center" [@inOutAnimation]>
     <div class="medium-column">
-        <p>Landing medium column.</p>
+        <div class="cards">
+            <div class="card" routerLink="/signup">
+                <span class="illustration member"></span>
+                <div class="description">
+                    <h4 class="title primary-400 bold size-18 center">Member</h4>
+                    <p class="subtitle primary-200 size-14 medium center">
+                        Stay updated about <br />
+                        creators’ activity.<br />
+                        No matter where.
+                    </p>
+                </div>
+            </div>
+            <div class="card" routerLink="/signup">
+                <span class="illustration creator"></span>
+                <div class="description">
+                    <h4 class="title primary-400 bold size-18 center">Creator</h4>
+                    <p class="subtitle primary-200 size-14 medium center">
+                        Brave ones<br />
+                        are the world changers. Merge your community <br />
+                        as never before.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <p class="description primary-200 size-11 medium center">Have an account?</p>
+            <app-button [type]="signInButtonType" message="sign in" routerLink="/signin"></app-button>
+        </div>
+        <div class="stores-badges">
+            <a [href]="appleStoreLink" class="link">
+                <img class="store-badge app-store" src="assets/stores/AppStore.svg" alt="Merg - App Store" />
+            </a>
+            <a [href]="googlePlayLink" class="link">
+                <img class="store-badge google-play" src="assets/stores/GooglePlay.svg" alt="Merg - Google Store" />
+            </a>
+        </div>
     </div>
 </main>

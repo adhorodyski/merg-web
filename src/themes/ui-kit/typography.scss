@@ -89,5 +89,13 @@ $decorations: underline;
     .material-icons {
         color: mat-color($primary, 400);
         user-select: none;
+
+        @each $color-name, $color-value in $colors {
+            @each $hue in $hues {
+                &.#{$color-name}-#{$hue} {
+                    color: mat-color($color-value, $hue);
+                }
+            }
+        }
     }
 }

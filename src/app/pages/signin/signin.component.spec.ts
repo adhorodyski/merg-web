@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { SignInComponent } from './signin.component';
 import { ButtonComponent } from '@src/app/shared/components/button/button.component';
@@ -13,7 +14,7 @@ describe('SignInComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [BrowserAnimationsModule, ReactiveFormsModule],
+            imports: [BrowserAnimationsModule, ReactiveFormsModule, RouterTestingModule],
             declarations: [SignInComponent, ButtonComponent, InputComponent, PasswordComponent],
         }).compileComponents();
     }));

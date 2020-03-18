@@ -1,0 +1,118 @@
+.main {
+    .medium-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 640px) {
+            justify-content: flex-start;
+        }
+
+        .cards {
+            order: 1;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+
+            @media (max-width: 640px) {
+                order: 3;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .card {
+                min-height: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                @media (max-width: 640px) {
+                    width: 95%;
+                    min-height: auto;
+                    margin-bottom: 30px;
+                    flex-direction: row;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .description {
+                    @media (max-width: 640px) {
+                        width: 50%;
+                    }
+
+                    .title {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .illustration {
+                    width: 140px;
+                    height: 140px;
+                    background: pink;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .actions {
+            order: 2;
+            margin-bottom: 50px;
+
+            @media (max-width: 640px) {
+                order: 1;
+                margin-bottom: 30px;
+            }
+
+            .description {
+                margin-bottom: 10px;
+            }
+        }
+
+        .stores-badges {
+            order: 3;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            @media (max-width: 640px) {
+                order: 2;
+            }
+
+            @media (max-width: 1100px) and (orientation: landscape) {
+                margin-bottom: 30px;
+            }
+
+            .link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 30px;
+                width: 140px;
+                height: 40px;
+
+                @media (max-width: 640px) {
+                    margin-right: 20px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .store-badge {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
