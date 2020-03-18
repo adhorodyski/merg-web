@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { PatternValidatorDirective } from '@src/app/core/directives/pattern-validator.directive';
 import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
 import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
@@ -19,7 +20,7 @@ export class SignUpComponent implements OnInit {
     signUpButtonType = ButtonTypesEnum.PRIMARY;
     signUpForm: FormGroup;
 
-    constructor() {}
+    constructor(private router: Router) {}
 
     ngOnInit(): void {
         this.signUpForm = new FormGroup({
@@ -55,5 +56,9 @@ export class SignUpComponent implements OnInit {
 
     isPasswordLongEnough(): boolean {
         return this.signUpForm.value.password.length >= 8;
+    }
+
+    goBack(): void {
+        this.router.navigate(['landing']);
     }
 }

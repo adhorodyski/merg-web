@@ -37,18 +37,10 @@
         }
 
         &.full {
-            margin-bottom: 30px;
-            padding: 0 20px;
-            position: fixed;
-            left: 0;
-            bottom: 0;
+            padding: 20px;
 
             .nav-group {
                 justify-content: center;
-            }
-
-            @media (max-width: 640px) {
-                position: static;
             }
         }
     }

@@ -1,5 +1,9 @@
 <main class="main center minimal" [@inOutAnimation]>
     <div class="medium-column">
+        <div class="button go-back" (click)="goBack()">
+            <i class="material-icons primary-200">arrow_back</i>
+            <span class="primary-200 medium size-14">Go back</span>
+        </div>
         <form [formGroup]="signUpForm" class="form" (ngSubmit)="submit()">
             <app-input class="form-input" [type]="usernameControl"></app-input>
             <app-input class="form-input" [type]="nameControl"></app-input>

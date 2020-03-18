@@ -11,6 +11,6 @@ export class AuthService {
     }
 
     public isCreator(): boolean {
-        return false;
+        return true;
     }
 }

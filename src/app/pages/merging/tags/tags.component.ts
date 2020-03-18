@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-merging-tags',
     templateUrl: './tags.component.html',
     styleUrls: ['./tags.component.scss'],
 })
-export class TagsComponent implements OnInit {
-    title = 'merg-app';
+export class TagsComponent {
+    constructor(private router: Router) {}
 
-    constructor() {}
-
-    ngOnInit() {}
+    goBack(): void {
+        this.router.navigate(['merging']);
+    }
 }

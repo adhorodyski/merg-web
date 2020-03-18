@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
 import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
+import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
     selector: 'app-signin',
     templateUrl: './signin.component.html',
     styleUrls: ['./signin.component.scss'],
+    animations: [inOutAnimation],
 })
 export class SignInComponent implements OnInit {
     emailControl = FormControlsEnum.EMAIL;
@@ -15,7 +18,7 @@ export class SignInComponent implements OnInit {
     externalButtonType = ButtonTypesEnum.EXTERNAL;
     signInForm: FormGroup;
 
-    constructor() {}
+    constructor(private router: Router) {}
 
     ngOnInit(): void {
         this.signInForm = new FormGroup({
@@ -34,5 +37,9 @@ export class SignInComponent implements OnInit {
 
     handleGoogleSignIn(): void {
         console.log('Continue with Google!');
+    }
+
+    goBack(): void {
+        this.router.navigate(['landing']);
     }
 }

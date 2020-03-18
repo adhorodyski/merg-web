@@ -5,13 +5,14 @@
 
     .header {
         width: 100%;
+        height: 42px;
         position: fixed;
         top: 0;
         left: 0;
         display: flex;
         justify-content: center;
-        z-index: 5;
         background: mat-color($primary, 50);
+        z-index: 5;
 
         .view-header {
             width: 1040px;
@@ -30,6 +31,7 @@
                     text-decoration: none;
                     transition: opacity 0.2s;
                     height: 100%;
+                    cursor: pointer;
 
                     &.logo {
                         img {
@@ -42,8 +44,6 @@
         }
 
         &.full {
-            height: 42px;
-
             .view-header {
                 .nav-group {
                     .link {
@@ -79,12 +79,12 @@
         }
 
         &.minimal {
-            height: 60px;
+            background: transparent;
 
             .view-header {
                 .nav-group {
                     .link {
-                        padding: 16px 30px;
+                        padding: 0 5px;
                     }
                 }
             }
