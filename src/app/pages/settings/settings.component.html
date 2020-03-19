@@ -1,8 +1,14 @@
-<main class="main">
+<main class="main" [@inOutAnimation]>
     <div class="wide-column">
-        <p>Settings wide column.</p>
+        <section class="section personal">
+            <h4 class="title primary-400 size-18 bold">Personal</h4>
+        </section>
+        <section class="section streams">
+            <h4 class="title primary-400 size-18 bold">Streams</h4>
+        </section>
     </div>
     <div class="thin-column">
-        <p>Settings thin column.</p>
+        <app-settings-general></app-settings-general>
+        <app-footer [isFull]="false"></app-footer>
     </div>
 </main>

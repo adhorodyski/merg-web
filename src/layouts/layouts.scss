@@ -68,4 +68,19 @@
             height: auto;
         }
     }
+
+    .section {
+        margin-bottom: 30px;
+
+        @media (max-width: 1100px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+    }
 }

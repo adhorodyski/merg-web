@@ -3,8 +3,13 @@ import { inject } from '@angular/core/testing';
 import { SafePipe } from './safe.pipe';
 
 describe('SafePipe', () => {
-    it('create an instance', inject([DomSanitizer], (sanitize: DomSanitizer) => {
-        const pipe = new SafePipe(sanitize);
-        expect(pipe).toBeTruthy();
+    let pipe: SafePipe;
+
+    beforeEach(inject([DomSanitizer], (sanitize: DomSanitizer) => {
+        pipe = new SafePipe(sanitize);
     }));
+
+    it('create an instance', () => {
+        expect(pipe).toBeTruthy();
+    });
 });

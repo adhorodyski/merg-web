@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { SafePipe } from '@src/app/core';
+import { SafePipe, CapitalizePipe } from '@src/app/core';
 
 import {
     AvatarComponent,
@@ -11,7 +11,7 @@ import {
     CountrySelectorComponent,
     FooterComponent,
     InputComponent,
-    ModeComponent,
+    ModeSelectorComponent,
     PasswordComponent,
     PostComponent,
     SearchResultComponent,
@@ -31,7 +31,7 @@ import {
         CountrySelectorComponent,
         FooterComponent,
         InputComponent,
-        ModeComponent,
+        ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
@@ -48,7 +48,7 @@ import {
         CountrySelectorComponent,
         FooterComponent,
         InputComponent,
-        ModeComponent,
+        ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
@@ -65,7 +65,7 @@ import {
         CountrySelectorComponent,
         FooterComponent,
         InputComponent,
-        ModeComponent,
+        ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
@@ -75,6 +75,7 @@ import {
         StoryComponent,
         TagComponent,
         SafePipe,
+        CapitalizePipe,
     ],
 })
 export class SharedModule {}

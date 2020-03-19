@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
     selector: 'app-settings',
     templateUrl: './settings.component.html',
     styleUrls: ['./settings.component.scss'],
+    animations: [inOutAnimation],
 })
-export class SettingsComponent implements OnInit {
-    title = 'merg-app';
-
+export class SettingsComponent {
     constructor() {}
-
-    ngOnInit() {}
 }

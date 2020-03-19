@@ -5,8 +5,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { TokenInterceptor } from './interceptors';
 import { MemberGuard, CreatorGuard } from './guards';
-import { ApiService, AuthService, ThemeService } from './services';
-import { SafePipe } from './pipes';
+import { ApiService, AuthService, LanguageService, ModeService } from './services';
+import { CapitalizePipe, SafePipe } from './pipes';
 import { PatternValidatorDirective } from './directives';
 
 @NgModule({
@@ -17,8 +17,10 @@ import { PatternValidatorDirective } from './directives';
         CreatorGuard,
         ApiService,
         AuthService,
-        ThemeService,
+        ModeService,
+        LanguageService,
         SafePipe,
+        CapitalizePipe,
         PatternValidatorDirective,
     ],
     declarations: [],
