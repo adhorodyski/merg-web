@@ -1,0 +1,16 @@
+<section class="section personal">
+    <h4 class="heading primary-400 size-18 bold">Personal</h4>
+    <app-avatar-selector [user]="user" [type]="avatarControl"></app-avatar-selector>
+    <form [formGroup]="loggedUserForm" class="form" (ngSubmit)="submit()">
+        <app-input class="form-input" [type]="usernameControl"></app-input>
+        <app-input class="form-input" [type]="nameControl"></app-input>
+        <app-input class="form-input" [type]="emailControl"></app-input>
+        <app-button
+            class="form-button"
+            message="update"
+            [type]="updateButtonType"
+            [disabled]="!loggedUserForm.valid"
+        ></app-button>
+        <p class="password-reset primary-200 size-11 regular">I want to reset my password</p>
+    </form>
+</section>

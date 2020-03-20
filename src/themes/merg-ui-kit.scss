@@ -11,6 +11,7 @@
 @import 'ui-kit/posts';
 @import 'ui-kit/headers';
 @import 'ui-kit/footers';
+@import 'ui-kit/backgrounds';
 
 @mixin merg-ui-kit($theme) {
     @include typography($theme);
@@ -26,4 +27,5 @@
     @include posts($theme);
     @include headers($theme);
     @include footers($theme);
+    @include backgrounds($theme);
 }

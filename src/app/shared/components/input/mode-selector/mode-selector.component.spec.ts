@@ -1,21 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
 
-import { ModeComponent } from './mode.component';
+import { ModeSelectorComponent } from './mode-selector.component';
 
-describe('ModeComponent', () => {
-    let component: ModeComponent;
-    let fixture: ComponentFixture<ModeComponent>;
+describe('ModeSelectorComponent', () => {
+    let component: ModeSelectorComponent;
+    let fixture: ComponentFixture<ModeSelectorComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [FormsModule],
-            declarations: [ModeComponent],
+            imports: [],
+            declarations: [ModeSelectorComponent],
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(ModeComponent);
+        fixture = TestBed.createComponent(ModeSelectorComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

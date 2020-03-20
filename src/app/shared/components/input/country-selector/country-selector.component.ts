@@ -13,7 +13,7 @@ export class CountrySelectorComponent {
 
     constructor() {}
 
-    sendValue(): void {
-        this.changeEvent.emit(this.selectedLanguage);
+    sendValue($event): void {
+        this.changeEvent.emit($event);
     }
 }

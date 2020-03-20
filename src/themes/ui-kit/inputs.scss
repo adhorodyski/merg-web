@@ -14,6 +14,7 @@
         position: relative;
         width: 300px;
         height: 42px;
+        user-select: none;
         border-radius: 10px;
         background: mat-color($primary, 100);
         box-shadow: 0 10px 25px rgba(mat-color($primary, 400), 0.03);
@@ -146,7 +147,7 @@
 
         &.mode {
             width: max-content;
-            padding: 15px;
+            padding: 15px 0;
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -171,6 +172,28 @@
                 .material-icons {
                     color: mat-color($warn, 50);
                 }
+            }
+        }
+    }
+
+    .avatar-selector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            display: none;
+        }
+
+        .description {
+            margin-top: 10px;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .description {
+                text-decoration: underline;
             }
         }
     }

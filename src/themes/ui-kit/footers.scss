@@ -43,5 +43,11 @@
                 justify-content: center;
             }
         }
+
+        &.minimal {
+            @media (max-width: 1100px) {
+                display: none;
+            }
+        }
     }
 }

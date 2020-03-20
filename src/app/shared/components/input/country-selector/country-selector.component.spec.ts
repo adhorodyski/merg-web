@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
+import { CapitalizePipe } from '@src/app/core/pipes/capitalize.pipe';
 import { CountrySelectorComponent } from './country-selector.component';
 
 describe('CountrySelectorComponent', () => {
@@ -10,7 +11,7 @@ describe('CountrySelectorComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [FormsModule],
-            declarations: [CountrySelectorComponent],
+            declarations: [CountrySelectorComponent, CapitalizePipe],
         }).compileComponents();
     }));
 

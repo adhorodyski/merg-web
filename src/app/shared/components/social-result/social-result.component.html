@@ -16,7 +16,7 @@
                         [ngClass]="provider"
                     />
                 </div>
-                <p class="semi-bold size-14 primary-400">{{ addStreamsTitle }}</p>
+                <p class="semi-bold size-14 primary-400">Add streams</p>
             </div>
             <div class="actions">
                 <i class="material-icons add">add</i>
@@ -52,7 +52,7 @@
                 <div class="images" *ngIf="state === filled" [ngClass]="provider">
                     <app-avatar [username]="stream.username" [size]="avatarSize" [source]="stream.avatar"></app-avatar>
                 </div>
-                <p class="semi-bold size-14 primary-400" *ngIf="state === empty">{{ addStreamsTitle }}</p>
+                <p class="semi-bold size-14 primary-400" *ngIf="state === empty">Add streams</p>
                 <p class="semi-bold size-14 primary-400" *ngIf="state === condensed">
                     {{ streams[0].username }} <span class="hint"></span>
                 </p>
@@ -70,7 +70,7 @@
                 >
                     add
                 </i>
-                <i class="material-icons remove" *ngIf="state === filled" (click)="removeStream(provider, streamIDX)">
+                <i class="material-icons remove" *ngIf="state === filled" (click)="removeStream(streamIDX)">
                     close
                 </i>
                 <i class="material-icons dropdown" *ngIf="state === condensed">keyboard_arrow_down</i>

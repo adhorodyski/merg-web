@@ -250,7 +250,7 @@ module.exports = env => {
                             loader: 'nativescript-dev-webpack/bundle-config-loader',
                             options: {
                                 angular: true,
-                                loadCss: !snapshot, // load the application css if in debug mode
+                                loadCss: !snapshot, // load the application css if in debug mode-selector
                                 unitTesting,
                                 appFullPath,
                                 projectRoot,
@@ -327,7 +327,7 @@ module.exports = env => {
             // check out https://github.com/nativescript/worker-loader
             new NativeScriptWorkerPlugin(),
             ngCompilerPlugin,
-            // Does IPC communication with the {N} CLI to notify events when running in watch mode.
+            // Does IPC communication with the {N} CLI to notify events when running in watch mode-selector.
             new nsWebpack.WatchStateLoggerPlugin(),
         ],
     };

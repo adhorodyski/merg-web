@@ -1,4 +1,4 @@
 export enum ModesEnum {
-    LIGHT,
-    DARK,
+    LIGHT = 'LIGHT',
+    DARK = 'DARK',
 }

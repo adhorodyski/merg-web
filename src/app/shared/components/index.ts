@@ -3,7 +3,7 @@ export * from './input';
 export * from './input/country-selector';
 export * from './input/password';
 export * from './input/search';
-export * from './input/mode';
+export * from './input/mode-selector';
 export * from './badge';
 export * from './status';
 export * from './story';

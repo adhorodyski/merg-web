@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SocialResultStatesEnum } from '@src/app/core/models/social-result-states.enum';
 import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
-import { IUser } from '@src/app/core/models/user.model';
+import { IStream } from '@src/app/core/models/stream.model';
 import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
@@ -14,13 +14,12 @@ import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 export class SocialResultComponent {
     @Input() state: SocialResultStatesEnum;
     @Input() provider: ProvidersEnum;
-    @Input() streams: IUser[];
+    @Input() streams: IStream[];
     @Input() isHidden: boolean;
     @Input() isDone: boolean;
-    @Input() addStreamsTitle: string;
-    @Output() expand = new EventEmitter<boolean>();
+    @Output() expand = new EventEmitter<null>();
+    @Output() remove = new EventEmitter<number>();
     @Output() add = new EventEmitter<ProvidersEnum>();
-    @Output() remove = new EventEmitter<object>();
 
     empty = SocialResultStatesEnum.EMPTY;
     filled = SocialResultStatesEnum.FILLED;
@@ -35,15 +34,15 @@ export class SocialResultComponent {
     }
 
     expandStreams(): void {
-        this.expand.emit(true);
+        this.expand.emit();
     }
 
-    addStream(provider): void {
-        this.add.emit(provider);
+    addStream($event): void {
+        this.add.emit($event);
     }
 
-    removeStream(provider, streamIDX): void {
-        this.remove.emit({ provider, streamIDX });
+    removeStream(streamIDX): void {
+        this.remove.emit(streamIDX);
     }
 
     clickResult(newState: SocialResultStatesEnum): void {

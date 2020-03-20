@@ -3,4 +3,5 @@ export enum FormControlsEnum {
     NAME = 'name',
     EMAIL = 'email',
     PASSWORD = 'password',
+    AVATAR = 'file',
 }

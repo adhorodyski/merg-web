@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { SafePipe } from '@src/app/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SafePipe, CapitalizePipe } from '@src/app/core';
 
 import {
     AvatarComponent,
+    AvatarSelectorComponent,
     BadgeComponent,
     ButtonComponent,
     CountrySelectorComponent,
     FooterComponent,
     InputComponent,
-    ModeComponent,
+    ModeSelectorComponent,
     PasswordComponent,
     PostComponent,
     SearchResultComponent,
@@ -26,12 +27,13 @@ import {
     imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule.forChild([])],
     exports: [
         AvatarComponent,
+        AvatarSelectorComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
         FooterComponent,
         InputComponent,
-        ModeComponent,
+        ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
@@ -43,12 +45,13 @@ import {
     ],
     providers: [
         AvatarComponent,
+        AvatarSelectorComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
         FooterComponent,
         InputComponent,
-        ModeComponent,
+        ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
@@ -60,12 +63,13 @@ import {
     ],
     declarations: [
         AvatarComponent,
+        AvatarSelectorComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
         FooterComponent,
         InputComponent,
-        ModeComponent,
+        ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
         SearchResultComponent,
@@ -75,6 +79,7 @@ import {
         StoryComponent,
         TagComponent,
         SafePipe,
+        CapitalizePipe,
     ],
 })
 export class SharedModule {}

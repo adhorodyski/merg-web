@@ -1,8 +1,10 @@
-<main class="main">
+<main class="main" [@inOutAnimation]>
     <div class="wide-column">
-        <p>Settings wide column.</p>
+        <app-settings-personal [user]="user"></app-settings-personal>
+        <app-settings-streams [user]="user" *ngIf="isCreator()"></app-settings-streams>
     </div>
     <div class="thin-column">
-        <p>Settings thin column.</p>
+        <app-settings-general></app-settings-general>
+        <app-footer [isFull]="false"></app-footer>
     </div>
 </main>

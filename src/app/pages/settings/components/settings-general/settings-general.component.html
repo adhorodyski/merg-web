@@ -1,0 +1,18 @@
+<section class="section general">
+    <h4 class="heading primary-400 size-18 bold">General</h4>
+    <div class="modes">
+        <app-mode-selector
+            [mode]="modes.LIGHT"
+            [isActive]="modes.LIGHT === mode"
+            title="Light Mode"
+            (clickMode)="setMode($event)"
+        ></app-mode-selector>
+        <app-mode-selector
+            [mode]="modes.DARK"
+            [isActive]="modes.DARK === mode"
+            title="Dark Mode"
+            (clickMode)="setMode($event)"
+        ></app-mode-selector>
+    </div>
+    <app-country-selector [selectedLanguage]="language" (changeEvent)="setLanguage($event)"></app-country-selector>
+</section>

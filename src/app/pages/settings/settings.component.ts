@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { mockedUser } from '@src/app/core/mocks/user.mockup';
+import { IUser } from '@src/app/core/models/user.model';
+import { AuthService } from '@src/app/core/services/auth.service';
+import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
     selector: 'app-settings',
     templateUrl: './settings.component.html',
     styleUrls: ['./settings.component.scss'],
+    animations: [inOutAnimation],
 })
-export class SettingsComponent implements OnInit {
-    title = 'merg-app';
+export class SettingsComponent {
+    user: IUser = mockedUser;
 
-    constructor() {}
+    constructor(private authService: AuthService) {}
 
-    ngOnInit() {}
+    isCreator() {
+        return this.authService.isCreator();
+    }
 }
