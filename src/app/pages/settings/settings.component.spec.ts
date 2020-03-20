@@ -1,17 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CapitalizePipe } from '@src/app/core/pipes/capitalize.pipe';
-import { SettingsPersonalComponent } from '@src/app/pages/settings/components/settings-personal/settings-personal.component';
-import { SettingsStreamsComponent } from '@src/app/pages/settings/components/settings-streams/settings-streams.component';
-import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
-import { CountrySelectorComponent } from '@src/app/shared/components/input/country-selector/country-selector.component';
-import { ModeSelectorComponent } from '@src/app/shared/components/input/mode-selector/mode-selector.component';
-import { SocialResultComponent } from '@src/app/shared/components/social-result/social-result.component';
 
 import { SettingsComponent } from './settings.component';
 import { SettingsGeneralComponent } from './components/settings-general/settings-general.component';
+import { SettingsPersonalComponent } from '@src/app/pages/settings/components/settings-personal/settings-personal.component';
+import { SettingsStreamsComponent } from '@src/app/pages/settings/components/settings-streams/settings-streams.component';
 import { FooterComponent } from '@src/app/shared/components/footer/footer.component';
+import { CapitalizePipe } from '@src/app/core/pipes/capitalize.pipe';
+import { AuthService } from '@src/app/core/services/auth.service';
+import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
+import { ButtonComponent } from '@src/app/shared/components/button/button.component';
+import { AvatarSelectorComponent } from '@src/app/shared/components/input/avatar-selector/avatar-selector.component';
+import { CountrySelectorComponent } from '@src/app/shared/components/input/country-selector/country-selector.component';
+import { InputComponent } from '@src/app/shared/components/input/input.component';
+import { ModeSelectorComponent } from '@src/app/shared/components/input/mode-selector/mode-selector.component';
+import { SocialResultComponent } from '@src/app/shared/components/social-result/social-result.component';
 
 describe('SettingsComponent', () => {
     let component: SettingsComponent;
@@ -19,7 +23,8 @@ describe('SettingsComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [FormsModule, BrowserAnimationsModule],
+            imports: [ReactiveFormsModule, FormsModule, BrowserAnimationsModule],
+            providers: [AuthService],
             declarations: [
                 SettingsComponent,
                 SettingsGeneralComponent,
@@ -27,6 +32,9 @@ describe('SettingsComponent', () => {
                 SettingsStreamsComponent,
                 ModeSelectorComponent,
                 CountrySelectorComponent,
+                AvatarSelectorComponent,
+                InputComponent,
+                ButtonComponent,
                 SocialResultComponent,
                 AvatarComponent,
                 FooterComponent,

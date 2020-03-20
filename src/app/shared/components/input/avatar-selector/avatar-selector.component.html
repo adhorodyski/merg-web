@@ -1,0 +1,5 @@
+<div class="avatar-selector" (click)="openFileBrowser()">
+    <input type="file" (change)="uploadAvatar($event)" #avatarInput />
+    <app-avatar [size]="sizes.BIG" [source]="user.avatar" [username]="user.username"></app-avatar>
+    <p class="description primary-200 size-11 regular">Search and update profile picture</p>
+</div>

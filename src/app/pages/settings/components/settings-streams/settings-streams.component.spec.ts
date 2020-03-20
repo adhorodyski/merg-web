@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SettingsStreamsComponent } from './settings-streams.component';
 import { SocialResultComponent } from '@src/app/shared/components/social-result/social-result.component';
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
+import { mockedUser } from '@src/app/core/mocks/user.mockup';
 
 describe('SettingsStreamsComponent', () => {
     let component: SettingsStreamsComponent;
@@ -19,6 +20,7 @@ describe('SettingsStreamsComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(SettingsStreamsComponent);
         component = fixture.componentInstance;
+        component.user = mockedUser;
         fixture.detectChanges();
     });
 

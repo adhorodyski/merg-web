@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
+import { Component, Input, OnInit } from '@angular/core';
 import { SocialResultStatesEnum } from '@src/app/core/models/social-result-states.enum';
 import { IUser } from '@src/app/core/models/user.model';
 
@@ -9,7 +8,7 @@ import { IUser } from '@src/app/core/models/user.model';
     styleUrls: ['./settings-streams.component.scss'],
 })
 export class SettingsStreamsComponent implements OnInit {
-    user: IUser = mockedUser;
+    @Input() user: IUser;
 
     // TODO create an interface for socialResult behaviours & create instances dynamically
     socialResults = [

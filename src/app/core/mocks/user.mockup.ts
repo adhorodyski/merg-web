@@ -2,7 +2,9 @@ import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 import { IUser } from '@src/app/core/models/user.model';
 
 export const mockedUser: IUser = {
-    username: 'MKBHD',
+    username: 'm_brownlee',
+    name: 'MKBHD',
+    email: 'mbrown@mail.com',
     avatar: 'https://pbs.twimg.com/profile_images/1212149592403382281/cI0-xyss_400x400.jpg',
     providers: [
         {

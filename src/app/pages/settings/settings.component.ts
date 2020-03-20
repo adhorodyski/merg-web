@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { mockedUser } from '@src/app/core/mocks/user.mockup';
+import { IUser } from '@src/app/core/models/user.model';
 import { AuthService } from '@src/app/core/services/auth.service';
 import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
@@ -9,6 +11,8 @@ import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
     animations: [inOutAnimation],
 })
 export class SettingsComponent {
+    user: IUser = mockedUser;
+
     constructor(private authService: AuthService) {}
 
     isCreator() {

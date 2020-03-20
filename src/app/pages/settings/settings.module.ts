@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from '@src/app/shared/shared.module';
 import { SettingsRoutingModule } from '@src/app/pages/settings/settings-routing.module';
@@ -10,6 +11,6 @@ import { SettingsGeneralComponent } from '@src/app/pages/settings/components/set
 
 @NgModule({
     declarations: [SettingsComponent, SettingsPersonalComponent, SettingsStreamsComponent, SettingsGeneralComponent],
-    imports: [CommonModule, SharedModule, SettingsRoutingModule],
+    imports: [CommonModule, SharedModule, SettingsRoutingModule, ReactiveFormsModule],
 })
 export class SettingsModule {}

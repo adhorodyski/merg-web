@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SafePipe, CapitalizePipe } from '@src/app/core';
 
 import {
     AvatarComponent,
+    AvatarSelectorComponent,
     BadgeComponent,
     ButtonComponent,
     CountrySelectorComponent,
@@ -26,6 +27,7 @@ import {
     imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule.forChild([])],
     exports: [
         AvatarComponent,
+        AvatarSelectorComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
@@ -43,6 +45,7 @@ import {
     ],
     providers: [
         AvatarComponent,
+        AvatarSelectorComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,
@@ -60,6 +63,7 @@ import {
     ],
     declarations: [
         AvatarComponent,
+        AvatarSelectorComponent,
         BadgeComponent,
         ButtonComponent,
         CountrySelectorComponent,

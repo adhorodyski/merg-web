@@ -1,7 +1,7 @@
 <main class="main" [@inOutAnimation]>
     <div class="wide-column">
-        <app-settings-personal></app-settings-personal>
-        <app-settings-streams *ngIf="isCreator()"></app-settings-streams>
+        <app-settings-personal [user]="user"></app-settings-personal>
+        <app-settings-streams [user]="user" *ngIf="isCreator()"></app-settings-streams>
     </div>
     <div class="thin-column">
         <app-settings-general></app-settings-general>

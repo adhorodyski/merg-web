@@ -175,4 +175,26 @@
             }
         }
     }
+
+    .avatar-selector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            display: none;
+        }
+
+        .description {
+            margin-top: 10px;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .description {
+                text-decoration: underline;
+            }
+        }
+    }
 }
