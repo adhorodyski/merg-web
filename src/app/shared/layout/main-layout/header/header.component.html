@@ -8,7 +8,11 @@
         </div>
         <!--  SEARCH  -->
         <div class="nav-group">
-            <app-search [size]="searchSize" [value]="searchValue" (valueEvent)="handleSearchValue($event)"></app-search>
+            <app-search
+                [size]="sizes.SMALL"
+                [value]="searchValue"
+                (valueEvent)="handleSearchValue($event)"
+            ></app-search>
         </div>
         <!--  NAVIGATION  -->
         <nav class="nav-group">
@@ -23,11 +27,11 @@
             </a>
             <a
                 class="link"
-                [routerLink]="['/u', avatarUsername]"
+                [routerLink]="['/u', user.username]"
                 [routerLinkActiveOptions]="{ exact: true }"
                 routerLinkActive="active"
             >
-                <app-avatar [size]="avatarSize" [username]="avatarUsername" [source]="avatarSource"></app-avatar>
+                <app-avatar [size]="sizes.SMALL" [username]="user.username" [source]="user.avatar"></app-avatar>
             </a>
         </nav>
     </div>

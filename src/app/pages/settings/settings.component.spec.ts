@@ -2,8 +2,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CapitalizePipe } from '@src/app/core/pipes/capitalize.pipe';
+import { SettingsPersonalComponent } from '@src/app/pages/settings/components/settings-personal/settings-personal.component';
+import { SettingsStreamsComponent } from '@src/app/pages/settings/components/settings-streams/settings-streams.component';
+import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
 import { CountrySelectorComponent } from '@src/app/shared/components/input/country-selector/country-selector.component';
 import { ModeSelectorComponent } from '@src/app/shared/components/input/mode-selector/mode-selector.component';
+import { SocialResultComponent } from '@src/app/shared/components/social-result/social-result.component';
 
 import { SettingsComponent } from './settings.component';
 import { SettingsGeneralComponent } from './components/settings-general/settings-general.component';
@@ -19,8 +23,12 @@ describe('SettingsComponent', () => {
             declarations: [
                 SettingsComponent,
                 SettingsGeneralComponent,
+                SettingsPersonalComponent,
+                SettingsStreamsComponent,
                 ModeSelectorComponent,
                 CountrySelectorComponent,
+                SocialResultComponent,
+                AvatarComponent,
                 FooterComponent,
                 CapitalizePipe,
             ],
