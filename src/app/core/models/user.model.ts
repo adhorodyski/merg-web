@@ -5,5 +5,8 @@ export interface IUser {
     name: string;
     email: string;
     avatar: string;
+    about: string;
     providers: IProvider[];
+    followers: number[];
+    follows: number[];
 }
