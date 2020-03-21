@@ -6,6 +6,7 @@ export const mockedUser: IUser = {
     name: 'MKBHD',
     email: 'mbrown@mail.com',
     avatar: 'https://pbs.twimg.com/profile_images/1212149592403382281/cI0-xyss_400x400.jpg',
+    about: 'I promise I wont overdo the filters.',
     providers: [
         {
             provider: ProvidersEnum.YOUTUBE,
@@ -30,4 +31,6 @@ export const mockedUser: IUser = {
             ],
         },
     ],
+    followers: [1, 2, 3, 4],
+    follows: [1, 2, 3],
 };

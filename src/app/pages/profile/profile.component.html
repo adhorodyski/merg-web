@@ -1,8 +1,9 @@
-<main class="main">
+<main class="main" [@inOutAnimation]>
     <div class="wide-column">
         <p>Profile wide column.</p>
     </div>
     <div class="thin-column">
-        <p>Profile thin column.</p>
+        <app-profile-overview [user]="user"></app-profile-overview>
+        <app-footer [isFull]="false"></app-footer>
     </div>
 </main>

@@ -1,0 +1,19 @@
+<section class="section overview">
+    <div class="basics">
+        <app-avatar [username]="user.username" [source]="user.avatar" [size]="sizes.BIG"></app-avatar>
+        <div class="paragraphs-wrapper">
+            <p class="username primary-400 size-14 semi-bold">{{ user.username }}</p>
+            <p class="primary-200 regular size-14">
+                <span class="accent-100 semi-bold">{{ user.followers.length }}</span>
+                people
+            </p>
+        </div>
+    </div>
+    <div class="actions">
+        <app-button [size]="sizes.SMALL" [type]="mergeButtonType" message="merge"></app-button>
+    </div>
+    <div class="about">
+        <h6 class="name primary-400 size-14 semi-bold">{{ user.name }}</h6>
+        <p class="primary-200 size-14 medium">{{ user.about }}</p>
+    </div>
+</section>

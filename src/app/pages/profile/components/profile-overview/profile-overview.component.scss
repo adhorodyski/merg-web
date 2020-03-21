@@ -1,0 +1,27 @@
+.section {
+    .basics {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .paragraphs-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+
+            .username {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .actions {
+        margin-bottom: 30px;
+    }
+
+    .about {
+        .name {
+            margin-bottom: 5px;
+        }
+    }
+}
