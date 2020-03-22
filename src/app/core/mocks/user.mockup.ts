@@ -2,6 +2,7 @@ import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 import { IUser } from '@src/app/core/models/user.model';
 
 export const mockedUser: IUser = {
+    creator: true,
     username: 'm_brownlee',
     name: 'MKBHD',
     email: 'mbrown@mail.com',
@@ -31,6 +32,6 @@ export const mockedUser: IUser = {
             ],
         },
     ],
-    followers: [1, 2, 3, 4],
-    follows: [1, 2, 3],
+    followers: [],
+    follows: [],
 };

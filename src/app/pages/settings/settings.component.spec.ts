@@ -3,9 +3,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SettingsComponent } from './settings.component';
-import { SettingsGeneralComponent } from './components/settings-general/settings-general.component';
-import { SettingsPersonalComponent } from '@src/app/pages/settings/components/settings-personal/settings-personal.component';
-import { SettingsStreamsComponent } from '@src/app/pages/settings/components/settings-streams/settings-streams.component';
+import { SettingsGeneralComponent } from './sections/settings-general/settings-general.component';
+import { SettingsPersonalComponent } from '@src/app/pages/settings/sections/settings-personal/settings-personal.component';
+import { SettingsStreamsComponent } from '@src/app/pages/settings/sections/settings-streams/settings-streams.component';
 import { FooterComponent } from '@src/app/shared/components/footer/footer.component';
 import { CapitalizePipe } from '@src/app/core/pipes/capitalize.pipe';
 import { AuthService } from '@src/app/core/services/auth.service';

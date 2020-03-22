@@ -13,14 +13,9 @@ $providers: (
 @mixin stories($theme) {
     .story {
         width: 70px;
-
-        &.big:not(:last-child) {
-            margin: 0 15px 15px 0;
-        }
+        cursor: pointer;
 
         &.small {
-            margin-right: 10px;
-
             .elipse {
                 width: 54px;
                 height: 54px;

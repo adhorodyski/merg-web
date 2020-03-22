@@ -5,7 +5,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { TokenInterceptor } from './interceptors';
 import { MemberGuard, CreatorGuard } from './guards';
-import { ApiService, AuthService, LanguageService, ModeService } from './services';
+import { ApiService, AuthService, LanguageService, ModeService, PostService } from './services';
 import { CapitalizePipe, SafePipe } from './pipes';
 import { PatternValidatorDirective } from './directives';
 
@@ -19,6 +19,7 @@ import { PatternValidatorDirective } from './directives';
         AuthService,
         ModeService,
         LanguageService,
+        PostService,
         SafePipe,
         CapitalizePipe,
         PatternValidatorDirective,

@@ -5,7 +5,7 @@ import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.compon
 import { ButtonComponent } from '@src/app/shared/components/button/button.component';
 import { mockedUser } from '@src/app/core/mocks/user.mockup';
 
-describe('SettingsGeneralComponent', () => {
+describe('ProfileOverviewComponent', () => {
     let component: ProfileOverviewComponent;
     let fixture: ComponentFixture<ProfileOverviewComponent>;
 
