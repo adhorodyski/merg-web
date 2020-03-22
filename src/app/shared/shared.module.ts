@@ -23,6 +23,8 @@ import {
     TagComponent,
 } from '@src/app/shared/components';
 
+import { StoriesComponent } from '@src/app/shared/sections';
+
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule.forChild([])],
     exports: [
@@ -41,6 +43,7 @@ import {
         SocialResultComponent,
         StatusComponent,
         StoryComponent,
+        StoriesComponent,
         TagComponent,
     ],
     providers: [
@@ -59,6 +62,7 @@ import {
         SocialResultComponent,
         StatusComponent,
         StoryComponent,
+        StoriesComponent,
         TagComponent,
     ],
     declarations: [
@@ -77,6 +81,7 @@ import {
         SocialResultComponent,
         StatusComponent,
         StoryComponent,
+        StoriesComponent,
         TagComponent,
         SafePipe,
         CapitalizePipe,
