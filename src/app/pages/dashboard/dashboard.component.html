@@ -1,9 +1,11 @@
 <main class="main" [@inOutAnimation]>
     <div class="wide-column">
-        <p>Dashboard wide column.</p>
+        <app-posts [posts]="ocean"></app-posts>
     </div>
     <div class="thin-column">
-        <app-stories></app-stories>
-        <app-footer [isFull]="false"></app-footer>
+        <div class="sticky-wrapper">
+            <app-stories></app-stories>
+            <app-footer [isFull]="false"></app-footer>
+        </div>
     </div>
 </main>

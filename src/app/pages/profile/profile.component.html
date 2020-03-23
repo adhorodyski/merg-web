@@ -1,9 +1,11 @@
 <main class="main" [@inOutAnimation]>
     <div class="wide-column">
-        <p>Profile wide column.</p>
+        <app-posts [posts]="river"></app-posts>
     </div>
     <div class="thin-column">
-        <app-profile-overview [user]="user"></app-profile-overview>
-        <app-footer [isFull]="false"></app-footer>
+        <div class="sticky-wrapper">
+            <app-profile-overview [user]="user"></app-profile-overview>
+            <app-footer [isFull]="false"></app-footer>
+        </div>
     </div>
 </main>

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ProvidersEnum } from '@src/app/core/models/providers.enum';
+import { IPost } from '@src/app/core/models/post.model';
 import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
 
 @Component({
@@ -8,13 +8,8 @@ import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum'
     styleUrls: ['./post.component.scss'],
 })
 export class PostComponent {
-    @Input() username: string;
-    @Input() avatar: string;
-    @Input() provider: ProvidersEnum;
+    @Input() post: IPost;
     @Input() size: ComponentsSizesEnum;
-    @Input() timestamp: string;
-    @Input() source: string;
-    @Input() embed: string;
 
     constructor() {}
 }

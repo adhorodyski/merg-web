@@ -4,7 +4,9 @@
         <app-settings-streams [user]="user" *ngIf="isCreator()"></app-settings-streams>
     </div>
     <div class="thin-column">
-        <app-settings-general></app-settings-general>
-        <app-footer [isFull]="false"></app-footer>
+        <div class="sticky-wrapper">
+            <app-settings-general></app-settings-general>
+            <app-footer [isFull]="false"></app-footer>
+        </div>
     </div>
 </main>

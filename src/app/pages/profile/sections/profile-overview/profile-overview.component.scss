@@ -20,6 +20,10 @@
     }
 
     .about {
+        @media (max-width: 1100px) {
+            text-align: center;
+        }
+
         .name {
             margin-bottom: 5px;
         }
