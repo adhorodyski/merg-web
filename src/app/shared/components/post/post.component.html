@@ -1,15 +1,17 @@
-<div class="post {{ provider }} {{ size }}">
+<div class="post {{ post.provider }} {{ size }}">
     <div class="post-header">
-        <div class="info">
-            <app-avatar [username]="username" [size]="size" [source]="avatar"></app-avatar>
-            <p class="medium {{ size === 'big' ? 'size-14' : 'size-11' }} primary-400 username">{{ username }}</p>
-            <p class="medium size-11 primary-200 timestamp">{{ timestamp }}</p>
+        <div class="info" [routerLink]="['/u', post.author.username]">
+            <app-avatar [username]="post.author.username" [size]="size" [source]="post.author.avatar"></app-avatar>
+            <p class="medium {{ size === 'big' ? 'size-14' : 'size-11' }} primary-400 username">
+                {{ post.author.username }}
+            </p>
+            <p class="medium size-11 primary-200 timestamp">{{ post.timestamp }}</p>
         </div>
-        <a href="{{ source }}" class="source-link" target="_blank">
+        <a href="{{ post.source }}" class="source-link" target="_blank">
             <i class="material-icons">call_made</i>
         </a>
     </div>
     <div class="content">
-        <iframe [src]="embed | safe" allowfullscreen></iframe>
+        <iframe [src]="post.embed | safe" allowfullscreen></iframe>
     </div>
 </div>

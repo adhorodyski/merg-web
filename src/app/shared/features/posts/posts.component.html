@@ -1,0 +1,5 @@
+<section class="section section-posts">
+    <div class="posts" (window:resize)="isSmall()">
+        <app-post *ngFor="let post of posts" [post]="post" [size]="isSmall() ? sizes.SMALL : sizes.BIG"></app-post>
+    </div>
+</section>

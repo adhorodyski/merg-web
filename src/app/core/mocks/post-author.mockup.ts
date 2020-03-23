@@ -6,7 +6,7 @@ export const mockedPostAuthor: IPostAuthor = {
     username: 'thefutur',
     name: 'Chris Do',
     email: 'cdo@mail.com',
-    avatar: 'https://bit.ly/2UEcbFh',
+    avatar: 'https://pbs.twimg.com/profile_images/1212149592403382281/cI0-xyss_400x400.jpg',
     about:
         'Teach creatives how to make money doing what they love. Impact 1 Billion lives. Entrepreneur, Educator, Agitator.',
     providers: [

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IPost } from '@src/app/core/models/post.model';
+import { PostService } from '@src/app/core/services/post.service';
 import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
 
 @Component({
@@ -7,6 +9,16 @@ import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
     styleUrls: ['./dashboard.component.scss'],
     animations: [inOutAnimation],
 })
-export class DashboardComponent {
-    constructor() {}
+export class DashboardComponent implements OnInit {
+    ocean: IPost[];
+
+    constructor(private postService: PostService) {}
+
+    ngOnInit(): void {
+        this.getOcean();
+    }
+
+    private getOcean(): void {
+        this.ocean = this.postService.getOcean();
+    }
 }

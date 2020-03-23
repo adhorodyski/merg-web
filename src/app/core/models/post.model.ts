@@ -5,5 +5,6 @@ export interface IPost {
     author: IPostAuthor;
     provider: ProvidersEnum;
     timestamp: Date;
+    source: string;
     embed: string;
 }

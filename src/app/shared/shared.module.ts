@@ -23,7 +23,7 @@ import {
     TagComponent,
 } from '@src/app/shared/components';
 
-import { StoriesComponent } from '@src/app/shared/sections';
+import { StoriesComponent, PostsComponent } from '@src/app/shared/features';
 
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule.forChild([])],
@@ -38,6 +38,7 @@ import { StoriesComponent } from '@src/app/shared/sections';
         ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
+        PostsComponent,
         SearchResultComponent,
         SearchComponent,
         SocialResultComponent,
@@ -57,6 +58,7 @@ import { StoriesComponent } from '@src/app/shared/sections';
         ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
+        PostsComponent,
         SearchResultComponent,
         SearchComponent,
         SocialResultComponent,
@@ -76,6 +78,7 @@ import { StoriesComponent } from '@src/app/shared/sections';
         ModeSelectorComponent,
         PasswordComponent,
         PostComponent,
+        PostsComponent,
         SearchResultComponent,
         SearchComponent,
         SocialResultComponent,
