@@ -1,6 +1,6 @@
 <section class="section section-stories">
     <h4 class="heading primary-400 size-18 bold">People</h4>
-    <div class="stories">
+    <ul class="stories">
         <app-story
             *ngFor="let story of stories"
             [username]="story.author.username"
@@ -8,5 +8,5 @@
             [provider]="story.provider"
             [size]="sizes.BIG"
         ></app-story>
-    </div>
+    </ul>
 </section>

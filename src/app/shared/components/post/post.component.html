@@ -1,4 +1,4 @@
-<div class="post {{ post.provider }} {{ size }}">
+<li class="post {{ post.provider }} {{ size }}">
     <div class="post-header">
         <div class="info" [routerLink]="['/u', post.author.username]">
             <app-avatar [username]="post.author.username" [size]="size" [source]="post.author.avatar"></app-avatar>
@@ -14,4 +14,4 @@
     <div class="content">
         <iframe [src]="post.embed | safe" allowfullscreen></iframe>
     </div>
-</div>
+</li>
