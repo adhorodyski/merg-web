@@ -1,6 +1,6 @@
-<div class="input search {{ size }}">
-    <i class="material-icons">search</i>
-    <input [(ngModel)]="value" (ngModelChange)="sendValue($event)" />
+<div class="input search {{ size }}" [ngClass]="{ active: isActive }">
+    <i *ngIf="!isActive" class="material-icons" [@inOutSideAnimation]>search</i>
+    <input [(ngModel)]="value" (ngModelChange)="sendValue($event)" (focusin)="setActive()" (focusout)="setActive()" />
     <i *ngIf="value" class="material-icons clear" (click)="clearInput()" [@inOutAnimation]>
         close
     </i>

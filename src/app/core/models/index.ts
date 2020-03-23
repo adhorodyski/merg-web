@@ -7,7 +7,6 @@ export * from './social-result-states.enum';
 export * from './providers.enum';
 export * from './accounts.enum';
 export * from './modes.enum';
-export * from './tags.enum';
 export * from './user.model';
 export * from './stream.model';
 export * from './post.model';

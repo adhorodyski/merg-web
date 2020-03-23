@@ -2,7 +2,7 @@
     <i class="material-icons">translate</i>
     <select name="country-selector" [(ngModel)]="selectedLanguage" (ngModelChange)="sendValue($event)">
         <option *ngFor="let option of options | keyvalue" [ngValue]="option.key">
-            {{ option.value | capitalize }}
+            {{ option.value | titlecase }}
         </option>
     </select>
     <i class="material-icons dropdown">keyboard_arrow_down</i>

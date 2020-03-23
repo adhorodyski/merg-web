@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SafePipe, CapitalizePipe } from '@src/app/core';
+import { SafePipe } from '@src/app/core';
 
 import {
     AvatarComponent,
@@ -87,7 +87,6 @@ import { StoriesComponent, PostsComponent } from '@src/app/shared/features';
         StoriesComponent,
         TagComponent,
         SafePipe,
-        CapitalizePipe,
     ],
 })
 export class SharedModule {}

@@ -1,8 +1,9 @@
+import { AccountsEnum } from '@src/app/core/models/accounts.enum';
 import { IPostAuthor } from '@src/app/core/models/post-author.model';
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 
 export const mockedPostAuthor: IPostAuthor = {
-    creator: true,
+    accountType: AccountsEnum.CREATOR,
     username: 'thefutur',
     name: 'Chris Do',
     email: 'cdo@mail.com',
