@@ -7,7 +7,6 @@ import { SettingsGeneralComponent } from './sections/settings-general/settings-g
 import { SettingsPersonalComponent } from '@src/app/pages/settings/sections/settings-personal/settings-personal.component';
 import { SettingsStreamsComponent } from '@src/app/pages/settings/sections/settings-streams/settings-streams.component';
 import { FooterComponent } from '@src/app/shared/components/footer/footer.component';
-import { CapitalizePipe } from '@src/app/core/pipes/capitalize.pipe';
 import { AuthService } from '@src/app/core/services/auth.service';
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
 import { ButtonComponent } from '@src/app/shared/components/button/button.component';
@@ -38,7 +37,6 @@ describe('SettingsComponent', () => {
                 SocialResultComponent,
                 AvatarComponent,
                 FooterComponent,
-                CapitalizePipe,
             ],
         }).compileComponents();
     }));

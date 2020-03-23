@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { CapitalizePipe } from '@src/app/core/pipes/capitalize.pipe';
 import { ModeSelectorComponent } from '@src/app/shared/components/input/mode-selector/mode-selector.component';
 
 import { SettingsGeneralComponent } from './settings-general.component';
@@ -16,7 +15,7 @@ describe('SettingsGeneralComponent', () => {
         TestBed.configureTestingModule({
             imports: [FormsModule],
             providers: [ModeService, LanguageService],
-            declarations: [SettingsGeneralComponent, ModeSelectorComponent, CountrySelectorComponent, CapitalizePipe],
+            declarations: [SettingsGeneralComponent, ModeSelectorComponent, CountrySelectorComponent],
         }).compileComponents();
     }));
 

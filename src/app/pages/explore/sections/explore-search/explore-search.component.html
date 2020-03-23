@@ -1,0 +1,15 @@
+<section class="section explore-search">
+    <app-search [size]="sizes.BIG" [value]="searchValue" (valueEvent)="handleSearchValue($event)"></app-search>
+    <ul class="tags">
+        <app-tag
+            *ngFor="let tag of tags"
+            [size]="sizes.SMALL"
+            [value]="tag"
+            [isActive]="activeTags.includes(tag)"
+            (clickTag)="handleTagValue($event)"
+        ></app-tag>
+    </ul>
+    <ul class="search-results">
+        <app-search-result *ngFor="let result of results" [user]="result" [size]="sizes.BIG"></app-search-result>
+    </ul>
+</section>

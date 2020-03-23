@@ -1,3 +1,4 @@
+import { AccountsEnum } from '@src/app/core/models/accounts.enum';
 import { IProvider } from '@src/app/core/models/provider.model';
 
 export interface IUser {
@@ -6,8 +7,9 @@ export interface IUser {
     email: string;
     avatar: string;
     about: string;
-    creator: boolean;
+    accountType: AccountsEnum.CREATOR;
     providers?: IProvider[];
+    tags: string[];
     followers: number[];
     follows: number[];
 }

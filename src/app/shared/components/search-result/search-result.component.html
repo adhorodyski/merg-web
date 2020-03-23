@@ -1,15 +1,15 @@
-<div class="search-result {{ size }}">
+<div class="search-result {{ size }}" [routerLink]="['/u', user.username]" [@inOutAnimation]>
     <div class="info">
-        <app-avatar [source]="avatar" [size]="size" [username]="username"></app-avatar>
+        <app-avatar [source]="user.avatar" [size]="size" [username]="user.username"></app-avatar>
         <div class="paragraphs-wrapper">
-            <p class="{{ size === 'big' ? 'semi-bold' : 'regular' }} size-14 primary-400">{{ username }}</p>
+            <p class="{{ size === 'big' ? 'semi-bold' : 'regular' }} size-14 primary-400">{{ user.username }}</p>
             <p *ngIf="size === 'big'" class="regular size-14 primary-200 counter">
-                <span class="number">{{ followers }}</span> people
+                <span class="number">{{ user.followers.length }}</span> people
             </p>
         </div>
     </div>
     <i *ngIf="size === 'big'" class="material-icons">keyboard_arrow_right</i>
     <p *ngIf="size === 'small'" class="account-type regular size-14 primary-200">
-        {{ accountType.toString().toLowerCase() }}
+        {{ user.accountType }}
     </p>
 </div>
