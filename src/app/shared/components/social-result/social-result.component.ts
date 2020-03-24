@@ -3,13 +3,13 @@ import { SocialResultStatesEnum } from '@src/app/core/models/social-result-state
 import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 import { IStream } from '@src/app/core/models/stream.model';
-import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
+import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-social-result',
     templateUrl: './social-result.component.html',
     styleUrls: ['./social-result.component.scss'],
-    animations: [inOutAnimation],
+    animations: [slideUp],
 })
 export class SocialResultComponent {
     @Input() state: SocialResultStatesEnum;

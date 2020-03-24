@@ -4,13 +4,13 @@ import { Router } from '@angular/router';
 import { PatternValidatorDirective } from '@src/app/core/directives/pattern-validator.directive';
 import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
 import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
-import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
+import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-signup',
     templateUrl: './signup.component.html',
     styleUrls: ['./signup.component.scss'],
-    animations: [inOutAnimation],
+    animations: [slideUp],
 })
 export class SignUpComponent implements OnInit {
     usernameControl = FormControlsEnum.USERNAME;

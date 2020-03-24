@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { inOutSideAnimation } from '@src/app/shared/animations/inOutSideAnimation';
-import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
+import { slideLeft } from '@src/app/shared/animations/slideLeft';
+import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-search',
     templateUrl: './search.component.html',
     styleUrls: ['./search.component.scss'],
-    animations: [inOutAnimation, inOutSideAnimation],
+    animations: [slideUp, slideLeft],
 })
 export class SearchComponent {
     @Input() size?: string;

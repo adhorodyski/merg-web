@@ -1,4 +1,4 @@
-<main class="main center minimal" [@inOutAnimation]>
+<main class="main center minimal" [@slideUp]>
     <div class="medium-column">
         <div class="button go-back" (click)="goBack()">
             <i class="material-icons primary-200">arrow_back</i>
@@ -10,13 +10,13 @@
             <app-input class="form-input" [type]="emailControl"></app-input>
             <div class="help">
                 <div class="help-requirement">
-                    <i class="material-icons" *ngIf="isPasswordLongEnough()" [@inOutAnimation]>done</i>
-                    <i class="material-icons" *ngIf="!isPasswordLongEnough()" [@inOutAnimation]>clear</i>
+                    <i class="material-icons" *ngIf="isPasswordLongEnough()" [@slideUp]>done</i>
+                    <i class="material-icons" *ngIf="!isPasswordLongEnough()" [@slideUp]>clear</i>
                     <p class="primary-200 size-11 help-text">Use minimum 8 signs</p>
                 </div>
                 <div class="help-requirement">
-                    <i class="material-icons" *ngIf="isPasswordStrongEnough()" [@inOutAnimation]>done</i>
-                    <i class="material-icons" *ngIf="!isPasswordStrongEnough()" [@inOutAnimation]>clear</i>
+                    <i class="material-icons" *ngIf="isPasswordStrongEnough()" [@slideUp]>done</i>
+                    <i class="material-icons" *ngIf="!isPasswordStrongEnough()" [@slideUp]>clear</i>
                     <p class="primary-200 size-11 help-text">Include letters, numbers and special characters</p>
                 </div>
             </div>

@@ -2,13 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ControlContainer, FormGroup } from '@angular/forms';
 import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
 import { FormIconsEnum } from '@src/app/core/models/form-icons.enum';
-import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
+import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-input',
     templateUrl: './input.component.html',
     styleUrls: ['./input.component.scss'],
-    animations: [inOutAnimation],
+    animations: [slideUp],
 })
 export class InputComponent implements OnInit {
     @Input() type: FormControlsEnum;
