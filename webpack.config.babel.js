@@ -20,7 +20,7 @@ const { getAngularCompilerPlugin } = require('nativescript-dev-webpack/plugins/N
 const hashSalt = Date.now().toString();
 
 module.exports = env => {
-    // Add your custom Activities, Services and other Android app pages here.
+    // Add your custom Activities, Services and other Android app modules here.
     const appComponents = ['tns-core-modules/ui/frame', 'tns-core-modules/ui/frame/activity'];
 
     const platform = env && ((env.android && 'android') || (env.ios && 'ios'));
@@ -240,9 +240,9 @@ module.exports = env => {
                 {
                     include: join(appFullPath, entryPath),
                     use: [
-                        // Require all Android app pages
+                        // Require all Android app modules
                         platform === 'android' && {
-                            loader: 'nativescript-dev-webpack/android-app-pages-loader',
+                            loader: 'nativescript-dev-webpack/android-app-modules-loader',
                             options: { modules: appComponents },
                         },
 
@@ -284,7 +284,7 @@ module.exports = env => {
                     ],
                 },
 
-                // Angular pages reference css files and their imports using raw-loader
+                // Angular modules reference css files and their imports using raw-loader
                 { test: /\.css$/, exclude: /[\/|\\]app\.css$/, use: 'raw-loader' },
                 {
                     test: /\.scss$/,
