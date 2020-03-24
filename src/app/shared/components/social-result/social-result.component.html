@@ -1,12 +1,12 @@
 <div class="social-result {{ provider }} {{ state }}" [ngClass]="{ hidden: isHidden }">
     <div class="title">
         <p class="semi-bold size-14 primary-200 provider">{{ provider }}</p>
-        <i class="material-icons done" *ngIf="isDone && state !== empty" [@inOutAnimation]>done</i>
+        <i class="material-icons done" *ngIf="isDone && state !== empty" [@slideUp]>done</i>
     </div>
 
     <!--  EMPTY  -->
     <div class="results" *ngIf="state === empty">
-        <div class="result" (click)="clickResult(state)" [@inOutAnimation]>
+        <div class="result" (click)="clickResult(state)" [@slideUp]>
             <div class="info">
                 <div class="images">
                     <img
@@ -30,7 +30,7 @@
             class="result"
             *ngFor="let stream of streams; let streamIDX = index"
             (click)="clickResult(state)"
-            [@inOutAnimation]
+            [@slideUp]
         >
             <div class="info">
                 <div class="images" *ngIf="state === empty">
@@ -66,7 +66,7 @@
                     class="material-icons add"
                     *ngIf="isLastStream(stream) && state !== condensed"
                     (click)="addStream(provider)"
-                    [@inOutAnimation]
+                    [@slideUp]
                 >
                     add
                 </i>

@@ -1,2 +1,2 @@
-export * from './inOutAnimation';
-export * from './inOutSideAnimation';
+export * from './slideUp';
+export * from './slideLeft';

@@ -3,13 +3,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
 import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
-import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
+import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-signin',
     templateUrl: './signin.component.html',
     styleUrls: ['./signin.component.scss'],
-    animations: [inOutAnimation],
+    animations: [slideUp],
 })
 export class SignInComponent implements OnInit {
     emailControl = FormControlsEnum.EMAIL;

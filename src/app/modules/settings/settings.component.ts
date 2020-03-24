@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { mockedUser } from '@src/app/core/mocks/user.mockup';
 import { IUser } from '@src/app/core/models/user.model';
 import { AuthService } from '@src/app/core/services/auth.service';
-import { inOutAnimation } from '@src/app/shared/animations/inOutAnimation';
+import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-settings',
     templateUrl: './settings.component.html',
     styleUrls: ['./settings.component.scss'],
-    animations: [inOutAnimation],
+    animations: [slideUp],
 })
 export class SettingsComponent {
     user: IUser = mockedUser;
