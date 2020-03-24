@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreatorGuard, MemberGuard } from '@src/app/core';
+// guards
+import { CreatorGuard, MemberGuard } from '@src/app/core/guards';
+// layouts
 import { MainLayoutComponent } from '@src/app/shared/layout/main-layout';
 import { MinimalLayoutComponent } from '@src/app/shared/layout/minimal-layout';
 
@@ -18,23 +20,23 @@ const routes: Routes = [
                 path: '',
                 pathMatch: 'full',
                 canActivate: [MemberGuard],
-                loadChildren: () => import('@src/app/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
+                loadChildren: () => import('@src/app/modules/dashboard/dashboard.module').then(m => m.DashboardModule),
             },
             {
                 path: 'explore',
                 pathMatch: 'full',
                 canActivate: [MemberGuard],
-                loadChildren: () => import('@src/app/pages/explore/explore.module').then(m => m.ExploreModule),
+                loadChildren: () => import('@src/app/modules/explore/explore.module').then(m => m.ExploreModule),
             },
             {
                 path: 'settings',
                 pathMatch: 'full',
                 canActivate: [MemberGuard],
-                loadChildren: () => import('@src/app/pages/settings/settings.module').then(m => m.SettingsModule),
+                loadChildren: () => import('@src/app/modules/settings/settings.module').then(m => m.SettingsModule),
             },
             {
                 path: 'u/:username',
-                loadChildren: () => import('@src/app/pages/profile/profile.module').then(m => m.ProfileModule),
+                loadChildren: () => import('@src/app/modules/profile/profile.module').then(m => m.ProfileModule),
             },
         ],
     },
@@ -44,25 +46,25 @@ const routes: Routes = [
         children: [
             {
                 path: 'landing',
-                loadChildren: () => import('@src/app/pages/landing/landing.module').then(m => m.LandingModule),
+                loadChildren: () => import('@src/app/modules/landing/landing.module').then(m => m.LandingModule),
             },
             {
                 path: 'signin',
-                loadChildren: () => import('@src/app/pages/signin/signin.module').then(m => m.SignInModule),
+                loadChildren: () => import('@src/app/modules/signin/signin.module').then(m => m.SigninModule),
             },
             {
                 path: 'signup',
-                loadChildren: () => import('@src/app/pages/signup/signup.module').then(m => m.SignUpModule),
+                loadChildren: () => import('@src/app/modules/signup/signup.module').then(m => m.SignupModule),
             },
             {
                 path: 'merging',
                 canActivate: [MemberGuard, CreatorGuard],
-                loadChildren: () => import('@src/app/pages/merging/merging.module').then(m => m.MergingModule),
+                loadChildren: () => import('@src/app/modules/merging/merging.module').then(m => m.MergingModule),
             },
             {
                 path: '**',
                 loadChildren: () =>
-                    import('@src/app/pages/pageNotFound/pageNotFound.module').then(m => m.PageNotFoundModule),
+                    import('@src/app/modules/pageNotFound/pageNotFound.module').then(m => m.PageNotFoundModule),
             },
         ],
     },
