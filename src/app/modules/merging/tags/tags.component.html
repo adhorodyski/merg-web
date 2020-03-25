@@ -1,5 +1,32 @@
-<main class="main center">
+<main class="main center" [@slideUp]>
     <div class="medium-column">
-        <p>Merging tags medium column.</p>
+        <div class="headings">
+            <h1 class="heading primary-400 size-40 bold center">Tags</h1>
+            <h5 class="sub-heading primary-200 size-14 semi-bold center">
+                What are the best words to describe your content?
+            </h5>
+        </div>
+        <div class="tags">
+            <app-tag
+                *ngFor="let tag of tags"
+                [size]="sizes.BIG"
+                [value]="tag"
+                [isActive]="activeTags.includes(tag)"
+                (clickTag)="handleTagValue($event)"
+            ></app-tag>
+        </div>
+        <div class="actions">
+            <app-button
+                class="form-button"
+                message="accept and continue"
+                [type]="acceptButtonType"
+                [disabled]="!activeTags.length"
+                (click)="submit()"
+            ></app-button>
+            <div class="button go-back" (click)="goBack()">
+                <i class="material-icons primary-200">arrow_back</i>
+                <span class="primary-200 medium size-14">Go back</span>
+            </div>
+        </div>
     </div>
 </main>
