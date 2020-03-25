@@ -1,7 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { TagsComponent } from './tags.component';
+import { TagComponent } from '@src/app/shared/components/input/tag/tag.component';
+import { ButtonComponent } from '@src/app/shared/components/button/button.component';
 
 describe('TagsComponent', () => {
     let component: TagsComponent;
@@ -9,8 +12,8 @@ describe('TagsComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [RouterTestingModule],
-            declarations: [TagsComponent],
+            imports: [RouterTestingModule, BrowserAnimationsModule],
+            declarations: [TagsComponent, TagComponent, ButtonComponent],
         }).compileComponents();
     }));
 
