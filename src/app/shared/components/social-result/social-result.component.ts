@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { SocialResultStatesEnum } from '@src/app/core/models/social-result-states.enum';
 import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 import { IStream } from '@src/app/core/models/stream.model';
@@ -12,29 +11,29 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
     animations: [slideUp],
 })
 export class SocialResultComponent {
-    @Input() state: SocialResultStatesEnum;
     @Input() provider: ProvidersEnum;
-    @Input() streams: IStream[];
-    @Input() isHidden: boolean;
-    @Input() isDone: boolean;
-    @Output() expand = new EventEmitter<null>();
+    @Input() streams: IStream[] = [];
+    @Input() isHidden = false;
+    @Input() isDone = false;
     @Output() remove = new EventEmitter<number>();
     @Output() add = new EventEmitter<ProvidersEnum>();
 
-    empty = SocialResultStatesEnum.EMPTY;
-    filled = SocialResultStatesEnum.FILLED;
-    condensed = SocialResultStatesEnum.CONDENSED;
+    isExpanded = true;
 
     avatarSize = ComponentsSizesEnum.MEDIUM;
 
     constructor() {}
+
+    isEmpty(): boolean {
+        return Boolean(!this.streams.length);
+    }
 
     isLastStream(stream): boolean {
         return stream === this.streams[this.streams.length - 1];
     }
 
     expandStreams(): void {
-        this.expand.emit();
+        this.isExpanded = !this.isExpanded;
     }
 
     addStream($event): void {
@@ -45,14 +44,11 @@ export class SocialResultComponent {
         this.remove.emit(streamIDX);
     }
 
-    clickResult(newState: SocialResultStatesEnum): void {
-        switch (newState) {
-            case SocialResultStatesEnum.CONDENSED:
-                this.expandStreams();
-                break;
-            case SocialResultStatesEnum.EMPTY:
-                this.addStream(this.provider);
-                break;
+    clickResult(): void {
+        if (this.isEmpty()) {
+            this.addStream(this.provider);
+        } else if (!this.isExpanded) {
+            this.expandStreams();
         }
     }
 }

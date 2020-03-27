@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SocialResultStatesEnum } from '@src/app/core/models/social-result-states.enum';
+import { IStream } from '@src/app/core/models/stream.model';
 import { IUser } from '@src/app/core/models/user.model';
 
 @Component({
@@ -10,38 +10,19 @@ import { IUser } from '@src/app/core/models/user.model';
 export class SettingsStreamsComponent implements OnInit {
     @Input() user: IUser;
 
-    // TODO create an interface for socialResult behaviours & create instances dynamically
-    socialResults = [
-        {
-            state: SocialResultStatesEnum.CONDENSED,
-            isHidden: false,
-            isDone: true,
-        },
-        {
-            state: SocialResultStatesEnum.CONDENSED,
-            isHidden: false,
-            isDone: true,
-        },
-    ];
-
     constructor() {}
 
     ngOnInit(): void {}
-
-    expandStreams(providerIDX): void {
-        this.socialResults[providerIDX].state = SocialResultStatesEnum.FILLED;
-    }
 
     addStream(provider): void {
         console.log(provider);
     }
 
     removeStream(streamIDX, providerIDX): void {
-        if (this.user.providers[providerIDX].streams.length === 1) {
-            this.socialResults[providerIDX].state = SocialResultStatesEnum.EMPTY;
-            this.user.providers[providerIDX].streams.splice(streamIDX, 1);
-        } else {
-            this.user.providers[providerIDX].streams.splice(streamIDX, 1);
-        }
+        this.user.providers[providerIDX].streams.splice(streamIDX, 1);
+    }
+
+    isEmpty(streams: IStream[]): boolean {
+        return Boolean(streams.length);
     }
 }
