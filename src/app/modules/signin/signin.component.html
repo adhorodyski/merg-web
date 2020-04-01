@@ -23,14 +23,14 @@
             message="Continue with Facebook"
             provider="facebook"
             [type]="externalButtonType"
-            (click)="handleFacebookSignIn()"
+            (handleClick)="handleFacebookSignIn()"
         ></app-button>
         <app-button
             class="button-external"
             message="Continue with Google"
             provider="google"
             [type]="externalButtonType"
-            (click)="handleGoogleSignIn()"
+            (handleClick)="handleGoogleSignIn()"
         ></app-button>
     </div>
 </main>

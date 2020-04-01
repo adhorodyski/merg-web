@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ControlContainer, FormGroup } from '@angular/forms';
 import { FormIconsEnum } from '@src/app/core/models/form-icons.enum';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { slideLeft } from '@src/app/shared/animations/slideLeft';
 
 @Component({
     selector: 'app-password',
     templateUrl: './password.component.html',
     styleUrls: ['./password.component.scss'],
-    animations: [slideUp],
+    animations: [slideLeft],
 })
 export class PasswordComponent implements OnInit {
     @Input() type: string;

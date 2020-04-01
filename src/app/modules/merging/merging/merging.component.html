@@ -1,5 +1,60 @@
-<main class="main center">
+<main class="main center" [@slideUp]>
     <div class="medium-column">
-        <p>Merging medium column.</p>
+        <div class="headings">
+            <h1 class="heading primary-400 size-40 bold center">Streams</h1>
+            <h5 class="sub-heading primary-200 size-14 semi-bold center">
+                Add streams for your Merg members.
+            </h5>
+        </div>
+        <ul class="providers-results" [@mergingRoll]="activeStepIDX">
+            <!--   PREVIOUS  -->
+            <li class="provider-result">
+                <app-social-result
+                    *ngIf="previousProvider"
+                    [provider]="previousProvider"
+                    [streams]="previousStreams"
+                    [isHidden]="true"
+                    [isExpanded]="false"
+                    [isDone]="true"
+                    (add)="addStream($event)"
+                    (remove)="removeStream($event, previousProvider)"
+                ></app-social-result>
+            </li>
+            <!--   ACTIVE  -->
+            <li class="provider-result">
+                <app-social-result
+                    *ngIf="activeProvider"
+                    [provider]="activeProvider"
+                    [streams]="activeStreams"
+                    [isHidden]="false"
+                    [isExpanded]="true"
+                    [isDone]="false"
+                    (add)="addStream($event)"
+                    (remove)="removeStream($event, activeProvider)"
+                ></app-social-result>
+            </li>
+            <!--   NEXT  -->
+            <li class="provider-result">
+                <app-social-result
+                    *ngIf="nextProvider"
+                    [provider]="nextProvider"
+                    [streams]="nextStreams"
+                    [isHidden]="true"
+                    [isExpanded]="false"
+                    [isDone]="false"
+                    (add)="addStream($event)"
+                    (remove)="removeStream($event, nextProvider)"
+                ></app-social-result>
+            </li>
+        </ul>
+        <div class="actions">
+            <app-status [steps]="steps" [activeStepIDX]="activeStepIDX"></app-status>
+            <app-button
+                class="form-button"
+                message="accept and continue"
+                [type]="isDone ? buttonTypes.PRIMARY : buttonTypes.SECONDARY"
+                (handleClick)="isDone ? submit() : continue()"
+            ></app-button>
+        </div>
     </div>
 </main>

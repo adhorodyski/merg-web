@@ -3,7 +3,6 @@ export * from './form-icons.enum';
 export * from './form-controls.enum';
 export * from './button-types.enum';
 export * from './components-sizes.enum';
-export * from './social-result-states.enum';
 export * from './providers.enum';
 export * from './accounts.enum';
 export * from './modes.enum';

@@ -4,10 +4,8 @@
         <app-social-result
             [provider]="provider.provider"
             [streams]="provider.streams"
-            [state]="socialResults[providerIDX].state"
-            [isHidden]="socialResults[providerIDX].isHidden"
-            [isDone]="socialResults[providerIDX].isDone"
-            (expand)="expandStreams(providerIDX)"
+            [isHidden]="false"
+            [isDone]="isEmpty(provider.streams)"
             (add)="addStream($event)"
             (remove)="removeStream($event, providerIDX)"
         ></app-social-result>

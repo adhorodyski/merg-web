@@ -21,7 +21,7 @@
                 message="accept and continue"
                 [type]="acceptButtonType"
                 [disabled]="!activeTags.length"
-                (click)="submit()"
+                (handleClick)="submit()"
             ></app-button>
             <div class="button go-back" (click)="goBack()">
                 <i class="material-icons primary-200">arrow_back</i>

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { SocialResultStatesEnum } from '@src/app/core/models/social-result-states.enum';
 import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 import { IStream } from '@src/app/core/models/stream.model';
@@ -12,30 +11,17 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
     animations: [slideUp],
 })
 export class SocialResultComponent {
-    @Input() state: SocialResultStatesEnum;
     @Input() provider: ProvidersEnum;
-    @Input() streams: IStream[];
-    @Input() isHidden: boolean;
-    @Input() isDone: boolean;
-    @Output() expand = new EventEmitter<null>();
+    @Input() streams: IStream[] = [];
+    @Input() isHidden = false;
+    @Input() isExpanded = true;
+    @Input() isDone = false;
     @Output() remove = new EventEmitter<number>();
     @Output() add = new EventEmitter<ProvidersEnum>();
-
-    empty = SocialResultStatesEnum.EMPTY;
-    filled = SocialResultStatesEnum.FILLED;
-    condensed = SocialResultStatesEnum.CONDENSED;
 
     avatarSize = ComponentsSizesEnum.MEDIUM;
 
     constructor() {}
-
-    isLastStream(stream): boolean {
-        return stream === this.streams[this.streams.length - 1];
-    }
-
-    expandStreams(): void {
-        this.expand.emit();
-    }
 
     addStream($event): void {
         this.add.emit($event);
@@ -45,14 +31,15 @@ export class SocialResultComponent {
         this.remove.emit(streamIDX);
     }
 
-    clickResult(newState: SocialResultStatesEnum): void {
-        switch (newState) {
-            case SocialResultStatesEnum.CONDENSED:
-                this.expandStreams();
-                break;
-            case SocialResultStatesEnum.EMPTY:
-                this.addStream(this.provider);
-                break;
-        }
+    expandStreams(): void {
+        this.isExpanded = !this.isExpanded;
+    }
+
+    isEmpty(): boolean {
+        return Boolean(!this.streams.length);
+    }
+
+    isLastStream(stream): boolean {
+        return stream === this.streams[this.streams.length - 1];
     }
 }
