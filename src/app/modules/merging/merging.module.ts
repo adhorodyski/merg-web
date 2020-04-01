@@ -6,9 +6,10 @@ import { MergingRoutingModule } from '@src/app/modules/merging/merging-routing.m
 // components
 import { MergingComponent } from '@src/app/modules/merging/merging/merging.component';
 import { TagsComponent } from '@src/app/modules/merging/tags/tags.component';
+import { WelcomeComponent } from '@src/app/modules/merging/welcome/welcome.component';
 
 @NgModule({
-    declarations: [MergingComponent, TagsComponent],
+    declarations: [MergingComponent, TagsComponent, WelcomeComponent],
     imports: [CommonModule, SharedModule, MergingRoutingModule],
 })
 export class MergingModule {}
