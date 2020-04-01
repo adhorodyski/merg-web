@@ -1,7 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
-import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
-import { ModesEnum } from '@src/app/core/models/modes.enum';
+import { SIZES } from '@src/app/core/models/sizes.enum';
+import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
+import { MODES } from '@src/app/core/models/modes.enum';
 import { IUser } from '@src/app/core/models/user.model';
 
 @Component({
@@ -11,12 +11,12 @@ import { IUser } from '@src/app/core/models/user.model';
 })
 export class AvatarSelectorComponent {
     @Input() user: IUser;
-    @Input() type: FormControlsEnum;
-    @Output() clickMode: EventEmitter<ModesEnum> = new EventEmitter<ModesEnum>();
+    @Input() type: FORM_CONTROLS;
+    @Output() clickMode: EventEmitter<MODES> = new EventEmitter<MODES>();
 
     @ViewChild('avatarInput', { static: false }) avatarInput: ElementRef;
 
-    sizes = ComponentsSizesEnum;
+    sizes = SIZES;
 
     constructor() {}
 

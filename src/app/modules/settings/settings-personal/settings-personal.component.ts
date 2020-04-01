@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
-import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
+import { BUTTONS } from '@src/app/core/models/buttons.enum';
+import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
 import { IUser } from '@src/app/core/models/user.model';
 
 @Component({
@@ -11,11 +11,8 @@ import { IUser } from '@src/app/core/models/user.model';
 })
 export class SettingsPersonalComponent implements OnInit {
     @Input() user: IUser;
-    avatarControl = FormControlsEnum.AVATAR;
-    usernameControl = FormControlsEnum.USERNAME;
-    nameControl = FormControlsEnum.NAME;
-    emailControl = FormControlsEnum.EMAIL;
-    updateButtonType = ButtonTypesEnum.SECONDARY;
+    buttons = BUTTONS;
+    formControls = FORM_CONTROLS;
     loggedUserForm: FormGroup;
 
     constructor() {}

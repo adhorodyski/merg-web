@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { SIZES } from '@src/app/core/models/sizes.enum';
 
 @Component({
     selector: 'app-avatar',
@@ -9,7 +9,7 @@ import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum'
 export class AvatarComponent {
     @Input() source: string;
     @Input() username: string;
-    @Input() size: ComponentsSizesEnum;
+    @Input() size: SIZES;
 
     constructor() {}
 }

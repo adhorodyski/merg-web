@@ -1,4 +1,4 @@
-export enum FormControlsEnum {
+export enum FORM_CONTROLS {
     USERNAME = 'username',
     NAME = 'name',
     EMAIL = 'email',

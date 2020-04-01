@@ -5,16 +5,16 @@
             <span class="primary-200 medium size-14">Go back</span>
         </div>
         <form [formGroup]="signInForm" class="form" (ngSubmit)="submit()">
-            <app-input class="form-input" [type]="emailControl"></app-input>
+            <app-input class="form-input" [type]="formControls.EMAIL"></app-input>
             <app-password
                 class="form-input"
-                [type]="passwordControl"
+                [type]="formControls.PASSWORD"
                 [value]="signInForm.value.password"
             ></app-password>
             <app-button
                 class="form-button"
                 message="sign in"
-                [type]="signInButtonType"
+                [type]="buttons.PRIMARY"
                 [disabled]="!signInForm.valid"
             ></app-button>
         </form>
@@ -22,14 +22,14 @@
             class="button-external"
             message="Continue with Facebook"
             provider="facebook"
-            [type]="externalButtonType"
+            [type]="buttons.EXTERNAL"
             (handleClick)="handleFacebookSignIn()"
         ></app-button>
         <app-button
             class="button-external"
             message="Continue with Google"
             provider="google"
-            [type]="externalButtonType"
+            [type]="buttons.EXTERNAL"
             (handleClick)="handleGoogleSignIn()"
         ></app-button>
     </div>

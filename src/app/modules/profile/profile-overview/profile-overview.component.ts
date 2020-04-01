@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { BUTTONS } from '@src/app/core/models/buttons.enum';
+import { SIZES } from '@src/app/core/models/sizes.enum';
 import { IUser } from '@src/app/core/models/user.model';
 
 @Component({
@@ -11,8 +11,8 @@ import { IUser } from '@src/app/core/models/user.model';
 export class ProfileOverviewComponent {
     @Input() user: IUser;
 
-    sizes = ComponentsSizesEnum;
-    mergeButtonType = ButtonTypesEnum.PRIMARY;
+    sizes = SIZES;
+    mergeButtonType = BUTTONS.PRIMARY;
 
     constructor() {}
 }

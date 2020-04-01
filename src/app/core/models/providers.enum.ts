@@ -1,4 +1,4 @@
-export enum ProvidersEnum {
+export enum PROVIDERS {
     FACEBOOK = 'facebook',
     TWITTER = 'twitter',
     INSTAGRAM = 'instagram',

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { LanguagesEnum } from '@src/app/core/models/languages.enum';
+import { LANGUAGES } from '@src/app/core/models/languages.enum';
 
 @Component({
     selector: 'app-country-selector',
@@ -7,9 +7,9 @@ import { LanguagesEnum } from '@src/app/core/models/languages.enum';
     styleUrls: ['./country-selector.component.scss'],
 })
 export class CountrySelectorComponent {
-    options = LanguagesEnum;
-    @Input() selectedLanguage: LanguagesEnum;
-    @Output() changeEvent: EventEmitter<LanguagesEnum> = new EventEmitter<LanguagesEnum>();
+    options = LANGUAGES;
+    @Input() selectedLanguage: LANGUAGES;
+    @Output() changeEvent: EventEmitter<LANGUAGES> = new EventEmitter<LANGUAGES>();
 
     constructor() {}
 

@@ -19,7 +19,7 @@
             <app-button
                 class="form-button"
                 message="accept and continue"
-                [type]="acceptButtonType"
+                [type]="buttons.PRIMARY"
                 [disabled]="!activeTags.length"
                 (handleClick)="submit()"
             ></app-button>

@@ -1,39 +1,39 @@
 import { Injectable } from '@angular/core';
-import { ModesEnum } from '@src/app/core/models/modes.enum';
+import { MODES } from '@src/app/core/models/modes.enum';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root',
 })
 export class ModeService {
-    private readonly defaultMode = ModesEnum.LIGHT;
-    private readonly mode: BehaviorSubject<ModesEnum>;
+    private readonly defaultMode = MODES.LIGHT;
+    private readonly mode: BehaviorSubject<MODES>;
 
     constructor() {
         const storedMode = localStorage.getItem('mode');
         if (storedMode) {
-            this.mode = new BehaviorSubject<ModesEnum>(ModesEnum[storedMode]);
+            this.mode = new BehaviorSubject<MODES>(MODES[storedMode]);
         } else {
-            this.mode = new BehaviorSubject<ModesEnum>(this.defaultMode);
+            this.mode = new BehaviorSubject<MODES>(this.defaultMode);
             localStorage.setItem('mode', this.defaultMode);
         }
         this.applyMode();
     }
 
-    setMode(mode: ModesEnum): void {
+    setMode(mode: MODES): void {
         this.mode.next(mode);
-        localStorage.setItem('mode', ModesEnum[mode]);
+        localStorage.setItem('mode', MODES[mode]);
         this.applyMode();
     }
 
-    getMode(): Observable<ModesEnum> {
+    getMode(): Observable<MODES> {
         return this.mode;
     }
 
     applyMode(): void {
         const root: HTMLHtmlElement = document.querySelector('html');
 
-        if (this.mode.getValue() === ModesEnum.DARK) {
+        if (this.mode.getValue() === MODES.DARK) {
             root.classList.add('merg-dark-theme');
         } else {
             root.classList.remove('merg-dark-theme');

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PatternValidatorDirective } from '@src/app/core/directives/pattern-validator.directive';
-import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
-import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
+import { BUTTONS } from '@src/app/core/models/buttons.enum';
+import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
 import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
@@ -13,11 +13,8 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
     animations: [slideUp],
 })
 export class SignUpComponent implements OnInit {
-    usernameControl = FormControlsEnum.USERNAME;
-    nameControl = FormControlsEnum.NAME;
-    emailControl = FormControlsEnum.EMAIL;
-    passwordControl = FormControlsEnum.PASSWORD;
-    signUpButtonType = ButtonTypesEnum.PRIMARY;
+    formControls = FORM_CONTROLS;
+    buttons = BUTTONS;
     signUpForm: FormGroup;
 
     constructor(private router: Router) {}

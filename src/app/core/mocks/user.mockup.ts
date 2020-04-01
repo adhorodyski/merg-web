@@ -1,9 +1,9 @@
-import { AccountsEnum } from '@src/app/core/models/accounts.enum';
-import { ProvidersEnum } from '@src/app/core/models/providers.enum';
+import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
+import { PROVIDERS } from '@src/app/core/models/providers.enum';
 import { IUser } from '@src/app/core/models/user.model';
 
 export const mockedUser: IUser = {
-    accountType: AccountsEnum.CREATOR,
+    accountType: ACCOUNTS.CREATOR,
     username: 'm_brownlee',
     name: 'MKBHD',
     email: 'mbrown@mail.com',
@@ -12,7 +12,7 @@ export const mockedUser: IUser = {
     tags: ['music', 'technology'],
     providers: [
         {
-            name: ProvidersEnum.YOUTUBE,
+            name: PROVIDERS.YOUTUBE,
             details: [
                 {
                     username: 'MKBHD',
@@ -21,7 +21,7 @@ export const mockedUser: IUser = {
             ],
         },
         {
-            name: ProvidersEnum.INSTAGRAM,
+            name: PROVIDERS.INSTAGRAM,
             details: [
                 {
                     username: 'marcus_brownlee',

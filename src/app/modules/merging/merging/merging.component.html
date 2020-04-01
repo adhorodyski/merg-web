@@ -52,7 +52,7 @@
             <app-button
                 class="form-button"
                 message="accept and continue"
-                [type]="isDone ? buttonTypes.PRIMARY : buttonTypes.SECONDARY"
+                [type]="isDone ? buttons.PRIMARY : buttons.SECONDARY"
                 (handleClick)="isDone ? submit() : continue()"
             ></app-button>
         </div>

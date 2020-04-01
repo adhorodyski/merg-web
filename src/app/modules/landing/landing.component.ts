@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
+import { BUTTONS } from '@src/app/core/models/buttons.enum';
 import { slideUp } from '@src/app/shared/animations/slideUp';
 @Component({
     selector: 'app-landing',
@@ -8,7 +8,7 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
     animations: [slideUp],
 })
 export class LandingComponent {
-    signInButtonType = ButtonTypesEnum.SECONDARY;
+    signInButtonType = BUTTONS.SECONDARY;
     appleStoreLink = 'https://apple.com';
     googlePlayLink = 'https://google.com';
 
