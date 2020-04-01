@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PatternValidatorDirective } from '@src/app/core/directives/pattern-validator.directive';
+import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
 import { BUTTONS } from '@src/app/core/models/buttons.enum';
 import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
 import { slideUp } from '@src/app/shared/animations/slideUp';
@@ -15,12 +16,19 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
 export class SignUpComponent implements OnInit {
     formControls = FORM_CONTROLS;
     buttons = BUTTONS;
-    signUpForm: FormGroup;
 
-    constructor(private router: Router) {}
+    signUpForm: FormGroup;
+    accountType: ACCOUNTS;
+
+    constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
     ngOnInit(): void {
+        this.activatedRoute.data.subscribe(data => {
+            this.accountType = data['accountType'] || '';
+        });
+
         this.signUpForm = new FormGroup({
+            accountType: new FormControl(this.accountType, [Validators.required]),
             username: new FormControl('', [Validators.required]),
             name: new FormControl('', [Validators.required]),
             email: new FormControl('', [Validators.required, Validators.email]),

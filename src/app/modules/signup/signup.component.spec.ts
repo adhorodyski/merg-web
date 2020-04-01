@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
 
 import { SignUpComponent } from './signup.component';
 import { ButtonComponent } from '@src/app/shared/components/button/button.component';
@@ -23,6 +24,7 @@ describe('SignUpComponent', () => {
         fixture = TestBed.createComponent(SignUpComponent);
         component = fixture.componentInstance;
         component.signUpForm = new FormGroup({
+            accountType: new FormControl(ACCOUNTS.CREATOR, [Validators.required]),
             username: new FormControl('', [Validators.required]),
             name: new FormControl('', [Validators.required]),
             email: new FormControl('', [Validators.required, Validators.email]),
