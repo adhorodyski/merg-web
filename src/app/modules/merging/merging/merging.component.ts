@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { mockedUser } from '@src/app/core/mocks/user.mockup';
 import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
-import { IStream } from '@src/app/core/models/stream.model';
+import { IProviderDetails } from '@src/app/core/models/provider-details.model';
 import { IUser } from '@src/app/core/models/user.model';
 import { mergingRoll } from '@src/app/shared/animations/mergingRoll';
 import { slideUp } from '@src/app/shared/animations/slideUp';
@@ -23,30 +23,30 @@ export class MergingComponent implements OnInit {
     isDone = false;
 
     previousProvider: ProvidersEnum;
-    previousStreams: IStream[];
+    previousProviderDetails: IProviderDetails[];
 
     activeProvider: ProvidersEnum;
-    activeStreams: IStream[];
+    activeProviderDetails: IProviderDetails[];
 
     nextProvider: ProvidersEnum;
-    nextStreams: IStream[];
+    nextProviderDetails: IProviderDetails[];
 
     constructor(private router: Router) {}
 
     ngOnInit() {
         this.user = mockedUser;
         this.setVisibleProviders();
-        this.setVisibleStreams();
+        this.setVisibleProvidersDetails();
     }
 
-    getProviderStreams(resultProvider: ProvidersEnum): IStream[] {
-        let streams: IStream[] = [];
+    getProviderDetails(resultProvider: ProvidersEnum): IProviderDetails[] {
+        let providerDetails: IProviderDetails[] = [];
         this.user.providers.forEach(provider => {
-            if (provider.provider === resultProvider) {
-                streams = provider.streams;
+            if (provider.name === resultProvider) {
+                providerDetails = provider.details;
             }
         });
-        return streams;
+        return providerDetails;
     }
 
     setVisibleProviders(): void {
@@ -57,25 +57,25 @@ export class MergingComponent implements OnInit {
         this.nextProvider = ProvidersEnum[providersKeys[this.activeStepIDX + 1]];
     }
 
-    setVisibleStreams(): void {
-        this.previousStreams = this.getProviderStreams(this.previousProvider);
-        this.activeStreams = this.getProviderStreams(this.activeProvider);
-        this.nextStreams = this.getProviderStreams(this.nextProvider);
+    setVisibleProvidersDetails(): void {
+        this.previousProviderDetails = this.getProviderDetails(this.previousProvider);
+        this.activeProviderDetails = this.getProviderDetails(this.activeProvider);
+        this.nextProviderDetails = this.getProviderDetails(this.nextProvider);
     }
 
-    addStream(provider): void {
+    addProviderDetails(provider): void {
         console.log(provider);
     }
 
-    removeStream(streamIDX: number, provider: ProvidersEnum): void {
-        const providerStreams = this.getProviderStreams(provider);
-        providerStreams.splice(streamIDX, 1);
+    removeProviderDetails(providerDetailsIDX: number, provider: ProvidersEnum): void {
+        const providerDetails = this.getProviderDetails(provider);
+        providerDetails.splice(providerDetailsIDX, 1);
     }
 
     nextStep(): void {
         this.activeStepIDX++;
         this.setVisibleProviders();
-        this.setVisibleStreams();
+        this.setVisibleProvidersDetails();
     }
 
     continue(): void {

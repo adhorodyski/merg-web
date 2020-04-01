@@ -12,8 +12,8 @@ export const mockedPostAuthor: IPostAuthor = {
         'Teach creatives how to make money doing what they love. Impact 1 Billion lives. Entrepreneur, Educator, Agitator.',
     providers: [
         {
-            provider: ProvidersEnum.INSTAGRAM,
-            streams: [
+            name: ProvidersEnum.INSTAGRAM,
+            details: [
                 {
                     username: 'thefutur',
                     avatar: 'https://bit.ly/3bf1qj7',
@@ -21,8 +21,8 @@ export const mockedPostAuthor: IPostAuthor = {
             ],
         },
         {
-            provider: ProvidersEnum.TWITTER,
-            streams: [
+            name: ProvidersEnum.TWITTER,
+            details: [
                 {
                     username: 'futur',
                     avatar: 'https://bit.ly/394qU17',

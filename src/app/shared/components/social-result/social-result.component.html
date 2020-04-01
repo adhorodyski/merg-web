@@ -1,6 +1,11 @@
 <div
     class="social-result {{ provider }}"
-    [ngClass]="{ hidden: isHidden, empty: isEmpty(), filled: !isEmpty(), condensed: !isEmpty() && !isExpanded }"
+    [ngClass]="{
+        hidden: isHidden,
+        empty: isProviderEmpty(),
+        filled: !isProviderEmpty(),
+        condensed: !isProviderEmpty() && !isExpanded
+    }"
 >
     <div class="title">
         <p class="semi-bold size-14 primary-200 provider">{{ provider | titlecase }}</p>
@@ -8,13 +13,13 @@
     </div>
 
     <!--  EMPTY  -->
-    <div class="results" *ngIf="isEmpty()">
-        <div class="result" (click)="addStream(provider)" [@slideUp]>
+    <div class="results" *ngIf="isProviderEmpty()">
+        <div class="result" (click)="addProviderDetails(provider)" [@slideUp]>
             <div class="info">
                 <div class="images">
                     <img
                         src="assets/social-media/{{ provider }}.png"
-                        alt="logo {{ provider }}"
+                        alt="{{ provider }} logo"
                         class="logo"
                         [ngClass]="provider"
                     />
@@ -28,46 +33,54 @@
     </div>
 
     <!-- FILLED/CONDENSED  -->
-    <div class="results" *ngIf="!isEmpty()">
+    <div class="results" *ngIf="!isProviderEmpty()">
         <div
             class="result"
-            *ngFor="let stream of streams; let streamIDX = index"
-            (click)="!isExpanded && expandStreams()"
+            *ngFor="let details of providerDetails; let detailsIDX = index"
+            (click)="!isExpanded && expandProviderDetails()"
             [@slideUp]
         >
             <div class="info">
-                <div class="images" *ngIf="!isEmpty() && !isExpanded" [ngClass]="provider">
+                <div class="images" *ngIf="!isProviderEmpty() && !isExpanded" [ngClass]="provider">
                     <app-avatar
-                        *ngFor="let stream of streams.slice(0, 2)"
-                        [username]="stream.username"
+                        *ngFor="let details of providerDetails.slice(0, 2)"
+                        [username]="details.username"
                         [size]="avatarSize"
-                        [source]="stream.avatar"
+                        [source]="details.avatar"
                     ></app-avatar>
                 </div>
-                <div class="images" *ngIf="!isEmpty() && isExpanded" [ngClass]="provider">
-                    <app-avatar [username]="stream.username" [size]="avatarSize" [source]="stream.avatar"></app-avatar>
+                <div class="images" *ngIf="!isProviderEmpty() && isExpanded" [ngClass]="provider">
+                    <app-avatar
+                        [username]="details.username"
+                        [size]="avatarSize"
+                        [source]="details.avatar"
+                    ></app-avatar>
                 </div>
-                <p class="semi-bold size-14 primary-400" *ngIf="!isEmpty() && !isExpanded">
-                    {{ streams[0].username }} <span class="hint"></span>
+                <p class="semi-bold size-14 primary-400" *ngIf="!isProviderEmpty() && !isExpanded">
+                    {{ providerDetails[0].username }} <span class="hint"></span>
                 </p>
-                <p class="semi-bold size-14 primary-400" *ngIf="!isEmpty() && isExpanded">
-                    {{ stream.username }} <span class="hint"></span>
+                <p class="semi-bold size-14 primary-400" *ngIf="!isProviderEmpty() && isExpanded">
+                    {{ details.username }} <span class="hint"></span>
                 </p>
             </div>
 
             <div class="actions">
                 <i
                     class="material-icons add"
-                    *ngIf="isLastStream(stream) && !isEmpty() && isExpanded"
-                    (click)="addStream(provider)"
+                    *ngIf="areLastProviderDetails(details) && !isProviderEmpty() && isExpanded"
+                    (click)="addProviderDetails(provider)"
                     [@slideUp]
                 >
                     add
                 </i>
-                <i class="material-icons remove" *ngIf="!isEmpty() && isExpanded" (click)="removeStream(streamIDX)">
+                <i
+                    class="material-icons remove"
+                    *ngIf="!isProviderEmpty() && isExpanded"
+                    (click)="removeProviderDetails(detailsIDX)"
+                >
                     close
                 </i>
-                <i class="material-icons dropdown" *ngIf="!isEmpty() && !isExpanded">keyboard_arrow_down</i>
+                <i class="material-icons dropdown" *ngIf="!isProviderEmpty() && !isExpanded">keyboard_arrow_down</i>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ export * from './providers.enum';
 export * from './accounts.enum';
 export * from './modes.enum';
 export * from './user.model';
-export * from './stream.model';
+export * from './provider-details.model';
 export * from './post.model';
 export * from './post-author.model';
 export * from './provider.model';

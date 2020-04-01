@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { IProviderDetails } from '@src/app/core/models/provider-details.model';
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
-import { IStream } from '@src/app/core/models/stream.model';
 import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
@@ -12,7 +12,7 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
 })
 export class SocialResultComponent {
     @Input() provider: ProvidersEnum;
-    @Input() streams: IStream[] = [];
+    @Input() providerDetails: IProviderDetails[] = [];
     @Input() isHidden = false;
     @Input() isExpanded = true;
     @Input() isDone = false;
@@ -23,23 +23,23 @@ export class SocialResultComponent {
 
     constructor() {}
 
-    addStream($event): void {
+    addProviderDetails($event): void {
         this.add.emit($event);
     }
 
-    removeStream(streamIDX): void {
-        this.remove.emit(streamIDX);
+    removeProviderDetails(providerDetailsIDX): void {
+        this.remove.emit(providerDetailsIDX);
     }
 
-    expandStreams(): void {
+    expandProviderDetails(): void {
         this.isExpanded = !this.isExpanded;
     }
 
-    isEmpty(): boolean {
-        return Boolean(!this.streams.length);
+    isProviderEmpty(): boolean {
+        return Boolean(!this.providerDetails.length);
     }
 
-    isLastStream(stream): boolean {
-        return stream === this.streams[this.streams.length - 1];
+    areLastProviderDetails(providerDetails): boolean {
+        return providerDetails === this.providerDetails[this.providerDetails.length - 1];
     }
 }

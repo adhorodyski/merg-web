@@ -12,12 +12,12 @@
                 <app-social-result
                     *ngIf="previousProvider"
                     [provider]="previousProvider"
-                    [streams]="previousStreams"
+                    [providerDetails]="previousProviderDetails"
                     [isHidden]="true"
                     [isExpanded]="false"
                     [isDone]="true"
-                    (add)="addStream($event)"
-                    (remove)="removeStream($event, previousProvider)"
+                    (add)="addProviderDetails($event)"
+                    (remove)="removeProviderDetails($event, previousProvider)"
                 ></app-social-result>
             </li>
             <!--   ACTIVE  -->
@@ -25,12 +25,12 @@
                 <app-social-result
                     *ngIf="activeProvider"
                     [provider]="activeProvider"
-                    [streams]="activeStreams"
+                    [providerDetails]="activeProviderDetails"
                     [isHidden]="false"
                     [isExpanded]="true"
                     [isDone]="false"
-                    (add)="addStream($event)"
-                    (remove)="removeStream($event, activeProvider)"
+                    (add)="addProviderDetails($event)"
+                    (remove)="removeProviderDetails($event, activeProvider)"
                 ></app-social-result>
             </li>
             <!--   NEXT  -->
@@ -38,12 +38,12 @@
                 <app-social-result
                     *ngIf="nextProvider"
                     [provider]="nextProvider"
-                    [streams]="nextStreams"
+                    [providerDetails]="nextProviderDetails"
                     [isHidden]="true"
                     [isExpanded]="false"
                     [isDone]="false"
-                    (add)="addStream($event)"
-                    (remove)="removeStream($event, nextProvider)"
+                    (add)="addProviderDetails($event)"
+                    (remove)="removeProviderDetails($event, nextProvider)"
                 ></app-social-result>
             </li>
         </ul>
