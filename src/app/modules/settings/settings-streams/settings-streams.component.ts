@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IStream } from '@src/app/core/models/stream.model';
+import { IProviderDetails } from '@src/app/core/models/provider-details.model';
 import { IUser } from '@src/app/core/models/user.model';
 
 @Component({
@@ -14,15 +14,15 @@ export class SettingsStreamsComponent implements OnInit {
 
     ngOnInit(): void {}
 
-    addStream(provider): void {
+    addProviderDetails(provider): void {
         console.log(provider);
     }
 
-    removeStream(streamIDX, providerIDX): void {
-        this.user.providers[providerIDX].streams.splice(streamIDX, 1);
+    removeProviderDetails(providerDetailsIDX, providerIDX): void {
+        this.user.providers[providerIDX].details.splice(providerDetailsIDX, 1);
     }
 
-    isEmpty(streams: IStream[]): boolean {
-        return Boolean(streams.length);
+    isProviderEmpty(providerDetails: IProviderDetails[]): boolean {
+        return Boolean(providerDetails.length);
     }
 }

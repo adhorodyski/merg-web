@@ -1,7 +1,7 @@
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
-import { IStream } from '@src/app/core/models/stream.model';
+import { IProviderDetails } from '@src/app/core/models/provider-details.model';
 
 export interface IProvider {
-    provider: ProvidersEnum;
-    streams: IStream[];
+    name: ProvidersEnum;
+    details: IProviderDetails[];
 }

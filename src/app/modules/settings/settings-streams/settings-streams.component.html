@@ -2,12 +2,12 @@
     <h4 class="heading primary-400 size-18 bold">Streams</h4>
     <div class="provider-results" *ngFor="let provider of user.providers; let providerIDX = index">
         <app-social-result
-            [provider]="provider.provider"
-            [streams]="provider.streams"
+            [provider]="provider.name"
+            [providerDetails]="provider.details"
             [isHidden]="false"
-            [isDone]="isEmpty(provider.streams)"
-            (add)="addStream($event)"
-            (remove)="removeStream($event, providerIDX)"
+            [isDone]="isProviderEmpty(provider.details)"
+            (add)="addProviderDetails($event)"
+            (remove)="removeProviderDetails($event, providerIDX)"
         ></app-social-result>
     </div>
 </section>

@@ -12,8 +12,8 @@ export const mockedUser: IUser = {
     tags: ['music', 'technology'],
     providers: [
         {
-            provider: ProvidersEnum.YOUTUBE,
-            streams: [
+            name: ProvidersEnum.YOUTUBE,
+            details: [
                 {
                     username: 'MKBHD',
                     avatar: 'https://pbs.twimg.com/profile_images/1212149592403382281/cI0-xyss_400x400.jpg',
@@ -21,8 +21,8 @@ export const mockedUser: IUser = {
             ],
         },
         {
-            provider: ProvidersEnum.INSTAGRAM,
-            streams: [
+            name: ProvidersEnum.INSTAGRAM,
+            details: [
                 {
                     username: 'marcus_brownlee',
                     avatar: 'https://reidrealtors.com/wp-content/uploads/2017/12/pic-bio-melvin26-500x480-c-center.jpg',

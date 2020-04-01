@@ -1,4 +1,4 @@
-export interface IStream {
+export interface IProviderDetails {
     username: string;
     avatar: string;
 }
