@@ -1,9 +1,9 @@
-import { AccountsEnum } from '@src/app/core/models/accounts.enum';
+import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
 import { IPostAuthor } from '@src/app/core/models/post-author.model';
-import { ProvidersEnum } from '@src/app/core/models/providers.enum';
+import { PROVIDERS } from '@src/app/core/models/providers.enum';
 
 export const mockedPostAuthor: IPostAuthor = {
-    accountType: AccountsEnum.CREATOR,
+    accountType: ACCOUNTS.CREATOR,
     username: 'thefutur',
     name: 'Chris Do',
     email: 'cdo@mail.com',
@@ -12,7 +12,7 @@ export const mockedPostAuthor: IPostAuthor = {
         'Teach creatives how to make money doing what they love. Impact 1 Billion lives. Entrepreneur, Educator, Agitator.',
     providers: [
         {
-            name: ProvidersEnum.INSTAGRAM,
+            name: PROVIDERS.INSTAGRAM,
             details: [
                 {
                     username: 'thefutur',
@@ -21,7 +21,7 @@ export const mockedPostAuthor: IPostAuthor = {
             ],
         },
         {
-            name: ProvidersEnum.TWITTER,
+            name: PROVIDERS.TWITTER,
             details: [
                 {
                     username: 'futur',

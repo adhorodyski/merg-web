@@ -1,4 +1,4 @@
-import { AccountsEnum } from '@src/app/core/models/accounts.enum';
+import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
 import { IProvider } from '@src/app/core/models/provider.model';
 
 export interface IPostAuthor {
@@ -7,7 +7,7 @@ export interface IPostAuthor {
     email: string;
     avatar: string;
     about: string;
-    accountType: AccountsEnum;
+    accountType: ACCOUNTS;
     providers: IProvider[];
     followers: number[];
     follows: number[];

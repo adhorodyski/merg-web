@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '@src/app/core/services/post.service';
 import { IPost } from '@src/app/core/models/post.model';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { SIZES } from '@src/app/core/models/sizes.enum';
 
 @Component({
     selector: 'app-stories',
@@ -11,7 +11,7 @@ import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum'
 export class StoriesComponent implements OnInit {
     stories: IPost[];
 
-    sizes = ComponentsSizesEnum;
+    sizes = SIZES;
 
     constructor(private postService: PostService) {}
 

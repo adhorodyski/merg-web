@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { BUTTONS } from '@src/app/core/models/buttons.enum';
+import { SIZES } from '@src/app/core/models/sizes.enum';
 import { SearchService } from '@src/app/core/services/search.service';
 import { slideUp } from '@src/app/shared/animations/slideUp';
 
@@ -14,8 +14,8 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
 export class TagsComponent implements OnInit {
     tags: string[];
     activeTags: string[] = [];
-    sizes = ComponentsSizesEnum;
-    acceptButtonType = ButtonTypesEnum.PRIMARY;
+    sizes = SIZES;
+    buttons = BUTTONS;
 
     constructor(private router: Router, private searchService: SearchService) {}
 

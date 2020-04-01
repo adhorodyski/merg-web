@@ -45,14 +45,14 @@
                     <app-avatar
                         *ngFor="let details of providerDetails.slice(0, 2)"
                         [username]="details.username"
-                        [size]="avatarSize"
+                        [size]="sizes.MEDIUM"
                         [source]="details.avatar"
                     ></app-avatar>
                 </div>
                 <div class="images" *ngIf="!isProviderEmpty() && isExpanded" [ngClass]="provider">
                     <app-avatar
                         [username]="details.username"
-                        [size]="avatarSize"
+                        [size]="sizes.MEDIUM"
                         [source]="details.avatar"
                     ></app-avatar>
                 </div>

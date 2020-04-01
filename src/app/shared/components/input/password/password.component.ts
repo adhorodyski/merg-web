@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ControlContainer, FormGroup } from '@angular/forms';
-import { FormIconsEnum } from '@src/app/core/models/form-icons.enum';
+import { FORM_ICONS } from '@src/app/core/models/form-icons.enum';
 import { slideLeft } from '@src/app/shared/animations/slideLeft';
 
 @Component({
@@ -13,7 +13,7 @@ export class PasswordComponent implements OnInit {
     @Input() type: string;
     @Input() value: string;
 
-    private icons = FormIconsEnum;
+    icons = FORM_ICONS;
     inputForm: FormGroup;
 
     constructor(private controlContainer: ControlContainer) {}

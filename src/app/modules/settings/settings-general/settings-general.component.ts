@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguagesEnum } from '@src/app/core/models/languages.enum';
-import { ModesEnum } from '@src/app/core/models/modes.enum';
+import { LANGUAGES } from '@src/app/core/models/languages.enum';
+import { MODES } from '@src/app/core/models/modes.enum';
 import { LanguageService } from '@src/app/core/services/language.service';
 import { ModeService } from '@src/app/core/services/mode.service';
 
@@ -10,9 +10,9 @@ import { ModeService } from '@src/app/core/services/mode.service';
     styleUrls: ['./settings-general.component.scss'],
 })
 export class SettingsGeneralComponent implements OnInit {
-    modes = ModesEnum;
-    mode: ModesEnum;
-    language: LanguagesEnum;
+    modes = MODES;
+    mode: MODES;
+    language: LANGUAGES;
 
     constructor(private modeService: ModeService, private languageService: LanguageService) {}
 

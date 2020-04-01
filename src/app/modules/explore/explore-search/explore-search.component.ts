@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchService } from '@src/app/core/services/search.service';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { SIZES } from '@src/app/core/models/sizes.enum';
 import { IUser } from '@src/app/core/models/user.model';
 
 @Component({
@@ -13,7 +13,7 @@ export class ExploreSearchComponent {
     tags: string[];
     activeTags: string[] = [];
     results: IUser[];
-    sizes = ComponentsSizesEnum;
+    sizes = SIZES;
 
     constructor(private searchService: SearchService) {
         this.getTags();

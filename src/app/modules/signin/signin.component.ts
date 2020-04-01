@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
-import { FormControlsEnum } from '@src/app/core/models/form-controls.enum';
+import { BUTTONS } from '@src/app/core/models/buttons.enum';
+import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
 import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
@@ -12,10 +12,8 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
     animations: [slideUp],
 })
 export class SignInComponent implements OnInit {
-    emailControl = FormControlsEnum.EMAIL;
-    passwordControl = FormControlsEnum.PASSWORD;
-    signInButtonType = ButtonTypesEnum.PRIMARY;
-    externalButtonType = ButtonTypesEnum.EXTERNAL;
+    formControls = FORM_CONTROLS;
+    buttons = BUTTONS;
     signInForm: FormGroup;
 
     constructor(private router: Router) {}

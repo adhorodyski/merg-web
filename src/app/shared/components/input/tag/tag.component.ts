@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { SIZES } from '@src/app/core/models/sizes.enum';
 
 @Component({
     selector: 'app-tag',
@@ -9,7 +9,7 @@ import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum'
 export class TagComponent {
     @Input() isActive: boolean;
     @Input() value: string;
-    @Input() size: ComponentsSizesEnum;
+    @Input() size: SIZES;
     @Output() clickTag: EventEmitter<string> = new EventEmitter<string>();
 
     constructor() {}

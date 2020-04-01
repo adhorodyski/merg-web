@@ -1,4 +1,4 @@
-export enum ModesEnum {
+export enum MODES {
     LIGHT = 'LIGHT',
     DARK = 'DARK',
 }

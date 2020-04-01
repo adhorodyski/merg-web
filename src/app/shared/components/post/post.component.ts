@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IPost } from '@src/app/core/models/post.model';
-import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum';
+import { SIZES } from '@src/app/core/models/sizes.enum';
 
 @Component({
     selector: 'app-post',
@@ -9,7 +9,7 @@ import { ComponentsSizesEnum } from '@src/app/core/models/components-sizes.enum'
 })
 export class PostComponent {
     @Input() post: IPost;
-    @Input() size: ComponentsSizesEnum;
+    @Input() size: SIZES;
 
     constructor() {}
 }
