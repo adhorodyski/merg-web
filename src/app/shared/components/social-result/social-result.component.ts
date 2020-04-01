@@ -14,27 +14,14 @@ export class SocialResultComponent {
     @Input() provider: ProvidersEnum;
     @Input() streams: IStream[] = [];
     @Input() isHidden = false;
+    @Input() isExpanded = true;
     @Input() isDone = false;
     @Output() remove = new EventEmitter<number>();
     @Output() add = new EventEmitter<ProvidersEnum>();
 
-    isExpanded = true;
-
     avatarSize = ComponentsSizesEnum.MEDIUM;
 
     constructor() {}
-
-    isEmpty(): boolean {
-        return Boolean(!this.streams.length);
-    }
-
-    isLastStream(stream): boolean {
-        return stream === this.streams[this.streams.length - 1];
-    }
-
-    expandStreams(): void {
-        this.isExpanded = !this.isExpanded;
-    }
 
     addStream($event): void {
         this.add.emit($event);
@@ -44,11 +31,15 @@ export class SocialResultComponent {
         this.remove.emit(streamIDX);
     }
 
-    clickResult(): void {
-        if (this.isEmpty()) {
-            this.addStream(this.provider);
-        } else if (!this.isExpanded) {
-            this.expandStreams();
-        }
+    expandStreams(): void {
+        this.isExpanded = !this.isExpanded;
+    }
+
+    isEmpty(): boolean {
+        return Boolean(!this.streams.length);
+    }
+
+    isLastStream(stream): boolean {
+        return stream === this.streams[this.streams.length - 1];
     }
 }

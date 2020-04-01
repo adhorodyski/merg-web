@@ -9,7 +9,7 @@
 
     <!--  EMPTY  -->
     <div class="results" *ngIf="isEmpty()">
-        <div class="result" (click)="clickResult()" [@slideUp]>
+        <div class="result" (click)="addStream(provider)" [@slideUp]>
             <div class="info">
                 <div class="images">
                     <img
@@ -29,7 +29,12 @@
 
     <!-- FILLED/CONDENSED  -->
     <div class="results" *ngIf="!isEmpty()">
-        <div class="result" *ngFor="let stream of streams; let streamIDX = index" (click)="clickResult()" [@slideUp]>
+        <div
+            class="result"
+            *ngFor="let stream of streams; let streamIDX = index"
+            (click)="!isExpanded && expandStreams()"
+            [@slideUp]
+        >
             <div class="info">
                 <div class="images" *ngIf="!isEmpty() && !isExpanded" [ngClass]="provider">
                     <app-avatar
@@ -53,7 +58,7 @@
             <div class="actions">
                 <i
                     class="material-icons add"
-                    *ngIf="isLastStream(stream) && !isEmpty()"
+                    *ngIf="isLastStream(stream) && !isEmpty() && isExpanded"
                     (click)="addStream(provider)"
                     [@slideUp]
                 >

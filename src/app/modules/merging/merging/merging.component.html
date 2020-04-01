@@ -6,18 +6,47 @@
                 Add streams for your Merg members.
             </h5>
         </div>
-        <div class="providers-results">
-            <app-social-result
-                *ngFor="let provider of providers | keyvalue; let providerIDX = index"
-                class="provider-result"
-                [provider]="getProviderFromKey(provider.key)"
-                [streams]="getProviderStreams(this.user.providers, getProviderFromKey(provider.key))"
-                [isHidden]="activeStepIDX !== providerIDX"
-                [isDone]="activeStepIDX > providerIDX"
-                (add)="addStream($event)"
-                (remove)="removeStream($event, getProviderFromKey(provider.key))"
-            ></app-social-result>
-        </div>
+        <ul class="providers-results" [@mergingRoll]="activeStepIDX">
+            <!--   PREVIOUS  -->
+            <li class="provider-result">
+                <app-social-result
+                    *ngIf="previousProvider"
+                    [provider]="previousProvider"
+                    [streams]="previousStreams"
+                    [isHidden]="true"
+                    [isExpanded]="false"
+                    [isDone]="true"
+                    (add)="addStream($event)"
+                    (remove)="removeStream($event, previousProvider)"
+                ></app-social-result>
+            </li>
+            <!--   ACTIVE  -->
+            <li class="provider-result">
+                <app-social-result
+                    *ngIf="activeProvider"
+                    [provider]="activeProvider"
+                    [streams]="activeStreams"
+                    [isHidden]="false"
+                    [isExpanded]="true"
+                    [isDone]="false"
+                    (add)="addStream($event)"
+                    (remove)="removeStream($event, activeProvider)"
+                ></app-social-result>
+            </li>
+            <!--   NEXT  -->
+            <li class="provider-result">
+                <app-social-result
+                    *ngIf="nextProvider"
+                    [provider]="nextProvider"
+                    [streams]="nextStreams"
+                    [isHidden]="true"
+                    [isExpanded]="false"
+                    [isDone]="false"
+                    (add)="addStream($event)"
+                    (remove)="removeStream($event, nextProvider)"
+                ></app-social-result>
+            </li>
+        </ul>
         <div class="actions">
             <app-status [steps]="steps" [activeStepIDX]="activeStepIDX"></app-status>
             <app-button

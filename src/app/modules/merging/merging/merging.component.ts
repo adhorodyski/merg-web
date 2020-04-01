@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { mockedUser } from '@src/app/core/mocks/user.mockup';
 import { ButtonTypesEnum } from '@src/app/core/models/button-types.enum';
-import { IProvider } from '@src/app/core/models/provider.model';
 import { ProvidersEnum } from '@src/app/core/models/providers.enum';
 import { IStream } from '@src/app/core/models/stream.model';
 import { IUser } from '@src/app/core/models/user.model';
+import { mergingRoll } from '@src/app/shared/animations/mergingRoll';
 import { slideUp } from '@src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-merging',
     templateUrl: './merging.component.html',
     styleUrls: ['./merging.component.scss'],
-    animations: [slideUp],
+    animations: [slideUp, mergingRoll],
 })
 export class MergingComponent implements OnInit {
     user: IUser;
@@ -22,15 +22,26 @@ export class MergingComponent implements OnInit {
     activeStepIDX = 0;
     isDone = false;
 
+    previousProvider: ProvidersEnum;
+    previousStreams: IStream[];
+
+    activeProvider: ProvidersEnum;
+    activeStreams: IStream[];
+
+    nextProvider: ProvidersEnum;
+    nextStreams: IStream[];
+
     constructor(private router: Router) {}
 
     ngOnInit() {
         this.user = mockedUser;
+        this.setVisibleProviders();
+        this.setVisibleStreams();
     }
 
-    getProviderStreams(userProviders: IProvider[], resultProvider: ProvidersEnum): IStream[] {
-        let streams = [];
-        userProviders.forEach(provider => {
+    getProviderStreams(resultProvider: ProvidersEnum): IStream[] {
+        let streams: IStream[] = [];
+        this.user.providers.forEach(provider => {
             if (provider.provider === resultProvider) {
                 streams = provider.streams;
             }
@@ -38,8 +49,18 @@ export class MergingComponent implements OnInit {
         return streams;
     }
 
-    getProviderFromKey(providerKey: ProvidersEnum): ProvidersEnum {
-        return this.providers[providerKey];
+    setVisibleProviders(): void {
+        const providersKeys = Object.keys(ProvidersEnum);
+
+        this.previousProvider = ProvidersEnum[providersKeys[this.activeStepIDX - 1]];
+        this.activeProvider = ProvidersEnum[providersKeys[this.activeStepIDX]];
+        this.nextProvider = ProvidersEnum[providersKeys[this.activeStepIDX + 1]];
+    }
+
+    setVisibleStreams(): void {
+        this.previousStreams = this.getProviderStreams(this.previousProvider);
+        this.activeStreams = this.getProviderStreams(this.activeProvider);
+        this.nextStreams = this.getProviderStreams(this.nextProvider);
     }
 
     addStream(provider): void {
@@ -47,12 +68,14 @@ export class MergingComponent implements OnInit {
     }
 
     removeStream(streamIDX: number, provider: ProvidersEnum): void {
-        const providerStreams = this.getProviderStreams(this.user.providers, provider);
+        const providerStreams = this.getProviderStreams(provider);
         providerStreams.splice(streamIDX, 1);
     }
 
     nextStep(): void {
         this.activeStepIDX++;
+        this.setVisibleProviders();
+        this.setVisibleStreams();
     }
 
     continue(): void {
@@ -64,8 +87,6 @@ export class MergingComponent implements OnInit {
 
     submit(): void {
         this.nextStep();
-        setTimeout(() => {
-            this.router.navigate(['merging/tags']);
-        }, 1500);
+        this.router.navigate(['merging/tags']);
     }
 }
