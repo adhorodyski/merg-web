@@ -1,7 +1,7 @@
 <main class="main minimal center" [@slideUp]>
     <div class="medium-column">
         <div class="cards">
-            <div class="card" routerLink="/signup">
+            <div class="card" routerLink="/signup/member">
                 <span class="illustration member"></span>
                 <div class="description">
                     <h4 class="title primary-400 bold size-18 center">Member</h4>
@@ -12,7 +12,7 @@
                     </p>
                 </div>
             </div>
-            <div class="card" routerLink="/signup">
+            <div class="card" routerLink="/signup/creator">
                 <span class="illustration creator"></span>
                 <div class="description">
                     <h4 class="title primary-400 bold size-18 center">Creator</h4>
@@ -26,7 +26,7 @@
         </div>
         <div class="actions">
             <p class="description primary-200 size-11 medium center">Have an account?</p>
-            <app-button [type]="signInButtonType" message="sign in" routerLink="/signin"></app-button>
+            <app-button [type]="buttons.SECONDARY" message="sign in" routerLink="/signin"></app-button>
         </div>
         <div class="stores-badges">
             <a [href]="appleStoreLink" class="link">

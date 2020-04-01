@@ -8,7 +8,7 @@ import { slideUp } from '@src/app/shared/animations/slideUp';
     animations: [slideUp],
 })
 export class LandingComponent {
-    signInButtonType = BUTTONS.SECONDARY;
+    buttons = BUTTONS;
     appleStoreLink = 'https://apple.com';
     googlePlayLink = 'https://google.com';
 
