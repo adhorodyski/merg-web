@@ -37,6 +37,7 @@ export class TagsComponent implements OnInit {
 
     submit(): void {
         console.log(this.activeTags);
+        this.router.navigate(['merging/welcome']);
     }
 
     goBack(): void {

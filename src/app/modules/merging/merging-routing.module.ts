@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 // components
 import { MergingComponent } from '@src/app/modules/merging/merging/merging.component';
 import { TagsComponent } from '@src/app/modules/merging/tags/tags.component';
+import { WelcomeComponent } from '@src/app/modules/merging/welcome/welcome.component';
 
 const routes: Routes = [
     {
@@ -12,6 +13,10 @@ const routes: Routes = [
     {
         path: 'tags',
         component: TagsComponent,
+    },
+    {
+        path: 'welcome',
+        component: WelcomeComponent,
     },
 ];
 
