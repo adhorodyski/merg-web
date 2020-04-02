@@ -38,7 +38,6 @@
             class="result"
             *ngFor="let details of providerDetails; let detailsIDX = index"
             (click)="!isExpanded && expandProviderDetails()"
-            [@slideUp]
         >
             <div class="info">
                 <div class="images" *ngIf="!isProviderEmpty() && !isExpanded" [ngClass]="provider">
