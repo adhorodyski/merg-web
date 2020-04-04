@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { TokenInterceptor } from './interceptors';
-import { MemberGuard, CreatorGuard } from './guards';
+import { MemberGuard, CreatorGuard, NoAuthGuard } from './guards';
 import { ApiService, AuthService, LanguageService, ModeService, PostService, SearchService } from './services';
 import { SafePipe } from './pipes';
 import { PatternValidatorDirective } from './directives';
@@ -13,6 +13,7 @@ import { PatternValidatorDirective } from './directives';
     imports: [CommonModule, HttpClientModule, RouterModule],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+        NoAuthGuard,
         MemberGuard,
         CreatorGuard,
         ApiService,
