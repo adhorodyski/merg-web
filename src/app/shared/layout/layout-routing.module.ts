@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 // guards
-import { CreatorGuard, MemberGuard } from '@src/app/core/guards';
+import { CreatorGuard, MemberGuard, NoAuthGuard } from '@src/app/core/guards';
 // layouts
 import { MainLayoutComponent } from '@src/app/shared/layout/main-layout';
 import { MinimalLayoutComponent } from '@src/app/shared/layout/minimal-layout';
@@ -46,14 +46,17 @@ const routes: Routes = [
         children: [
             {
                 path: 'landing',
+                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/modules/landing/landing.module').then(m => m.LandingModule),
             },
             {
                 path: 'signin',
+                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/modules/signin/signin.module').then(m => m.SigninModule),
             },
             {
                 path: 'signup',
+                canActivate: [NoAuthGuard],
                 loadChildren: () => import('@src/app/modules/signup/signup.module').then(m => m.SignupModule),
             },
             {
