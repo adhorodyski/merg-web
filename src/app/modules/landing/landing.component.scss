@@ -55,14 +55,15 @@
                     width: 100%;
                     height: 140px;
                     border-radius: 10px;
-                    background-size: contain !important;
 
                     &.member {
                         background: url('../../../assets/illustrations/member.svg') no-repeat center;
+                        background-size: contain;
                     }
 
                     &.creator {
                         background: url('../../../assets/illustrations/creator.svg') no-repeat center;
+                        background-size: contain;
                     }
                 }
             }
