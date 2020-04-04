@@ -24,6 +24,10 @@
                 height: 200px;
                 background: pink;
                 border-radius: 10px;
+
+                &.creator {
+                    background: url('../../../../assets/illustrations/creator.svg') no-repeat center;
+                }
             }
         }
 
