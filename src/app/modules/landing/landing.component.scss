@@ -52,10 +52,18 @@
                 }
 
                 .illustration {
-                    width: 140px;
+                    width: 100%;
                     height: 140px;
-                    background: pink;
                     border-radius: 10px;
+                    background-size: contain !important;
+
+                    &.member {
+                        background: url('../../../assets/illustrations/member.svg') no-repeat center;
+                    }
+
+                    &.creator {
+                        background: url('../../../assets/illustrations/creator.svg') no-repeat center;
+                    }
                 }
             }
         }
