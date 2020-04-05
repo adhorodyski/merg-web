@@ -9,11 +9,13 @@ import { IUser } from '@src/app/core/models/user.model';
     styleUrls: ['./explore-search.component.scss'],
 })
 export class ExploreSearchComponent {
+    sizes = SIZES;
+
     searchValue: string;
+    results: IUser[];
+
     tags: string[];
     activeTags: string[] = [];
-    results: IUser[];
-    sizes = SIZES;
 
     constructor(private searchService: SearchService) {
         this.getTags();

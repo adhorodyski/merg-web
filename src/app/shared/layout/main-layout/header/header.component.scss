@@ -1,0 +1,14 @@
+.header {
+    .view-header {
+        .nav-group.search {
+            position: relative;
+
+            .search-results {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 40px;
+            }
+        }
+    }
+}
