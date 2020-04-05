@@ -7,12 +7,20 @@
             </a>
         </div>
         <!--  SEARCH  -->
-        <div class="nav-group">
+        <div class="nav-group search">
             <app-search
                 [size]="sizes.SMALL"
                 [value]="searchValue"
                 (valueEvent)="handleSearchValue($event)"
+                (focusout)="closeSearch()"
             ></app-search>
+            <ul class="search-results" *ngIf="isSearching && searchValue" [@slideUp]>
+                <app-search-result
+                    *ngFor="let result of results"
+                    [user]="result"
+                    [size]="sizes.SMALL"
+                ></app-search-result>
+            </ul>
         </div>
         <!--  NAVIGATION  -->
         <nav class="nav-group">
