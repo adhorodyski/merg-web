@@ -14,7 +14,7 @@
                 (valueEvent)="handleSearchValue($event)"
                 (focusout)="closeSearch()"
             ></app-search>
-            <ul class="search-results" *ngIf="isSearching && searchValue" [@slideUp]>
+            <ul class="search-results {{ sizes.SMALL }}" *ngIf="isSearching && searchValue" [@slideUp]>
                 <app-search-result
                     *ngFor="let result of results"
                     [user]="result"

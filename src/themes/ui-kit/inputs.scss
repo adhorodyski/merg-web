@@ -52,7 +52,13 @@
             padding: 0 15px 0 50px;
             background: transparent;
             appearance: none;
+            transition: border 0.2s;
+            border-radius: 5px;
             color: mat-color($primary, 400);
+
+            &:focus {
+                border: 2px solid mat-color($primary, 200);
+            }
         }
 
         &.password input {
@@ -102,6 +108,7 @@
 
         &.search {
             input {
+                border-radius: 10px;
                 transition: padding 0.3s;
             }
 
@@ -119,10 +126,12 @@
                 }
 
                 .material-icons {
-                    left: 20px;
+                    padding: 10px;
+                    left: 10px;
+                    top: 5px;
 
                     &.clear {
-                        @include reverseIconSide(20px);
+                        @include reverseIconSide(10px);
                         color: mat-color($primary, 400);
                         cursor: pointer;
                     }
@@ -145,11 +154,12 @@
 
                 .material-icons {
                     font-size: 1.25rem;
-                    top: calc(50% - 10px);
-                    left: 15px;
+                    padding: 3px;
+                    left: 10px;
+                    top: 2px;
 
                     &.clear {
-                        @include reverseIconSide(15px);
+                        @include reverseIconSide(10px);
                         color: mat-color($primary, 400);
                         cursor: pointer;
                     }
