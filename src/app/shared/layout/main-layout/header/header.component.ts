@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@src/app/core/services/auth.service';
 import { SearchService } from '@src/app/core/services/search.service';
 import { IUser } from '@src/app/core/models/user.model';
 import { SIZES } from '@src/app/core/models/sizes.enum';
@@ -20,7 +21,9 @@ export class HeaderComponent {
     results: IUser[];
     isSearching: boolean;
 
-    constructor(private searchService: SearchService) {}
+    isDropdownVisible = false;
+
+    constructor(private searchService: SearchService, private authService: AuthService) {}
 
     handleSearchValue($event): void {
         this.isSearching = true;
@@ -30,5 +33,13 @@ export class HeaderComponent {
 
     closeSearch(): void {
         setTimeout(() => (this.isSearching = false), 100);
+    }
+
+    triggerDropdown(): void {
+        this.isDropdownVisible = !this.isDropdownVisible;
+    }
+
+    signOut(): void {
+        this.authService.signOut();
     }
 }

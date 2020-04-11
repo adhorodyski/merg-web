@@ -23,23 +23,34 @@
             </ul>
         </div>
         <!--  NAVIGATION  -->
-        <nav class="nav-group">
+        <nav class="nav-group navigation">
             <a class="link" routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
-                <i class="material-icons">all_inclusive</i>
+                <i class="material-icons nav-icon">all_inclusive</i>
             </a>
             <a class="link" routerLink="/explore" routerLinkActive="active">
-                <i class="material-icons">search</i>
-            </a>
-            <a class="link" routerLink="/settings" routerLinkActive="active">
-                <i class="material-icons">more_horiz</i>
+                <i class="material-icons nav-icon">search</i>
             </a>
             <a
                 class="link profile"
-                [routerLink]="['/u', user.username]"
-                [routerLinkActiveOptions]="{ exact: true }"
-                routerLinkActive="active"
+                (click)="triggerDropdown()"
+                appClickOutside
+                (clickOutside)="isDropdownVisible && triggerDropdown()"
             >
                 <app-avatar [size]="sizes.SMALL" [username]="user.username" [source]="user.avatar"></app-avatar>
+                <div class="dropdown" *ngIf="isDropdownVisible" [@slideUp]>
+                    <span class="primary-200 size-14 medium result" [routerLink]="['/u', user.username]">
+                        <i class="material-icons">person_outline</i>
+                        Profile
+                    </span>
+                    <span class="primary-200 size-14 medium result" [routerLink]="['/settings']">
+                        <i class="material-icons">more_horiz</i>
+                        Settings
+                    </span>
+                    <span class="warn-50 size-14 medium result" (click)="signOut()">
+                        <i class="material-icons">transfer_within_a_station</i>
+                        Sign out
+                    </span>
+                </div>
             </a>
         </nav>
     </div>

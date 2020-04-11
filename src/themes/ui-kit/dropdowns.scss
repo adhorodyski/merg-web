@@ -1,0 +1,43 @@
+@import '~@angular/material/theming';
+@import '../palette';
+
+@mixin dropdowns($theme) {
+    $primary: map-get($theme, primary);
+    $warn: map-get($theme, warn);
+
+    .dropdown {
+        min-width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(mat-color($primary, 400), 0.03);
+
+        .result {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 15px;
+            background: mat-color($primary, 50);
+            border-bottom: 1px solid mat-color($primary, 100);
+            transition: background 0.2s;
+
+            &:hover {
+                background: mat-color($primary, 100);
+            }
+
+            &:first-child {
+                border-radius: 10px 10px 0 0;
+            }
+
+            &:last-child {
+                border: none;
+                border-radius: 0 0 10px 10px;
+            }
+
+            .material-icons {
+                color: mat-color($primary, 200);
+                font-size: 1.25rem;
+                margin-right: 15px;
+            }
+        }
+    }
+}

@@ -8,6 +8,7 @@ import { SearchComponent } from '@src/app/shared/components/input/search/search.
 import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
 import { SearchResultComponent } from '@src/app/shared/components/search-result/search-result.component';
 import { SearchService } from '@src/app/core/services/search.service';
+import { AuthService } from '@src/app/core/services/auth.service';
 
 describe('HeaderComponent', () => {
     let component: HeaderComponent;
@@ -15,7 +16,7 @@ describe('HeaderComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            providers: [SearchService],
+            providers: [SearchService, AuthService],
             imports: [BrowserAnimationsModule, FormsModule, RouterTestingModule],
             declarations: [HeaderComponent, AvatarComponent, SearchComponent, SearchResultComponent],
         }).compileComponents();

@@ -7,7 +7,7 @@ import { TokenInterceptor } from './interceptors';
 import { MemberGuard, CreatorGuard, NoAuthGuard } from './guards';
 import { ApiService, AuthService, LanguageService, ModeService, PostService, SearchService } from './services';
 import { SafePipe } from './pipes';
-import { PatternValidatorDirective } from './directives';
+import { PatternValidatorDirective, ClickOutsideDirective } from './directives';
 
 @NgModule({
     imports: [CommonModule, HttpClientModule, RouterModule],
@@ -24,6 +24,7 @@ import { PatternValidatorDirective } from './directives';
         SearchService,
         SafePipe,
         PatternValidatorDirective,
+        ClickOutsideDirective,
     ],
     declarations: [],
 })
