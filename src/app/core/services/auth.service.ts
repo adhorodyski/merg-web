@@ -1,16 +1,25 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
     providedIn: 'root',
 })
 export class AuthService {
-    constructor() {}
+    private authenticated = true;
+    private creator = true;
+
+    constructor(private router: Router) {}
 
     public isAuthenticated(): boolean {
-        return true;
+        return this.authenticated;
     }
 
     public isCreator(): boolean {
-        return true;
+        return this.creator;
+    }
+
+    public signOut(): void {
+        this.authenticated = false;
+        this.router.navigate(['landing']);
     }
 }
