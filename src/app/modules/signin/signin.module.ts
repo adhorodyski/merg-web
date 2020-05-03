@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 // modules
-import { SharedModule } from '@src/app/shared/shared.module';
-import { SigninRoutingModule } from '@src/app/modules/signin/signin-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { SigninRoutingModule } from 'src/app/modules/signin/signin-routing.module';
 // components
-import { SignInComponent } from '@src/app/modules/signin/signin.component';
+import { SignInComponent } from 'src/app/modules/signin/signin.component';
 
 @NgModule({
     declarations: [SignInComponent],

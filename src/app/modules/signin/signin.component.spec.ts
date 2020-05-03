@@ -4,9 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { SignInComponent } from './signin.component';
-import { ButtonComponent } from '@src/app/shared/components/button/button.component';
-import { InputComponent } from '@src/app/shared/components/input/input.component';
-import { PasswordComponent } from '@src/app/shared/components/input/password/password.component';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
+import { InputComponent } from 'src/app/shared/components/input/input.component';
+import { PasswordComponent } from 'src/app/shared/components/input/password/password.component';
 
 describe('SignInComponent', () => {
     let component: SignInComponent;

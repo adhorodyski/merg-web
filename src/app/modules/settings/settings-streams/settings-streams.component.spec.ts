@@ -2,9 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SettingsStreamsComponent } from './settings-streams.component';
-import { SocialResultComponent } from '@src/app/shared/components/social-result/social-result.component';
-import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
+import { SocialResultComponent } from 'src/app/shared/components/social-result/social-result.component';
+import { AvatarComponent } from 'src/app/shared/components/avatar/avatar.component';
+import { mockedUser } from 'src/app/core/mocks/user.mockup';
 
 describe('SettingsStreamsComponent', () => {
     let component: SettingsStreamsComponent;

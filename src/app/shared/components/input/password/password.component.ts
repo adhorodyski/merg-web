@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ControlContainer, FormGroup } from '@angular/forms';
-import { FORM_ICONS } from '@src/app/core/models/form-icons.enum';
-import { slideLeft } from '@src/app/shared/animations/slideLeft';
+import { FORM_ICONS } from 'src/app/core/models/form-icons.enum';
+import { slideLeft } from 'src/app/shared/animations/slideLeft';
 
 @Component({
     selector: 'app-password',

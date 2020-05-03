@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IProviderDetails } from '@src/app/core/models/provider-details.model';
-import { PROVIDERS } from '@src/app/core/models/providers.enum';
-import { SIZES } from '@src/app/core/models/sizes.enum';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { IProviderDetails } from 'src/app/core/models/provider-details.model';
+import { PROVIDERS } from 'src/app/core/models/providers.enum';
+import { SIZES } from 'src/app/core/models/sizes.enum';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-social-result',

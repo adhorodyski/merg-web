@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BUTTONS } from '@src/app/core/models/buttons.enum';
-import { SIZES } from '@src/app/core/models/sizes.enum';
-import { SearchService } from '@src/app/core/services/search.service';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { BUTTONS } from 'src/app/core/models/buttons.enum';
+import { SIZES } from 'src/app/core/models/sizes.enum';
+import { SearchService } from 'src/app/core/services/search.service';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-merging-tags',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LANGUAGES } from '@src/app/core/models/languages.enum';
-import { MODES } from '@src/app/core/models/modes.enum';
-import { LanguageService } from '@src/app/core/services/language.service';
-import { ModeService } from '@src/app/core/services/mode.service';
+import { LANGUAGES } from 'src/app/core/models/languages.enum';
+import { MODES } from 'src/app/core/models/modes.enum';
+import { LanguageService } from 'src/app/core/services/language.service';
+import { ModeService } from 'src/app/core/services/mode.service';
 
 @Component({
     selector: 'app-settings-general',

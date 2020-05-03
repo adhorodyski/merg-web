@@ -3,7 +3,8 @@
 @mixin backgrounds($theme) {
     $primary: map-get($theme, primary);
 
-    & {
+    // TODO
+    .bg {
         background: mat-color($primary, 50);
     }
 }

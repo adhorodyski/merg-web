@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MODES } from '@src/app/core/models/modes.enum';
+import { MODES } from 'src/app/core/models/modes.enum';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({

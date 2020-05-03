@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { BUTTONS } from '@src/app/core/models/buttons.enum';
-import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
-import { IUser } from '@src/app/core/models/user.model';
+import { BUTTONS } from 'src/app/core/models/buttons.enum';
+import { FORM_CONTROLS } from 'src/app/core/models/form-controls.enum';
+import { IUser } from 'src/app/core/models/user.model';
 
 @Component({
     selector: 'app-settings-personal',

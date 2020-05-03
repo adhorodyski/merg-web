@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ControlContainer, FormGroup } from '@angular/forms';
-import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
-import { FORM_ICONS } from '@src/app/core/models/form-icons.enum';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { FORM_CONTROLS } from 'src/app/core/models/form-controls.enum';
+import { FORM_ICONS } from 'src/app/core/models/form-icons.enum';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-input',

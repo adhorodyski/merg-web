@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ClickOutsideDirective } from '@src/app/core';
 // pipes
-import { SafePipe } from '@src/app/core/pipes';
+import { SafePipe } from 'src/app/core/pipes/safe.pipe';
+// directives
+import { ClickOutsideDirective } from 'src/app/core/directives/click-outside.directive';
 // components
+
 import {
     AvatarComponent,
     AvatarSelectorComponent,
@@ -23,9 +25,9 @@ import {
     StatusComponent,
     StoryComponent,
     TagComponent,
-} from '@src/app/shared/components';
+} from 'src/app/shared/components';
 // features
-import { PostsComponent, StoriesComponent } from '@src/app/shared/features';
+import { PostsComponent, StoriesComponent } from 'src/app/shared/features';
 
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule.forChild([])],

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { slideLeft } from '@src/app/shared/animations/slideLeft';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { slideLeft } from 'src/app/shared/animations/slideLeft';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-search',

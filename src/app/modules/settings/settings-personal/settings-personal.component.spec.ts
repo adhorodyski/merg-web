@@ -2,11 +2,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { SettingsPersonalComponent } from './settings-personal.component';
-import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
-import { ButtonComponent } from '@src/app/shared/components/button/button.component';
-import { AvatarSelectorComponent } from '@src/app/shared/components/input/avatar-selector/avatar-selector.component';
-import { InputComponent } from '@src/app/shared/components/input/input.component';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
+import { AvatarComponent } from 'src/app/shared/components/avatar/avatar.component';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
+import { AvatarSelectorComponent } from 'src/app/shared/components/input/avatar-selector/avatar-selector.component';
+import { InputComponent } from 'src/app/shared/components/input/input.component';
+import { mockedUser } from 'src/app/core/mocks/user.mockup';
 
 describe('SettingsPersonalComponent', () => {
     let component: SettingsPersonalComponent;

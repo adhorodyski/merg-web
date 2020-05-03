@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
+import { ACCOUNTS } from 'src/app/core/models/accounts.enum';
 
 // components
-import { SignUpComponent } from '@src/app/modules/signup/signup.component';
+import { SignUpComponent } from 'src/app/modules/signup/signup.component';
 
 const routes: Routes = [
     {

@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { MinimalLayoutComponent } from './minimal-layout.component';
 import { HeaderMinimalComponent } from './header-minimal/header-minimal.component';
-import { FooterComponent } from '@src/app/shared/components/footer/footer.component';
+import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 
 describe('MainLayoutComponent', () => {
     let component: MinimalLayoutComponent;

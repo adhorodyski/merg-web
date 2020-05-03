@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LANGUAGES } from '@src/app/core/models/languages.enum';
+import { LANGUAGES } from 'src/app/core/models/languages.enum';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({

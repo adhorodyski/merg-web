@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
-import { IPost } from '@src/app/core/models/post.model';
-import { IUser } from '@src/app/core/models/user.model';
-import { PostService } from '@src/app/core/services/post.service';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { mockedUser } from 'src/app/core/mocks/user.mockup';
+import { IPost } from 'src/app/core/models/post.model';
+import { IUser } from 'src/app/core/models/user.model';
+import { PostService } from 'src/app/core/services/post.service';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-profile',

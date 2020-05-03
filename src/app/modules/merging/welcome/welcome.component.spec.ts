@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { WelcomeComponent } from './welcome.component';
-import { ButtonComponent } from '@src/app/shared/components/button/button.component';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 
 describe('WelcomeComponent', () => {
     let component: WelcomeComponent;

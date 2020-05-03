@@ -12,6 +12,10 @@
         </a>
     </div>
     <div class="content">
-        <iframe [src]="post.embed | safe" allowfullscreen></iframe>
+        <iframe
+            title="{{ post.author.username }} post on {{ post.provider }}"
+            [src]="post.embed | safe"
+            allowfullscreen
+        ></iframe>
     </div>
 </li>

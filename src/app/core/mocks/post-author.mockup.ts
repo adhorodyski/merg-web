@@ -1,6 +1,6 @@
-import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
-import { IPostAuthor } from '@src/app/core/models/post-author.model';
-import { PROVIDERS } from '@src/app/core/models/providers.enum';
+import { ACCOUNTS } from 'src/app/core/models/accounts.enum';
+import { IPostAuthor } from 'src/app/core/models/post-author.model';
+import { PROVIDERS } from 'src/app/core/models/providers.enum';
 
 export const mockedPostAuthor: IPostAuthor = {
     accountType: ACCOUNTS.CREATOR,

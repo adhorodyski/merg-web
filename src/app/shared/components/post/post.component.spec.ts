@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SafePipe } from '@src/app/core/pipes/safe.pipe';
+import { SafePipe } from 'src/app/core/pipes/safe.pipe';
 
 import { PostComponent } from './post.component';
-import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
-import { mockedOcean } from '@src/app/core/mocks/ocean.mockup';
+import { AvatarComponent } from 'src/app/shared/components/avatar/avatar.component';
+import { mockedOcean } from 'src/app/core/mocks/ocean.mockup';
 
 describe('PostComponent', () => {
     let component: PostComponent;

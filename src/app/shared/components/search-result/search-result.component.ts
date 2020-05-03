@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { IUser } from '@src/app/core/models/user.model';
-import { SIZES } from '@src/app/core/models/sizes.enum';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { IUser } from 'src/app/core/models/user.model';
+import { SIZES } from 'src/app/core/models/sizes.enum';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-search-result',
