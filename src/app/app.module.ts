@@ -16,3 +16,9 @@ import { AppComponent } from '@src/app/app.component';
     bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+// "husky": {
+//     "hooks": {
+//         "pre-commit": "pretty-quick --staged && ng lint && ng test"
+//     }
+// }

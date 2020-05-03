@@ -53,10 +53,5 @@
         "tslint-config-prettier": "^1.18.0",
         "typescript": "~3.8.3",
         "webpack-cli": "^3.3.11"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged && ng lint && ng test"
-        }
     }
 }
