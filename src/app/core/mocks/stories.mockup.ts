@@ -1,6 +1,6 @@
-import { IPost } from '@src/app/core/models/post.model';
-import { PROVIDERS } from '@src/app/core/models/providers.enum';
-import { mockedPostAuthor } from '@src/app/core/mocks/post-author.mockup';
+import { IPost } from 'src/app/core/models/post.model';
+import { PROVIDERS } from 'src/app/core/models/providers.enum';
+import { mockedPostAuthor } from 'src/app/core/mocks/post-author.mockup';
 
 export const mockedStories: IPost[] = [
     {

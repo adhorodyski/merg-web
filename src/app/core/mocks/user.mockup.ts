@@ -1,6 +1,6 @@
-import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
-import { PROVIDERS } from '@src/app/core/models/providers.enum';
-import { IUser } from '@src/app/core/models/user.model';
+import { ACCOUNTS } from 'src/app/core/models/accounts.enum';
+import { PROVIDERS } from 'src/app/core/models/providers.enum';
+import { IUser } from 'src/app/core/models/user.model';
 
 export const mockedUser: IUser = {
     accountType: ACCOUNTS.CREATOR,

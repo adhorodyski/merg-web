@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
-import { IUser } from '@src/app/core/models/user.model';
-import { AuthService } from '@src/app/core/services/auth.service';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { mockedUser } from 'src/app/core/mocks/user.mockup';
+import { IUser } from 'src/app/core/models/user.model';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-settings',

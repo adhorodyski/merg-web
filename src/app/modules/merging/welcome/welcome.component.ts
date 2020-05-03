@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { BUTTONS } from '@src/app/core/models/buttons.enum';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { BUTTONS } from 'src/app/core/models/buttons.enum';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-welcome',

@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { PostService } from '@src/app/core/services/post.service';
+import { PostService } from 'src/app/core/services/post.service';
 
 import { StoriesComponent } from './stories.component';
-import { StoryComponent } from '@src/app/shared/components/story/story.component';
+import { StoryComponent } from 'src/app/shared/components/story/story.component';
 
 describe('StoriesComponent', () => {
     let component: StoriesComponent;

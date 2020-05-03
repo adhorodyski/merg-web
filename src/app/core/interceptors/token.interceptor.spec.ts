@@ -10,7 +10,7 @@ describe('TokenInterceptor', () => {
     );
 
     it('should be created', () => {
-        const interceptor: TokenInterceptor = TestBed.get(TokenInterceptor);
+        const interceptor: TokenInterceptor = TestBed.inject(TokenInterceptor);
         expect(interceptor).toBeTruthy();
     });
 });

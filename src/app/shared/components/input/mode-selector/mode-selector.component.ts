@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MODES } from '@src/app/core/models/modes.enum';
+import { MODES } from 'src/app/core/models/modes.enum';
 
 @Component({
     selector: 'app-mode-selector',
@@ -11,6 +11,8 @@ export class ModeSelectorComponent {
     @Input() title: string;
     @Input() isActive: boolean;
     @Output() clickMode: EventEmitter<MODES> = new EventEmitter<MODES>();
+
+    modes = MODES;
 
     constructor() {}
 

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { BUTTONS } from '@src/app/core/models/buttons.enum';
-import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { BUTTONS } from 'src/app/core/models/buttons.enum';
+import { FORM_CONTROLS } from 'src/app/core/models/form-controls.enum';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-signin',

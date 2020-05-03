@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { IUser } from '@src/app/core/models/user.model';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
-import { mockedTags } from '@src/app/core/mocks/tags.mockup';
+import { IUser } from 'src/app/core/models/user.model';
+import { mockedUser } from 'src/app/core/mocks/user.mockup';
+import { mockedTags } from 'src/app/core/mocks/tags.mockup';
 
 @Injectable({
     providedIn: 'root',

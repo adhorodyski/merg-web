@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { IProviderDetails } from '@src/app/core/models/provider-details.model';
-import { PROVIDERS } from '@src/app/core/models/providers.enum';
-import { IUser } from '@src/app/core/models/user.model';
+import { IProviderDetails } from 'src/app/core/models/provider-details.model';
+import { PROVIDERS } from 'src/app/core/models/providers.enum';
+import { IUser } from 'src/app/core/models/user.model';
 
 @Component({
     selector: 'app-settings-streams',

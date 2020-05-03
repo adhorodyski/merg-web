@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PatternValidatorDirective } from '@src/app/core/directives/pattern-validator.directive';
-import { ACCOUNTS } from '@src/app/core/models/accounts.enum';
-import { BUTTONS } from '@src/app/core/models/buttons.enum';
-import { FORM_CONTROLS } from '@src/app/core/models/form-controls.enum';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { PatternValidatorDirective } from 'src/app/core/directives/pattern-validator.directive';
+import { ACCOUNTS } from 'src/app/core/models/accounts.enum';
+import { BUTTONS } from 'src/app/core/models/buttons.enum';
+import { FORM_CONTROLS } from 'src/app/core/models/form-controls.enum';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-signup',

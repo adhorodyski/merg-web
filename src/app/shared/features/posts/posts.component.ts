@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { SIZES } from '@src/app/core/models/sizes.enum';
-import { IPost } from '@src/app/core/models/post.model';
+import { SIZES } from 'src/app/core/models/sizes.enum';
+import { IPost } from 'src/app/core/models/post.model';
 
 @Component({
     selector: 'app-posts',

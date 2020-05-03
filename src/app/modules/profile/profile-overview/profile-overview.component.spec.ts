@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileOverviewComponent } from './profile-overview.component';
-import { AvatarComponent } from '@src/app/shared/components/avatar/avatar.component';
-import { ButtonComponent } from '@src/app/shared/components/button/button.component';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
+import { AvatarComponent } from 'src/app/shared/components/avatar/avatar.component';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
+import { mockedUser } from 'src/app/core/mocks/user.mockup';
 
 describe('ProfileOverviewComponent', () => {
     let component: ProfileOverviewComponent;

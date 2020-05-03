@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
-import { BUTTONS } from '@src/app/core/models/buttons.enum';
-import { PROVIDERS } from '@src/app/core/models/providers.enum';
-import { IProviderDetails } from '@src/app/core/models/provider-details.model';
-import { IUser } from '@src/app/core/models/user.model';
-import { mergingRoll } from '@src/app/shared/animations/mergingRoll';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { mockedUser } from 'src/app/core/mocks/user.mockup';
+import { BUTTONS } from 'src/app/core/models/buttons.enum';
+import { PROVIDERS } from 'src/app/core/models/providers.enum';
+import { IProviderDetails } from 'src/app/core/models/provider-details.model';
+import { IUser } from 'src/app/core/models/user.model';
+import { mergingRoll } from 'src/app/shared/animations/mergingRoll';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-merging',

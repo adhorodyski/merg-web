@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { LANGUAGES } from '@src/app/core/models/languages.enum';
+import { LANGUAGES } from 'src/app/core/models/languages.enum';
 
 @Component({
     selector: 'app-country-selector',

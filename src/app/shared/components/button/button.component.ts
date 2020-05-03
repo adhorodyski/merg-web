@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { BUTTONS } from '@src/app/core/models/buttons.enum';
-import { SIZES } from '@src/app/core/models/sizes.enum';
+import { BUTTONS } from 'src/app/core/models/buttons.enum';
+import { SIZES } from 'src/app/core/models/sizes.enum';
 
 @Component({
     selector: 'app-button',

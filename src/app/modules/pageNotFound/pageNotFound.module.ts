@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // modules
-import { SharedModule } from '@src/app/shared/shared.module';
-import { PageNotFoundRoutingModule } from '@src/app/modules/pageNotFound/pageNotFound-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { PageNotFoundRoutingModule } from 'src/app/modules/pageNotFound/pageNotFound-routing.module';
 // components
-import { PageNotFoundComponent } from '@src/app/modules/pageNotFound/pageNotFound.component';
+import { PageNotFoundComponent } from 'src/app/modules/pageNotFound/pageNotFound.component';
 
 @NgModule({
     declarations: [PageNotFoundComponent],

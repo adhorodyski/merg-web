@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { BUTTONS } from '@src/app/core/models/buttons.enum';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { BUTTONS } from 'src/app/core/models/buttons.enum';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 @Component({
     selector: 'app-landing',
     templateUrl: './landing.component.html',

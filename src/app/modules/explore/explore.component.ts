@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { slideUp } from 'src/app/shared/animations';
 
 @Component({
     selector: 'app-explore',

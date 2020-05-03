@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { SearchService } from '@src/app/core/services/search.service';
-import { SIZES } from '@src/app/core/models/sizes.enum';
-import { IUser } from '@src/app/core/models/user.model';
+import { SearchService } from 'src/app/core/services/search.service';
+import { SIZES } from 'src/app/core/models/sizes.enum';
+import { IUser } from 'src/app/core/models/user.model';
 
 @Component({
     selector: 'app-explore-search',

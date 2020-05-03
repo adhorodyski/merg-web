@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { AuthService } from '@src/app/core/services/auth.service';
-import { SearchService } from '@src/app/core/services/search.service';
-import { IUser } from '@src/app/core/models/user.model';
-import { SIZES } from '@src/app/core/models/sizes.enum';
-import { mockedUser } from '@src/app/core/mocks/user.mockup';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { AuthService } from 'src/app/core/services/auth.service';
+import { SearchService } from 'src/app/core/services/search.service';
+import { IUser } from 'src/app/core/models/user.model';
+import { SIZES } from 'src/app/core/models/sizes.enum';
+import { mockedUser } from 'src/app/core/mocks/user.mockup';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-header',

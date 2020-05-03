@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IPost } from '@src/app/core/models/post.model';
-import { PostService } from '@src/app/core/services/post.service';
-import { slideUp } from '@src/app/shared/animations/slideUp';
+import { IPost } from 'src/app/core/models/post.model';
+import { PostService } from 'src/app/core/services/post.service';
+import { slideUp } from 'src/app/shared/animations/slideUp';
 
 @Component({
     selector: 'app-dashboard',

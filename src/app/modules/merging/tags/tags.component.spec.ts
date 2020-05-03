@@ -3,8 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { TagsComponent } from './tags.component';
-import { TagComponent } from '@src/app/shared/components/input/tag/tag.component';
-import { ButtonComponent } from '@src/app/shared/components/button/button.component';
+import { TagComponent } from 'src/app/shared/components/input/tag/tag.component';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 
 describe('TagsComponent', () => {
     let component: TagsComponent;
