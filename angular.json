@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "cli": {
-        "defaultCollection": "@nativescript/schematics"
+        "defaultCollection": "@schematics/angular"
     },
     "projects": {
         "merg-app": {
@@ -12,7 +12,7 @@
             "projectType": "application",
             "prefix": "app",
             "schematics": {
-                "@nativescript/schematics:component": {
+                "@schematics/angular:component": {
                     "styleext": "scss"
                 }
             },
@@ -20,6 +20,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
+                        "aot": true,
                         "outputPath": "dist/merg-app",
                         "index": "src/index.html",
                         "main": "src/main.ts",
@@ -31,6 +32,12 @@
                     },
                     "configurations": {
                         "production": {
+                            "budgets": [
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb"
+                                }
+                            ],
                             "fileReplacements": [
                                 {
                                     "replace": "src/environments/environment.ts",

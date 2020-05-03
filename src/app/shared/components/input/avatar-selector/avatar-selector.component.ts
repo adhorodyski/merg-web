@@ -14,7 +14,7 @@ export class AvatarSelectorComponent {
     @Input() type: FORM_CONTROLS;
     @Output() clickMode: EventEmitter<MODES> = new EventEmitter<MODES>();
 
-    @ViewChild('avatarInput', { static: false }) avatarInput: ElementRef;
+    @ViewChild('avatarInput') avatarInput: ElementRef;
 
     sizes = SIZES;
 

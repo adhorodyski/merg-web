@@ -2,11 +2,13 @@
     "extends": "./tsconfig.json",
     "compilerOptions": {
         "outDir": "./out-tsc/app",
-        "module": "esnext",
-        "types": [],
-        "paths": {
-            "@src/*": ["src/*.web", "src/*"]
-        }
+        "types": []
     },
-    "files": ["src/main.ts", "src/polyfills.ts"]
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "strictTemplates": true
+    },
+    "files": ["src/main.ts", "src/polyfills.ts"],
+    "include": ["src/**/*.d.ts"],
+    "exclude": ["src/test.ts", "src/**/*.spec.ts"]
 }

@@ -1,6 +1,7 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
+        "module": "esnext",
         "outDir": "./dist/out-tsc",
         "sourceMap": true,
         "declaration": false,
@@ -15,5 +16,9 @@
         "paths": {
             "@src/*": ["src/*.ts"]
         }
+    },
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true
     }
 }
