@@ -20,7 +20,7 @@ const { getAngularCompilerPlugin } = require('nativescript-dev-webpack/plugins/N
 const hashSalt = Date.now().toString();
 
 module.exports = env => {
-    // Add your custom Activities, Services and other Android app modules here.
+    // Add your custom Activities, Services and other Android app components here.
     const appComponents = ['tns-core-modules/ui/frame', 'tns-core-modules/ui/frame/activity'];
 
     const platform = env && ((env.android && 'android') || (env.ios && 'ios'));
@@ -240,9 +240,9 @@ module.exports = env => {
                 {
                     include: join(appFullPath, entryPath),
                     use: [
-                        // Require all Android app modules
+                        // Require all Android app components
                         platform === 'android' && {
-                            loader: 'nativescript-dev-webpack/android-app-modules-loader',
+                            loader: 'nativescript-dev-webpack/android-app-components-loader',
                             options: { modules: appComponents },
                         },
 
@@ -250,7 +250,7 @@ module.exports = env => {
                             loader: 'nativescript-dev-webpack/bundle-config-loader',
                             options: {
                                 angular: true,
-                                loadCss: !snapshot, // load the application css if in debug mode-selector
+                                loadCss: !snapshot, // load the application css if in debug mode
                                 unitTesting,
                                 appFullPath,
                                 projectRoot,
@@ -284,7 +284,7 @@ module.exports = env => {
                     ],
                 },
 
-                // Angular modules reference css files and their imports using raw-loader
+                // Angular components reference css files and their imports using raw-loader
                 { test: /\.css$/, exclude: /[\/|\\]app\.css$/, use: 'raw-loader' },
                 {
                     test: /\.scss$/,
@@ -327,7 +327,7 @@ module.exports = env => {
             // check out https://github.com/nativescript/worker-loader
             new NativeScriptWorkerPlugin(),
             ngCompilerPlugin,
-            // Does IPC communication with the {N} CLI to notify events when running in watch mode-selector.
+            // Does IPC communication with the {N} CLI to notify events when running in watch mode.
             new nsWebpack.WatchStateLoggerPlugin(),
         ],
     };
