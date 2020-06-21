@@ -7,7 +7,7 @@ export interface IUser {
     email: string;
     avatar: string;
     about: string;
-    accountType: ACCOUNTS.CREATOR;
+    accountType: ACCOUNTS;
     providers?: IProvider[];
     tags: string[];
     followers: number[];

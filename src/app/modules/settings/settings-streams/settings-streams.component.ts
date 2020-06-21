@@ -11,12 +11,12 @@ import { IUser } from 'src/app/core/models/user.model';
 export class SettingsStreamsComponent {
     @Input() user: IUser;
 
-    providers = PROVIDERS;
+    providers = Object.keys(PROVIDERS);
 
     constructor() {}
 
-    getProviderFromKey(providerKey: PROVIDERS): PROVIDERS {
-        return this.providers[providerKey];
+    getProvider(providerIDX) {
+        return PROVIDERS[this.providers[providerIDX]];
     }
 
     getProviderDetails(resultProvider: PROVIDERS): IProviderDetails[] {
@@ -33,8 +33,8 @@ export class SettingsStreamsComponent {
         console.log(provider);
     }
 
-    removeProviderDetails(providerDetailsIDX, providerIDX): void {
-        this.user.providers[providerIDX].details.splice(providerDetailsIDX, 1);
+    removeProviderDetails(providerDetailsIDX, provider: PROVIDERS): void {
+        this.getProviderDetails(provider).splice(providerDetailsIDX, 1);
     }
 
     isProviderEmpty(providerDetails: IProviderDetails[]): boolean {

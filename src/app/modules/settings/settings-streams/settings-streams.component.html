@@ -1,13 +1,13 @@
 <section class="section section-streams">
     <h4 class="heading primary-400 size-18 bold">Streams</h4>
-    <div class="provider-results" *ngFor="let provider of providers | keyvalue; let providerIDX = index">
+    <div class="provider-results" *ngFor="let provider of providers; let providerIDX = index">
         <app-social-result
-            [provider]="getProviderFromKey(provider.key)"
-            [providerDetails]="getProviderDetails(getProviderFromKey(provider.key))"
+            [provider]="getProvider(providerIDX)"
+            [providerDetails]="getProviderDetails(getProvider(providerIDX))"
             [isHidden]="false"
-            [isDone]="isProviderEmpty(getProviderDetails(provider.key))"
+            [isDone]="isProviderEmpty(getProviderDetails(getProvider(providerIDX)))"
             (add)="addProviderDetails($event)"
-            (remove)="removeProviderDetails($event, providerIDX)"
+            (remove)="removeProviderDetails($event, getProvider(providerIDX))"
         ></app-social-result>
     </div>
 </section>
