@@ -36,7 +36,6 @@ export class MergingComponent implements OnInit {
     ngOnInit() {
         this.user = mockedUser;
         this.setVisibleProviders();
-        this.setVisibleProvidersDetails();
     }
 
     getProviderDetails(resultProvider: PROVIDERS): IProviderDetails[] {
@@ -53,13 +52,12 @@ export class MergingComponent implements OnInit {
         const providersKeys = Object.keys(PROVIDERS);
 
         this.previousProvider = PROVIDERS[providersKeys[this.activeStepIDX - 1]];
-        this.activeProvider = PROVIDERS[providersKeys[this.activeStepIDX]];
-        this.nextProvider = PROVIDERS[providersKeys[this.activeStepIDX + 1]];
-    }
-
-    setVisibleProvidersDetails(): void {
         this.previousProviderDetails = this.getProviderDetails(this.previousProvider);
+
+        this.activeProvider = PROVIDERS[providersKeys[this.activeStepIDX]];
         this.activeProviderDetails = this.getProviderDetails(this.activeProvider);
+
+        this.nextProvider = PROVIDERS[providersKeys[this.activeStepIDX + 1]];
         this.nextProviderDetails = this.getProviderDetails(this.nextProvider);
     }
 
@@ -75,7 +73,6 @@ export class MergingComponent implements OnInit {
     nextStep(): void {
         this.activeStepIDX++;
         this.setVisibleProviders();
-        this.setVisibleProvidersDetails();
     }
 
     continue(): void {
